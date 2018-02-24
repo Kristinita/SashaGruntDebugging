@@ -1,3 +1,6 @@
+gulp = require('gulp')
+htmltidy = require('gulp-htmltidy')
+
 module.exports = (grunt) ->
 
 	require('load-grunt-tasks')(grunt)
@@ -9,27 +12,21 @@ module.exports = (grunt) ->
 				options:
 					updateType: 'force'
 
-		posthtml:
-			options:
-				use: [
-					require('posthtml-aria-tabs')()
-					require('posthtml-doctype')(doctype : 'HTML 4.01 Frameset')
-					require('posthtml-alt-always')()
-				]
-			single:
-				files: [
-					src: 'output/SashaPosthtml/SashaPosthtmlExample.html'
-					dest: 'output/SashaPosthtml/SashaPosthtmlExample.html'
-				]
+		gulp:
+			gulptidy:
+				gulp.src('output/SashaGruntGulp/SashaGruntGulpExample.html', base: ".")
+				.pipe(htmltidy(
+					wrap: 0)).pipe gulp.dest('.')
 
-		postcss:
-			options:
-				map: false
-				processors: [
-					require('autoprefixer')()
-				]
-			dist:
-				src: ['output/SashaPosthtml/SashaPosthtmlExample.css']
+		imagemin:
+			dynamic:
+				files: [
+					expand: true
+					cwd: '.'
+					src: ['output/SashaGruntGulp/*.jpg']
+					dest: '.'
+					]
+
 
 	grunt.registerTask 'update', [
 		'devUpdate'
