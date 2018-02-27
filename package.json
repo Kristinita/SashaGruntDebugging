@@ -23,7 +23,6 @@
   ],
   "devDependencies": {
     "grunt": "^1.0.2",
-    "grunt-dev-update": "^2.3.0",
     "grunt-nice-package": "^0.10.4",
     "load-grunt-tasks": "^3.5.2"
   }
