@@ -1,17 +1,30 @@
 {
   "name": "SashaGruntDebugging",
+  "description": "Repository for Grunt debugging",
   "version": "0.1.0",
-  "description": "Kristinita's Search site",
-  "main": "Gruntfile.coffee",
-  "repository": "https://github.com/Kristinita/SashaGruntDebugging",
+  "homepage": "https://github.com/Kristinita/SashaGruntDebugging",
+  "author": "Sasha Chernykh (http://uid.me/sasha_chernykh)",
+  "repository": "github:Kristinita/SashaGruntDebugging",
+  "bugs": {
+    "url": "https://github.com/Kristinita/SashaGruntDebugging/issues"
+  },
   "license": "MIT",
-  "author": "Sasha Chernykh",
+  "files": [
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Pelican"
+  ],
   "devDependencies": {
     "grunt": "^1.0.2",
-    "grunt-contrib-imagemin": "^2.0.1",
     "grunt-dev-update": "^2.3.0",
-    "grunt-gulp": "^1.0.2",
-    "gulp-htmltidy": "^0.2.4",
+    "grunt-nice-package": "^0.10.4",
     "load-grunt-tasks": "^3.5.2"
   }
 }

@@ -7,6 +7,11 @@ module.exports = (grunt) ->
 
 	grunt.initConfig
 
+		nicePackage:
+			all:
+				options:
+					blankLine: false
+
 		devUpdate:
 			main:
 				options:
