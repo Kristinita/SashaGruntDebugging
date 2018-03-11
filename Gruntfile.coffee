@@ -1,9 +1,11 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks('grunt-hello-world')
+	require('load-grunt-tasks')(grunt)
 
 	grunt.initConfig
 
-		hello_world:
-			world:
-				name: "world!"
+		purifycss:
+			sashapurify:
+				src: ['SashaPurify.html']
+				css: ['SashaPurify.css']
+				dest: 'SashaPurify.css'
