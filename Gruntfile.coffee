@@ -28,9 +28,20 @@ module.exports = (grunt) ->
 			commitizen:
 				command: 'git commit -m "%SASHAMESSAGE%"'
 
+		gta:
+			options:
+				stdout: true
+				stderr: true
+			add:
+				command: 'add -A'
+			commit:
+				command: 'commit -m "%SASHASHORTDESCRIPTION%" -m "%SASHALONGDESCRIPTION%"'
+			push:
+				command: 'push'
+
 	grunt.registerTask 'git', [
-		'gitadd'
-		'shell:commitizen'
-		'gitpush'
+		'gta:add'
+		'gta:commit'
+		'gta:push'
 	]
 	return
