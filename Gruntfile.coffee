@@ -4,6 +4,9 @@ module.exports = (grunt) ->
 
 	grunt.initConfig
 
+		# git add -A
+		# https://stackoverflow.com/a/572660/5951529
+		# https://pranavprakash.net/2014/09/21/automate-git-workflow-with-grunt/
 		gitadd:
 			task:
 				options:
@@ -21,9 +24,13 @@ module.exports = (grunt) ->
 					branch: 'SashaGruntCommit'
 					verbose: true
 
+		shell:
+			commitizen:
+				command: 'git commit -m "%SASHAMESSAGE%"'
+
 	grunt.registerTask 'git', [
 		'gitadd'
-		'gitcommit'
+		'shell:commitizen'
 		'gitpush'
 	]
 	return
