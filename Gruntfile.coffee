@@ -4,8 +4,26 @@ module.exports = (grunt) ->
 
 	grunt.initConfig
 
-		purifycss:
-			sashapurify:
-				src: ['SashaPurify.html']
-				css: ['SashaPurify.css']
-				dest: 'SashaPurify.css'
+		gitadd:
+			task:
+				options:
+					all: true
+					verbose: true
+
+		gitcommit:
+			task:
+				options:
+					verbose: true
+
+		gitpush:
+			task:
+				options:
+					branch: 'SashaGruntCommit'
+					verbose: true
+
+	grunt.registerTask 'git', [
+		'gitadd'
+		'gitcommit'
+		'gitpush'
+	]
+	return
