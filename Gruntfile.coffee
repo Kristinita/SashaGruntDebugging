@@ -35,6 +35,8 @@ module.exports = (grunt) ->
 			add:
 				command: 'add -A'
 			commit:
+				# Multiline commit:
+				# https://stackoverflow.com/a/5070502/5951529
 				command: 'commit -m "%SASHASHORTDESCRIPTION%" -m "%SASHALONGDESCRIPTION%"'
 			push:
 				command: 'push'
