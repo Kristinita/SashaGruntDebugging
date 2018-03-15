@@ -6,10 +6,8 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.0.2",
-    "grunt-git": "^1.0.9",
-    "grunt-git-them-all": "0.0.13",
     "grunt-hello-world": "^0.1.0",
-    "grunt-shell": "^2.1.0",
+    "grunt-notify": "^0.4.5",
     "load-grunt-tasks": "^3.5.2"
   },
   "scripts": {

@@ -1,0 +1,7 @@
+install:
+
+  - npm install -g grunt-cli
+
+build_script:
+
+  - grunt hello_world --verbose
