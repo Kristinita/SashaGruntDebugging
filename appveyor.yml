@@ -4,4 +4,4 @@ install:
 
 build_script:
 
-  - grunt hello_world --verbose
+  - grunt goddess --verbose
