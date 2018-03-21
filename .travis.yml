@@ -1,6 +1,9 @@
-install:
+before_install:
 
   - git checkout master
+
+install:
+
   - npm install -g grunt-cli
 
 script:
