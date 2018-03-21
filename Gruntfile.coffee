@@ -5,14 +5,12 @@ module.exports = (grunt) ->
 		hello_world:
 			world:
 				name: "world!"
-
-		notify_hooks:
-			options:
-				enabled: true
-				success: true
-				duration: 7
+		options:
+			enabled: true
+			success: true
+			duration: 7
+			message: "Sasha Goddess!"
 
 	grunt.loadNpmTasks('grunt-hello-world')
-	grunt.loadNpmTasks('grunt-notify')
 
-	grunt.task.run('notify_hooks')
+	grunt.registerTask("goddess", ["checkbranch:master", "hello_world"])
