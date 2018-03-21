@@ -1,9 +1,6 @@
-branches:
-  only:
-    - master
-
 install:
 
+  - git checkout master
   - npm install -g grunt-cli
 
 build_script:
