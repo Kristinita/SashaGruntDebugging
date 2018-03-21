@@ -12,5 +12,6 @@ module.exports = (grunt) ->
 			message: "Sasha Goddess!"
 
 	grunt.loadNpmTasks('grunt-hello-world')
+	grunt.loadNpmTasks('grunt-checkbranch')
 
 	grunt.registerTask("goddess", ["checkbranch:master", "hello_world"])
