@@ -3,10 +3,11 @@ node_js:
   - "node"
 
 install:
-  - npm -g install js-beautify eclint
+  - npm install
+  - npm -g install grunt-cli eclint
 
 before_script:
-  - js-beautify -r SashaJsBeautify.html
+  - grunt jsbeautifier --verbose
 
 script:
   - eclint check SashaJsBeautify.html
