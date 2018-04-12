@@ -1,11 +1,12 @@
-before_install:
-
-  - git checkout master
+language: node_js
+node_js:
+  - "node"
 
 install:
+  - npm -g install js-beautify eclint
 
-  - npm install -g grunt-cli
+before_script:
+  - js-beautify -r SashaJsBeautify.html
 
 script:
-
-  - grunt goddess --verbose
+  - eclint check SashaJsBeautify.html
