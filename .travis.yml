@@ -1,0 +1,7 @@
+install:
+- npm install -g eclint grunt-cli
+- npm install
+
+script:
+- grunt jsbeautifier
+- eclint SashaJsBeautifyTabs.html
