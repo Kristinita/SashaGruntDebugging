@@ -7,5 +7,4 @@ module.exports = (grunt) ->
                 html:
                     indentWithTabs: true
                     endWithNewline: true
-                    wrapLineLength: 0
             files: ['SashaJsBeautifyTabs.html']
