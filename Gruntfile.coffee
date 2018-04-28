@@ -1,9 +1,11 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks('grunt-hello-world')
-
-	grunt.initConfig
-
-		hello_world:
-			world:
-				name: "world!"
+    grunt.loadNpmTasks('grunt-jsbeautifier')
+    grunt.initConfig
+        jsbeautifier:
+            options:
+                html:
+                    indentWithTabs: true
+                    endWithNewline: true
+                    wrapLineLength: 0
+            files: ['SashaJsBeautifyTabs.html']
