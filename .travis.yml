@@ -1,7 +1,12 @@
+language: node_js
+
+node_js:
+- node
+
 install:
 - npm install -g eclint grunt-cli
 - npm install
 
 script:
 - grunt jsbeautifier
-- eclint SashaJsBeautifyTabs.html
+- eclint check SashaJsBeautifyTabs.html
