@@ -1,7 +1,9 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks('grunt-jsbeautifier')
+	grunt.loadNpmTasks('grunt-stylint')
 	grunt.initConfig
-    	jsbeautifier:
-    		files: ['SashaJsBeautify.html']
-
+		stylint:
+			options:
+				# [WARNING] If true, grunt-stylint will not show any errors/warnings:
+				quiet: false
+			src: ["Stylint/*.styl"]

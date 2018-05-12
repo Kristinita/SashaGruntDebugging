@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.0.2",
-    "grunt-jsbeautifier": "^0.2.13",
+    "grunt-stylint": "^0.2.0",
     "load-grunt-tasks": "^3.5.2"
   },
   "scripts": {
