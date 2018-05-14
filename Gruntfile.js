@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         htmllint: {
             options: {
-                force: true,
+                force: false,
                 maxerr: 5
             },
             src: [
@@ -12,6 +12,7 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-htmllint');
+    grunt.loadNpmTasks('grunt-notify');
 
     grunt.registerTask('default', ['htmllint']);
 };
