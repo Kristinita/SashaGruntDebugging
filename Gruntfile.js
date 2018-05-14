@@ -3,9 +3,7 @@ module.exports = function (grunt) {
         htmllint: {
             options: {
                 force: true,
-                opts: {
                 maxerr: 5
-            }
             },
             src: [
                 'SashaHtmllintDebugging.html'
