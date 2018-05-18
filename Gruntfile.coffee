@@ -6,4 +6,4 @@ module.exports = (grunt) ->
 			options:
 				force: false
 				htmllintrc: true
-			src: ['*.html']
+			src: ['Smert-svobode/*.html']
