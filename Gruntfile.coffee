@@ -4,8 +4,8 @@ module.exports = (grunt) ->
 	grunt.initConfig
 		templates:
 			yamlconfig: grunt.file.readYAML("pelicanvariables.yaml")
-				paths:
-					output_path: "<%= templates.yamlconfig.output_path %>"
+			paths:
+				output_path: "<%= templates.paths.output_path %>"
 		htmllint:
 			options:
 				force: false
