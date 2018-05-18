@@ -1,10 +1,10 @@
 module.exports = (grunt) ->
 
-    grunt.loadNpmTasks('grunt-jsbeautifier')
-    grunt.initConfig
-        jsbeautifier:
-            options:
-                html:
-                    indentWithTabs: true
-                    endWithNewline: true
-            files: ['SashaJsBeautifyTabs.html']
+	grunt.loadNpmTasks('grunt-htmllint')
+	grunt.initConfig
+		htmllint:
+			options:
+				force: false
+				htmllintrc: true
+			src: ['СашаКириллица.html'
+					'SashaLatin.html']
