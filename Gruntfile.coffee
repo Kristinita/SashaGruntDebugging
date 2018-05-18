@@ -6,5 +6,4 @@ module.exports = (grunt) ->
 			options:
 				force: false
 				htmllintrc: true
-			src: ['СашаКириллица.html'
-					'SashaLatin.html']
+			src: ['*.html']
