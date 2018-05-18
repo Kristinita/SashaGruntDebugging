@@ -12,8 +12,6 @@
 
 # Separate repository for output site
 
-output/
-
 output/.git/
 
 # Personal folder settings

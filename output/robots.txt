@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /images/
+Disallow: /js/
+Disallow: /css/
+Disallow: /Smert-svobode/
+Disallow: /Snippets/
+Disallow: /stylus/
+Disallow: /zohoverify/
+User-agent: LinkChecker
+Allow: /
+Sitemap: https://kristinita.ru/sitemap.xml
+Crawl-delay: 1

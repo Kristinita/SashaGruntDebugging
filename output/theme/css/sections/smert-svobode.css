@@ -1,0 +1,137 @@
+/*
+* @Author: Kristinita
+* @Date:   2017-03-15 17:06:35
+* @Last Modified by:   Kristinita
+* @Last Modified time: 2017-05-09 15:19:54
+*/
+
+/* Unverified For PurifyCSS
+	========================================================================== */
+
+body {
+	background: #08054e;
+	color: #fff0f5;
+}
+
+a {
+	color: #dda0dd;
+}
+
+a:hover {
+	background-color: #eee8aa;
+}
+
+a:focus {
+	background: #f0fff0;
+}
+
+em {
+	color: #6495ed;
+}
+
+img {
+	-webkit-box-shadow: 0 0 2rem #000;
+					box-shadow: 0 0 2rem #000;
+}
+
+.SashaPageLoading {
+	-webkit-box-shadow: none;
+					box-shadow: none;
+}
+
+kbd {
+	color: #fff5ee;
+	background: #6495ed;
+}
+
+hr {
+	color: Sasha-hr;
+}
+
+.SashaBottomAside {
+	color: #fff;
+	bottom: 8%;
+}
+
+blockquote {
+	border-left: solid #e6e6fa 0.5rem;
+	color: #6a5acd;
+	background: #fcfcfc;
+}
+
+.SashaBlockquote {
+	border-color: #ff5730;
+	background-color: #ffdab9;
+	color: #c71585;
+}
+
+.SashaCitation {
+	color: #90ee90;
+}
+
+.SashaEpigraph {
+	color: #ffe4c4;
+}
+
+.SashaEpigraph >.SashaEpigraphAuthor {
+	color: #ffb6c1;
+}
+
+.SashaEpigraph >em {
+	color: #ffdc33;
+}
+
+code {
+	background-color: #2f4f4f;
+}
+
+.SashaShadow {
+	text-shadow: 0 0 0.625rem #ff00de, 0 0 1.25rem #ff00de, 0 0 1.875rem #ff00de, 0 0 2.5rem #ff00de, 0 0 3.125rem #ff00de, 0 0 3.75rem #ff00de;
+}
+
+.SashaDot {
+	border-bottom: 0.0625rem dotted #c71585;
+}
+
+.SashaDotLight {
+	border-bottom: 0.0625rem dotted #fff8dc;
+}
+
+.SashaSpan {
+	color: #c71585;
+	background-color: #ffe4c4;
+}
+
+::-moz-selection {
+	color: #f08080;
+	background: #ffe4b5;
+}
+
+::selection {
+	color: #f08080;
+	background: rgba(255,228,181,0.99);
+}
+
+::-moz-selection:window-inactive {
+	color: #f08080;
+	background: rgba(255,228,181,0.99);
+}
+
+::selection:window-inactive {
+	color: #f08080;
+	background: rgba(255,228,181,0.99);
+}
+
+.SashaEmNoColor {
+	color: #fff0f5;
+}
+
+.tooltipster-punk-purple .tooltipster-box {
+	border-bottom: 0.1875rem solid #ffa500;
+	background: #800080;
+}
+
+.tooltipster-punk-aquamarine .tooltipster-box {
+	border-bottom: 0.1875rem solid #ff69b4;
+	background: #228b22;
+}
