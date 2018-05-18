@@ -5,7 +5,7 @@ module.exports = (grunt) ->
 		templates:
 			yamlconfig: grunt.file.readYAML("pelicanvariables.yaml")
 			paths:
-				output_path: "<%= templates.paths.output_path %>"
+				output_path: "<%= templates.yamlconfig.output_path %>"
 		htmllint:
 			options:
 				force: false
