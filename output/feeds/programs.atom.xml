@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Поиск Кристиниты - Programs</title><link href="https://kristinita.ru/" rel="alternate"></link><link href="https://kristinita.ru/feeds/programs.atom.xml" rel="self"></link><id>https://kristinita.ru/</id><updated>2018-05-17T08:21:01+03:00</updated><entry><title>PaletteMira</title><link href="https://kristinita.ru/Programs/PaletteMira.html" rel="alternate"></link><published>2018-04-04T22:26:14+03:00</published><updated>2018-04-06T20:56:47+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:kristinita.ru,2018-04-04:/Programs/PaletteMira.html</id><summary type="html">&lt;p&gt;Add to command palette commands from external Sublime Text packages&lt;/p&gt;</summary><content type="html">&lt;!-- MarkdownTOC --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Поиск Кристиниты - Programs</title><link href="./" rel="alternate"></link><link href="./feeds/programs.atom.xml" rel="self"></link><id>./</id><updated>2018-05-17T08:21:01+03:00</updated><entry><title>PaletteMira</title><link href="./Programs/PaletteMira.html" rel="alternate"></link><published>2018-04-04T22:26:14+03:00</published><updated>2018-04-06T20:56:47+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:None,2018-04-04:./Programs/PaletteMira.html</id><summary type="html">&lt;p&gt;Add to command palette commands from external Sublime Text packages&lt;/p&gt;</summary><content type="html">&lt;!-- MarkdownTOC --&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="#overview"&gt;Overview&lt;/a&gt;&lt;/li&gt;
@@ -60,7 +60,7 @@
 &lt;p&gt;&lt;a id="palettemira-1"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;7.1. PaletteMira&lt;/h3&gt;
 &lt;p&gt;&lt;a id="dependencies-1"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;7.2. Dependencies&lt;/h3&gt;</content><category term="programs"></category><category term="sublime-text"></category></entry><entry><title>KristinitaLuckyLink</title><link href="https://kristinita.ru/Programs/KristinitaLuckyLink.html" rel="alternate"></link><published>2018-01-10T22:01:54+03:00</published><updated>2018-04-20T08:07:18+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:kristinita.ru,2018-01-10:/Programs/KristinitaLuckyLink.html</id><summary type="html">&lt;p&gt;Sublime Text 3 package, that wrap the selected text to DuckDuckGo or Google top query URL &lt;br&gt;&lt;br&gt; &lt;img alt="KristinitaLuckyLink" src="https://i.imgur.com/TuyxneV.png"&gt;&lt;/p&gt;</summary><content type="html">&lt;!-- MarkdownTOC --&gt;
+&lt;h3&gt;7.2. Dependencies&lt;/h3&gt;</content><category term="programs"></category><category term="sublime-text"></category></entry><entry><title>KristinitaLuckyLink</title><link href="./Programs/KristinitaLuckyLink.html" rel="alternate"></link><published>2018-01-10T22:01:54+03:00</published><updated>2018-04-20T08:07:18+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:None,2018-01-10:./Programs/KristinitaLuckyLink.html</id><summary type="html">&lt;p&gt;Sublime Text 3 package, that wrap the selected text to DuckDuckGo or Google top query URL &lt;br&gt;&lt;br&gt; &lt;img alt="KristinitaLuckyLink" src="https://i.imgur.com/TuyxneV.png"&gt;&lt;/p&gt;</summary><content type="html">&lt;!-- MarkdownTOC --&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="#description"&gt;Description&lt;/a&gt;&lt;ol&gt;
@@ -427,7 +427,7 @@
 &lt;h2&gt;15. License&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/Kristinita/KristinitaLuckyLink/blob/SashaDevelop/License.md" target="_blank"&gt;MIT&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="programs"></category><category term="sublime-text"></category></entry><entry><title>Sacagawea</title><link href="https://kristinita.ru/Sublime-Text/Sacagawea.html" rel="alternate"></link><published>2017-05-07T20:02:14+03:00</published><updated>2018-05-17T08:21:01+03:00</updated><author><name>Keith Hall</name></author><id>tag:kristinita.ru,2017-05-07:/Sublime-Text/Sacagawea.html</id><summary type="html">&lt;p&gt;Timer for Russian gingerinas.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code class="SashaInlineHighlight"&gt;“What? Where? When?” has great popularity in the Russian language, not English, so the description of the package in Russian.&lt;/code&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="programs"></category><category term="sublime-text"></category></entry><entry><title>Sacagawea</title><link href="./Sublime-Text/Sacagawea.html" rel="alternate"></link><published>2017-05-07T20:02:14+03:00</published><updated>2018-05-17T08:21:01+03:00</updated><author><name>Keith Hall</name></author><id>tag:None,2017-05-07:./Sublime-Text/Sacagawea.html</id><summary type="html">&lt;p&gt;Timer for Russian gingerinas.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code class="SashaInlineHighlight"&gt;“What? Where? When?” has great popularity in the Russian language, not English, so the description of the package in Russian.&lt;/code&gt;&lt;/p&gt;
 &lt;!-- MarkdownTOC --&gt;
 
 &lt;ol&gt;
@@ -741,7 +741,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://www.soundjay.com/tos.html" target="_blank"&gt;правила использования звуков&lt;/a&gt;,&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/Kristinita/Sacagawea/blob/SashaDevelop/License.md" target="_blank"&gt;лицензия на Sacagawea — MIT&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="sublime-text"></category><category term="gingerinas"></category><category term="what-where-when"></category></entry><entry><title>ValeriyaSpeller</title><link href="https://kristinita.ru/Sublime-Text/ValeriyaSpeller.html" rel="alternate"></link><published>2017-04-04T21:44:21+03:00</published><updated>2018-04-06T20:56:47+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:kristinita.ru,2017-04-04:/Sublime-Text/ValeriyaSpeller.html</id><summary type="html">&lt;p&gt;Spellchecker for Russian texts &lt;br&gt;&lt;br&gt; &lt;img alt="ValeriyaSpeller" src="https://i.imgur.com/bqRl8eD.png"&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="SashaEpigraph"&gt;
+&lt;/ol&gt;</content><category term="sublime-text"></category><category term="gingerinas"></category><category term="what-where-when"></category></entry><entry><title>ValeriyaSpeller</title><link href="./Sublime-Text/ValeriyaSpeller.html" rel="alternate"></link><published>2017-04-04T21:44:21+03:00</published><updated>2018-04-06T20:56:47+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:None,2017-04-04:./Sublime-Text/ValeriyaSpeller.html</id><summary type="html">&lt;p&gt;Spellchecker for Russian texts &lt;br&gt;&lt;br&gt; &lt;img alt="ValeriyaSpeller" src="https://i.imgur.com/bqRl8eD.png"&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="SashaEpigraph"&gt;
 &lt;em&gt;i express my gratitude to Her &lt;br&gt;
 for everything She has done for me. &lt;br&gt;
 ValeriyaSpeller devote to &lt;br&gt;
@@ -837,11 +837,11 @@ perfect fan of &lt;a href="https://vk.com/hair_in_the_wind"&gt;Goddess&lt;/a&gt;
 &lt;li&gt;&lt;a href="https://packagecontrol.io/packages/SublimeLinter-contrib-write-good" target="_blank"&gt;write-good&lt;/a&gt;,&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://packagecontrol.io/packages/Thesaurus" target="_blank"&gt;Thesaurus&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Also in Sublime Text implemented &lt;a href="https://packagecontrol.io/packages/SublimeLinter-contrib-proselint" target="_blank"&gt;proselint&lt;/a&gt; package, but &lt;a href="https://github.com/amperser/proselint/issues/686" target="_blank"&gt;I have critical CPU usage bug&lt;/a&gt;.&lt;/p&gt;</content><category term="sublime-text"></category><category term="yaspeller"></category></entry><entry><title>SashaSublime</title><link href="https://kristinita.ru/Sublime-Text/SashaSublime.html" rel="alternate"></link><published>2017-03-22T12:35:57+03:00</published><updated>2018-05-17T08:21:01+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:kristinita.ru,2017-03-22:/Sublime-Text/SashaSublime.html</id><summary type="html">&lt;p&gt;Theme and color scheme for Sublime Text, where all colors have good visible. &lt;br&gt;&lt;br&gt; &lt;img alt="Hex Viewer" src="https://i.imgur.com/c0t0Iqy.png"&gt; &lt;br&gt;&lt;br&gt; &lt;img alt="GoTo Anything" src="https://i.imgur.com/2hRinyv.png"&gt; &lt;br&gt;&lt;br&gt; &lt;img alt="JSON" src="https://i.imgur.com/N2LvbNZ.png"&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;
-    &lt;a href="https://kristinita.ru/images/donate_files/Bitcoin-HTML-Redirect.html"&gt;&lt;img src="https://kristinita.ru/images/donate_files/Bitcoin-Donate-button.png" alt="Bitcoin Donate Button" class="SashaInline" /&gt;&lt;/a&gt;
-    &lt;a href="https://kristinita.ru/images/donate_files/Litecoin-HTML-Redirect.html"&gt;&lt;img src="https://kristinita.ru/images/donate_files/Litecoin-Donate-button.png" alt="Litecoin Donate Button" class="SashaInline" /&gt;&lt;/a&gt;
-    &lt;a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=63KC7VJTRVNVQ"&gt;&lt;img class="SashaInline" src="https://kristinita.ru/images/donate_files/PayPal-Donate-Button-Dollar.png" alt="PayPal Dollar button" class="SashaInline" /&gt;&lt;/a&gt;
-    &lt;a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=VPA8L2LM7EX24"&gt;&lt;img src="https://kristinita.ru/images/donate_files/PayPal-Donate-Button-Euro.png" alt="PayPal Euro button" class="SashaInline" /&gt;&lt;/a&gt;
+&lt;p&gt;Also in Sublime Text implemented &lt;a href="https://packagecontrol.io/packages/SublimeLinter-contrib-proselint" target="_blank"&gt;proselint&lt;/a&gt; package, but &lt;a href="https://github.com/amperser/proselint/issues/686" target="_blank"&gt;I have critical CPU usage bug&lt;/a&gt;.&lt;/p&gt;</content><category term="sublime-text"></category><category term="yaspeller"></category></entry><entry><title>SashaSublime</title><link href="./Sublime-Text/SashaSublime.html" rel="alternate"></link><published>2017-03-22T12:35:57+03:00</published><updated>2018-05-17T08:21:01+03:00</updated><author><name>Sasha Chernykh</name></author><id>tag:None,2017-03-22:./Sublime-Text/SashaSublime.html</id><summary type="html">&lt;p&gt;Theme and color scheme for Sublime Text, where all colors have good visible. &lt;br&gt;&lt;br&gt; &lt;img alt="Hex Viewer" src="https://i.imgur.com/c0t0Iqy.png"&gt; &lt;br&gt;&lt;br&gt; &lt;img alt="GoTo Anything" src="https://i.imgur.com/2hRinyv.png"&gt; &lt;br&gt;&lt;br&gt; &lt;img alt="JSON" src="https://i.imgur.com/N2LvbNZ.png"&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;
+    &lt;a href="./images/donate_files/Bitcoin-HTML-Redirect.html"&gt;&lt;img src="./images/donate_files/Bitcoin-Donate-button.png" alt="Bitcoin Donate Button" class="SashaInline" /&gt;&lt;/a&gt;
+    &lt;a href="./images/donate_files/Litecoin-HTML-Redirect.html"&gt;&lt;img src="./images/donate_files/Litecoin-Donate-button.png" alt="Litecoin Donate Button" class="SashaInline" /&gt;&lt;/a&gt;
+    &lt;a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=63KC7VJTRVNVQ"&gt;&lt;img class="SashaInline" src="./images/donate_files/PayPal-Donate-Button-Dollar.png" alt="PayPal Dollar button" class="SashaInline" /&gt;&lt;/a&gt;
+    &lt;a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=VPA8L2LM7EX24"&gt;&lt;img src="./images/donate_files/PayPal-Donate-Button-Euro.png" alt="PayPal Euro button" class="SashaInline" /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -1437,24 +1437,24 @@ perfect fan of &lt;a href="https://vk.com/hair_in_the_wind"&gt;Goddess&lt;/a&gt;
 &lt;p&gt;I do not hope that I will get at least a penny, but suddenly I’m feeling lucky… &lt;a href="https://vk.com/hair_in_the_wind" target="_blank"&gt;Goddess Kira&lt;/a&gt; needs money for dental treatment.&lt;/p&gt;
 &lt;p&gt;&lt;a id="bitcoin"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;15.1. Bitcoin&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://kristinita.ru/images/donate_files/Bitcoin-HTML-Redirect.html" target="_blank"&gt;&lt;img alt="Bitcoin Donate Button" src="https://kristinita.ru/images/donate_files/Bitcoin-Donate-button.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="./images/donate_files/Bitcoin-HTML-Redirect.html" target="_blank"&gt;&lt;img alt="Bitcoin Donate Button" src="./images/donate_files/Bitcoin-Donate-button.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;See &lt;a href="http://bitcoin.stackexchange.com/a/48744/41598" target="_blank"&gt;my answer&lt;/a&gt; to Bitcoin Stack Exchange, if you want to know how to make the same button. If you Bitcoin client not supported &lt;a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki" target="_blank"&gt;standard bitcoin schema URI&lt;/a&gt;, my Bitcoin address is:&lt;/p&gt;
 &lt;div class="SashaBlockHighlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;17uctxtsWG3gpyAy6iJ8AVd5rdSjkJH2
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a id="litecoin"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;15.2. Litecoin&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://kristinita.ru/images/donate_files/Litecoin-HTML-Redirect.html" target="_blank"&gt;&lt;img alt="Litecoin Donate Button" src="https://kristinita.ru/images/donate_files/Litecoin-Donate-button.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="./images/donate_files/Litecoin-HTML-Redirect.html" target="_blank"&gt;&lt;img alt="Litecoin Donate Button" src="./images/donate_files/Litecoin-Donate-button.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you Litecoin client not supported Litecoin schema URI, my Litecoin address is:&lt;/p&gt;
 &lt;div class="SashaBlockHighlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;LLVvhNKGMLGHa8QmeRrBsjZUBjSpQMjUkP
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a id="paypal-$"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;15.3. Paypal $&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=W6MP468ZZV66Q" target="_blank"&gt;&lt;img alt="PayPal Dollar button" src="https://kristinita.ru/images/donate_files/PayPal-Donate-Button-Dollar.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=W6MP468ZZV66Q" target="_blank"&gt;&lt;img alt="PayPal Dollar button" src="./images/donate_files/PayPal-Donate-Button-Dollar.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a id="paypal-€"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;15.4. Paypal €&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=DGT7K29LDD2HQ" target="_blank"&gt;&lt;img alt="PayPal Euro button" src="https://kristinita.ru/images/donate_files/PayPal-Donate-Button-Euro.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=DGT7K29LDD2HQ" target="_blank"&gt;&lt;img alt="PayPal Euro button" src="./images/donate_files/PayPal-Donate-Button-Euro.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a id="license"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;16. License&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://opensource.org/licenses/MIT" target="_blank"&gt;MIT License&lt;/a&gt;&lt;/p&gt;

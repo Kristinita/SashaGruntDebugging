@@ -16,7 +16,7 @@ var SashaBowserExplorer, SashaBowserFirefox;
 if (bowser.msie) {
 	SashaBowserExplorer = document.getElementsByClassName('SashaBowserExplorer')[0];
 	SashaBowserExplorer.innerHTML = '<div>Нажмите <kbd>Alt+K</kbd> и вводите поисковый запрос</div>';
-// Firefox:
+	// Firefox:
 } else if (bowser.gecko) {
 	SashaBowserFirefox = document.getElementsByClassName('SashaBowserFirefox')[0];
 	SashaBowserFirefox.innerHTML = '<div>Нажмите <kbd>Shift+Alt+K</kbd> и вводите поисковый запрос</div>';

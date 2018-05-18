@@ -7,12 +7,14 @@
 * import variables must be in end of file:
 * https://stackoverflow.com/q/47971246/5951529
 */
+
 /*
 * For correct gemini-scrollbar displaying, see “body tag” section:
 * https://github.com/noeldelgado/gemini-scrollbar#notes
 * [NOTE] Use “overflow: hidden”! If no, you will get bugs with anchors: scrollbar scroll in begin ofthe page.
 * [NOTE] Both html and body must include for correct gemini-scrollbar working.
 */
+
 /*
 * Wrap all long words:
 * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
@@ -22,6 +24,7 @@
 * [NOTE] Don't use universal selector:
 * https://www.npmjs.com/package/stylint#universal--default-false-never--false-
 */
+
 /*
 * Permalinks visible on hover
 * As https://pythonhosted.org/Markdown/extensions/toc.html page
