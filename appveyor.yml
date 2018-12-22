@@ -1,7 +1,8 @@
 install:
 - choco install nodejs -y
-- npm install -g grunt-cli
+- npm install -g grunt-cli pageres-cli
 - npm install
 
 build_script:
+- pageres kristinita.ru 1024x768 --verbose
 - grunt pageres --verbose
