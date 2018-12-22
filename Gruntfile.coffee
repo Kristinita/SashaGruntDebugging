@@ -1,21 +1,19 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks('grunt-htmllint')
-	grunt.loadNpmTasks('grunt-jsbeautifier')
+	grunt.loadNpmTasks("grunt-http-server")
+	grunt.loadNpmTasks("grunt-hello-world")
 	grunt.initConfig
-		templates:
-			yamlconfig: grunt.file.readYAML("pelicanvariables.yaml")
-			paths:
-				output_path: "<%= templates.yamlconfig.output_path %>"
-		jsbeautifier:
-			options:
-				config: ".jsbeautifyrc"
-			files: [
-					"<%= templates.yamlconfig.output_path %>/**/*.{html,css,js,json}"
-					"!<%= templates.yamlconfig.output_path %>/**/*.min.{css,js}"
-					]
-		htmllint:
-			options:
-				force: false
-				htmllintrc: true
-			src: ["<%= templates.paths.output_path %>/**/*.html"]
+		"http-server":
+			server:
+				# “Specify "0.0.0.0" to be available everywhere”
+				host: "0.0.0.0"
+				https: true
+				port: 8282
+				# If true, run parallel with other tasks
+				runInBackground: true
+				root: "."
+		hello_world:
+			world:
+				name: "world!"
+
+	grunt.registerTask("default", ["http-server", "hello_world"])

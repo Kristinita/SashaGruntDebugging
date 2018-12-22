@@ -4,9 +4,8 @@ node_js:
 - node
 
 install:
-- npm install -g eclint grunt-cli
+- npm install -g grunt-cli
 - npm install
 
 script:
-- grunt jsbeautifier
-- eclint check SashaJsBeautifyTabs.html
+- grunt --verbose
