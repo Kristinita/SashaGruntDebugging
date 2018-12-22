@@ -6,7 +6,6 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.0.3",
-    "grunt-hello-world": "^0.1.0",
     "grunt-http-server": "^2.1.0",
     "grunt-pageres": "^3.0.0"
   },
