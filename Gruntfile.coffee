@@ -1,7 +1,7 @@
 module.exports = (grunt) ->
 
 	grunt.loadNpmTasks("grunt-http-server")
-	grunt.loadNpmTasks("grunt-hello-world")
+	grunt.loadNpmTasks("grunt-pageres")
 	grunt.initConfig
 		"http-server":
 			server:
@@ -12,8 +12,16 @@ module.exports = (grunt) ->
 				# If true, run parallel with other tasks
 				runInBackground: true
 				root: "."
-		hello_world:
-			world:
-				name: "world!"
+		# hello_world:
+		# 	world:
+		# 		name: "world!"
+		pageres:
+			screenshots:
+				options:
+					dest: "screenshots/"
+					sizes: [
+							"1024x768"
+							]
+					urls: ["https://kristinita.ru/404.html"]
 
-	grunt.registerTask("default", ["http-server", "hello_world"])
+	grunt.registerTask("default", ["http-server", "pageres"])

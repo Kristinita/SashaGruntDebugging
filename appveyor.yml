@@ -4,5 +4,4 @@ install:
 - npm install
 
 build_script:
-- grunt --verbose
-
+- grunt pageres --verbose
