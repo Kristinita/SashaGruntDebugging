@@ -4,9 +4,7 @@ node_js:
 - node
 
 install:
-- npm install -g grunt-cli pageres-cli
-- npm install
+- npm install -g pageres-cli
 
 script:
 - pageres kristinita.ru 1024x768 --verbose
-- grunt pageres --verbose
