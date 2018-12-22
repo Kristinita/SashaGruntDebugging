@@ -18,10 +18,11 @@ module.exports = (grunt) ->
 		pageres:
 			screenshots:
 				options:
+					delay: 4,
 					dest: "screenshots/"
 					sizes: [
 							"1024x768"
 							]
-					urls: ["https://kristinita.ru/404.html"]
+					urls: ["https://127.0.0.1:8282/output/index.html"]
 
 	grunt.registerTask("default", ["http-server", "pageres"])
