@@ -1,0 +1,12 @@
+environment:
+  nodejs_version: "11"
+
+install:
+- ps: Install-Product node $env:nodejs_version
+- choco install phantomjs -y
+
+before_build:
+- npm install
+
+build_script:
+- grunt clean-console --verbose
