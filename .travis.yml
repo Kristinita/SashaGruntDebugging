@@ -3,6 +3,7 @@ node_js:
 - 11
 install:
 - npm install phantomjs-prebuilt
+- npm install -g grunt-cli
 before_script:
 - npm install
 script:

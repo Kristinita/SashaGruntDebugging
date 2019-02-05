@@ -4,6 +4,9 @@ environment:
 install:
 - ps: Install-Product node $env:nodejs_version
 - choco install phantomjs -y
+- npm install -g grunt-cli
+
+before_script:
 - npm install
 
 build_script:
