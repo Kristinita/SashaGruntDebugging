@@ -6,7 +6,7 @@ install:
 - choco install phantomjs -y
 - npm install -g grunt-cli
 
-before_script:
+before_build:
 - npm install
 
 build_script:

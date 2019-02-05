@@ -4,7 +4,7 @@ node_js:
 install:
 - npm install phantomjs-prebuilt
 - npm install -g grunt-cli
-before_bulid:
+before_script:
 - npm install
-build_script:
+script:
 - grunt clean-console --verbose
