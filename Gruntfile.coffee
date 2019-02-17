@@ -6,19 +6,22 @@ doiuse = require('doiuse')
 # https://www.npmjs.com/package/poststylus#grunt
 postcss = ->
 	require('poststylus') [
+		# [INFO] doiuse options:
+		# https://www.npmjs.com/package/doiuse#as-a-postcss-plugin
 		doiuse(browsers: ['last 1 version'])
 	]
 
 module.exports = (grunt) ->
 	grunt.initConfig
 		stylus:
-			compile:
+			lint:
 				options:
 					use: [postcss]
 				files: 'KiraGoddess.css': 'KiraGoddess.styl'
 		postcss:
-			compile:
+			lint:
 				options:
+					failOnError: true
 					map: false
 					processors: [
 						require('doiuse')(browsers: ['last 1 version'])
