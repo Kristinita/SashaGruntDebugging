@@ -18,6 +18,7 @@ module.exports = (grunt) ->
 				options:
 					use: [postcss]
 				files: 'KiraGoddess.css': 'KiraGoddess.styl'
+		# [INFO] PostCSS equivalent
 		postcss:
 			lint:
 				options:
