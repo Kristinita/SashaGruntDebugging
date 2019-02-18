@@ -16,6 +16,8 @@ module.exports = (grunt) ->
 		stylus:
 			lint:
 				options:
+					compress: false
+					linenos: false
 					use: [postcss]
 				files: 'KiraGoddess.css': 'KiraGoddess.styl'
 		# [INFO] PostCSS equivalent
