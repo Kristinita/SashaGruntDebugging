@@ -10,7 +10,7 @@ before_script:
 matrix:
   include:
   - script:
-    - "coffee-fmt --indent_style tab -i KiraCoffeeFormatGrunt.coffee 2> KiraCoffeeFormatCLI.coffee"
+    - "coffee-fmt --indent_style tab -i KiraCoffeeFormatGrunt.coffee >> KiraCoffeeFormatCLI.coffee"
     - coffee --compile KiraCoffeeFormatCLI.coffee
   - script:
     - grunt coffee_format
