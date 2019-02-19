@@ -2,9 +2,14 @@ language: node_js
 node_js:
 - 11
 install:
-- npm install -g grunt-cli
+- npm install -g grunt-cli coffeescript coffee-fmt
 before_script:
 - npm install
-script:
-- grunt stylus --verbose
-- grunt postcss --verbose
+matrix:
+  include:
+  - script:
+    - "coffee-fmt --indent_style tab -i KiraCoffeeFormatGrunt.coffee >> KiraCoffeeFormatCLI.coffee"
+    - coffee --compile KiraCoffeeFormatCLI.coffee
+  - script:
+    - grunt coffee_format
+    - coffee --compile KiraCoffeeFormatGrunt.coffee

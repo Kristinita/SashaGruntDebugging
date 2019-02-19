@@ -7,10 +7,7 @@
   "license": "MIT",
   "author": "Sasha Chernykh",
   "devDependencies": {
-    "doiuse": "^4.2.0",
     "grunt": "^1.0.3",
-    "grunt-contrib-stylus": "^1.2.0",
-    "grunt-postcss": "^0.9.0",
-    "poststylus": "^1.0.0"
+    "grunt-coffee-format": "^1.0.1"
   }
 }
