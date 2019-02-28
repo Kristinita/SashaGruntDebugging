@@ -1,11 +1,14 @@
 module.exports = (grunt) ->
 	grunt.initConfig
-		coffee_format:
+		purgecss:
+			options:
+				content: ["KiraGoddess.html"]
+				whitelist: [".KiraSecond"]
+				whitelistPatterns: [/\.KiraSecond/g]
+				whitelistPatternsChildren: [/\.KiraSecond/g]
 			main:
-				options:
-					tab: '\t'
 				files:
-					src: ["KiraCoffeeFormatGrunt.coffee"]
+					"KiraGoddess.css": ["KiraGoddess.css"]
 
-	grunt.loadNpmTasks 'grunt-coffee-format'
+	grunt.loadNpmTasks 'grunt-purgecss'
 	return

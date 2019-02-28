@@ -8,6 +8,6 @@
   "author": "Sasha Chernykh",
   "devDependencies": {
     "grunt": "^1.0.3",
-    "grunt-coffee-format": "^1.0.1"
+    "grunt-purgecss": "^1.0.0"
   }
 }

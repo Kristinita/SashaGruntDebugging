@@ -4,14 +4,14 @@ language: node_js
 node_js:
 - 11
 install:
-- npm install -g grunt-cli coffeescript coffee-fmt
+- npm install -g grunt-cli purgecss
 before_script:
 - npm install
 matrix:
   include:
   - script:
-    - "coffee-fmt --indent_style tab -i KiraCoffeeFormatGrunt.coffee >> KiraCoffeeFormatCLI.coffee"
-    - coffee --compile KiraCoffeeFormatCLI.coffee
+    - grunt purgecss
   - script:
-    - grunt coffee_format
-    - coffee --compile KiraCoffeeFormatGrunt.coffee
+    - "purgecss --css KiraGoddess.css --con KiraGoddess.html --out . --whitelist KiraSecond"
+after_success:
+- cat KiraGoddess.css
