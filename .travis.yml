@@ -6,5 +6,4 @@ install:
 before_script:
 - npm install
 script:
-- grunt stylus --verbose
-- grunt postcss --verbose
+- grunt modernizr --verbose
