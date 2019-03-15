@@ -1,6 +1,7 @@
 git:
   depth: 1
-language: node_js
+dist: xenial
+language: python
 node_js:
 - 11
 python: 3.7
