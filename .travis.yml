@@ -10,7 +10,6 @@ before_install:
 - export PIPENV_IGNORE_VIRTUALENVS=1
 install:
 - npm install -g grunt-cli
-- pip install pylint ruamel.yaml
 before_script:
 - npm install
 script:
