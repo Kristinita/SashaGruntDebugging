@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-"ruamel.yaml" = "*"
 
 [requires]
 python_version = "3.7"
