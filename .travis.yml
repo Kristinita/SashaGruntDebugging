@@ -5,9 +5,12 @@ language: python
 node_js:
 - 11
 python: 3.7
+before_install:
+- export PIPENV_VENV_IN_PROJECT=1
+- export PIPENV_IGNORE_VIRTUALENVS=1
 install:
 - npm install -g grunt-cli
-- pip install pipenv==11.10.2 && pipenv install --dev
+- pip install pylint ruamel.yaml
 before_script:
 - npm install
 script:
