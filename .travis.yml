@@ -14,4 +14,4 @@ install:
 before_script:
 - npm install
 script:
-- grunt pylint --verbose
+- grunt flake8 --verbose

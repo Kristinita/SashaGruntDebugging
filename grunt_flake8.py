@@ -1,1 +1,2 @@
+"""Docstrigs."""
 print("Kira Goddess!")

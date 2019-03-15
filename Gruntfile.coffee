@@ -1,10 +1,10 @@
 module.exports = (grunt) ->
 	grunt.initConfig
-		pylint:
+		flake8:
 			options:
 				externalPylint: true
 			dist:
-				src: ["kira_grunt_pylint.py"]
+				src: ["grunt_flake8.py"]
 
-	grunt.loadNpmTasks 'grunt-pylint'
+	grunt.loadNpmTasks 'grunt-flake8'
 	return
