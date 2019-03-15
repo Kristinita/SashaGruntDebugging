@@ -1,13 +1,13 @@
 environment:
   nodejs_version: "11"
+  PYTHON: C:\Python37-x64
 
 install:
-- ps: Install-Product node $env:nodejs_version
-- choco install phantomjs -y
 - npm install -g grunt-cli
+- pip install pipenv==11.10.2 && pipenv install --dev
 
 before_build:
 - npm install
 
 build_script:
-- grunt clean-console --verbose
+- grunt pylint --verbose
