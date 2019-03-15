@@ -2,7 +2,7 @@ module.exports = (grunt) ->
 	grunt.initConfig
 		pylint:
 			options:
-				externalPylint: false
+				externalPylint: true
 			dist:
 				src: ["kira_grunt_pylint.py"]
 
