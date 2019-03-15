@@ -1,18 +1,10 @@
 git:
   depth: 1
-dist: xenial
-language: python
 node_js:
 - 11
-python: 3.7
-before_install:
-- export PIPENV_VENV_IN_PROJECT=1
-- export PIPENV_IGNORE_VIRTUALENVS=1
 install:
 - npm install -g grunt-cli
-- pip install --upgrade pip && pip install pipenv==11.10.2
 before_script:
-- pipenv install --dev
 - npm install
 script:
 - grunt flake8 --verbose
