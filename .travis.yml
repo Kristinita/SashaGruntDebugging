@@ -7,7 +7,7 @@ node_js:
 python: 3.7
 install:
 - npm install -g grunt-cli
-- pipenv install --dev
+- pip install pipenv==11.10.2 && pipenv install --dev
 before_script:
 - npm install
 script:
