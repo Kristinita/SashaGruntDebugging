@@ -7,7 +7,7 @@ node_js:
 python: 3.7
 install:
 - npm install -g grunt-cli
-- pip install pylint
+- pip install pylint ruamel.yaml
 before_script:
 - npm install
 script:
