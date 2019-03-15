@@ -10,8 +10,9 @@ before_install:
 - export PIPENV_IGNORE_VIRTUALENVS=1
 install:
 - npm install -g grunt-cli
-- pip install --upgrade pip && pip install pipenv==11.10.2 && pipenv install --dev
+- pip install --upgrade pip && pip install pipenv==11.10.2
 before_script:
+- pipenv install --dev
 - npm install
 script:
 - grunt flake8 --verbose

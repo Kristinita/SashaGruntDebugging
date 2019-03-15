@@ -1,2 +1,2 @@
 """Docstrigs."""
-print("Kira Goddess!")
+print("Kira Goddess!"
