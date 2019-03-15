@@ -3,6 +3,7 @@ git:
 language: node_js
 node_js:
 - 11
+python: 3.7
 install:
 - npm install -g grunt-cli
 - pip install pylint
