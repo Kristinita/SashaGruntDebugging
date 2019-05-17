@@ -3,9 +3,10 @@ git:
 language: node_js
 node_js:
 - 11
+- 12
 install:
 - npm install -g grunt-cli
 before_script:
 - npm install
 script:
-- grunt flake8 --verbose
+- grunt realFavicon --verbose
