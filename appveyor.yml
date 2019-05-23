@@ -1,5 +1,10 @@
+platform: x64
+
+init:
+- SETX GRUNT_PYLINT_SKIP_POSTINSTALL yes
+
 environment:
-  nodejs_version: "11"
+  nodejs_version: "12"
   PYTHON: C:\Python37-x64
 
 install:

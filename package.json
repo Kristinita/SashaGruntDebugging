@@ -8,6 +8,6 @@
   "author": "Sasha Chernykh",
   "devDependencies": {
     "grunt": "^1.0.4",
-    "grunt-real-favicon": "^0.2.3"
+    "grunt-pylint": "^2.0.1"
   }
 }

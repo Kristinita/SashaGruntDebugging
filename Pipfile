@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-flake8 = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.7"
