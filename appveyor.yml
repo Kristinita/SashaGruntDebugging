@@ -9,7 +9,7 @@ environment:
 
 install:
 - npm install -g grunt-cli
-- "%PYTHON%\\python -m pip install --upgrade pip & pip3 install pipenv==11.10.2 & pipenv install --dev"
+- "%PYTHON%\\python -m pip install --upgrade pip & %PYTHON%\\python -m pip install pipenv==11.10.2 & pipenv install --dev"
 
 before_build:
 - npm install
