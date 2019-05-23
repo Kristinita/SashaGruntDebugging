@@ -2,6 +2,7 @@ platform: x64
 
 init:
 - SETX GRUNT_PYLINT_SKIP_POSTINSTALL yes
+- SET PATH=%PATH%;%PYTHON%;%PYTHON%\Scripts
 
 environment:
   nodejs_version: "12"
