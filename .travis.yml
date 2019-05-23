@@ -9,6 +9,8 @@ python: 3.7
 
 before_install:
 - export GRUNT_PYLINT_SKIP_POSTINSTALL=yes
+- export PIPENV_VENV_IN_PROJECT=1
+- export PIPENV_IGNORE_VIRTUALENVS=1
 
 install:
 - npm install -g grunt-cli
