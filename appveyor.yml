@@ -4,13 +4,14 @@ init:
 - SETX GRUNT_PYLINT_SKIP_POSTINSTALL yes
 - SETX PIPENV_VENV_IN_PROJECT 1
 - SETX PIPENV_IGNORE_VIRTUALENVS 1
-- SET PATH=%PATH%;%PYTHON%;%PYTHON%\Scripts
 
 environment:
   nodejs_version: "12"
   PYTHON: C:\Python37-x64
 
 install:
+- choco install gtools -y & refreshenv & pathed /APPEND %PYTHON% /USER & pathed /APPEND %PYTHON%\Scripts /USER
+- refreshenv
 - npm install -g grunt-cli
 - "%PYTHON%\\python -m pip install --upgrade pip & %PYTHON%\\python -m pip install pipenv==11.10.2 & pipenv install --dev"
 
