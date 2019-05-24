@@ -15,6 +15,7 @@ install:
 - "%PYTHON%\\python -m pip install --upgrade pip & %PYTHON%\\python -m pip install pipenv==11.10.2 & pipenv install --dev"
 
 before_build:
+- refreshenv
 - echo %GRUNT_PYLINT_SKIP_POSTINSTALL%
 - npm install
 
