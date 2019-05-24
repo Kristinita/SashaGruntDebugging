@@ -16,6 +16,9 @@ install:
 
 before_build:
 - refreshenv
+- echo %PATH%
+- echo %PIPENV_VENV_IN_PROJECT%
+- echo %PIPENV_IGNORE_VIRTUALENVS%
 - echo %GRUNT_PYLINT_SKIP_POSTINSTALL%
 - npm install
 
