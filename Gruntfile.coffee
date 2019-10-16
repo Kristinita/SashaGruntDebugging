@@ -1,12 +1,9 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks 'grunt-pylint'
+	grunt.loadNpmTasks 'grunt-prettier'
 	grunt.initConfig
-		pylint:
-			options:
-				externalPylint: true
-				virtualenv: ".venv"
-			dist:
-				src: ["*.py"]
+		prettier:
+			files:
+				src: ["KiraArchitecture.html"]
 
 	return

@@ -1,2 +1,0 @@
-"""Docstrings."""
-print("Kira Goddess!")

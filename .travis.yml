@@ -1,23 +1,17 @@
 git:
   depth: 1
 
-dist: xenial
+language: node_js
 
-language: python
-
-python: 3.7
-
-before_install:
-- export GRUNT_PYLINT_SKIP_POSTINSTALL=yes
-- export PIPENV_VENV_IN_PROJECT=1
-- export PIPENV_IGNORE_VIRTUALENVS=1
+node_js:
+- node
 
 install:
-- npm install -g grunt-cli
-- pip install --upgrade pip && pip install pipenv==11.10.2 && pipenv install --dev
+- npm install -g grunt-cli prettier
 
 before_script:
 - npm install
 
 script:
-- grunt pylint --verbose
+- prettier --write --loglevel debug KiraArchitecture.html
+- grunt prettier --verbose
