@@ -11,9 +11,7 @@ node_js:
 - node
 
 install:
-- npm install -g grunt-cli grunt-cwebp
-
-before_script:
+- npm install -g grunt-cli
 - npm install
 
 script:
