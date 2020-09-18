@@ -1,3 +1,7 @@
+os: linux
+
+dist: focal
+
 git:
   depth: 1
 
@@ -7,11 +11,10 @@ node_js:
 - node
 
 install:
-- npm install -g grunt-cli prettier
+- npm install -g grunt-cli grunt-cwebp
 
 before_script:
 - npm install
 
 script:
-- prettier --write --loglevel debug KiraArchitecture.html
-- grunt prettier --verbose
+- grunt cwebp --verbose
