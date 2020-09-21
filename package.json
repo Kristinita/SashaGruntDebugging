@@ -9,6 +9,7 @@
   "devDependencies": {
     "coffeescript": "^2.5.1",
     "grunt": "^1.3.0",
-    "grunt-cwebp": "^3.0.1"
+    "grunt-crawl": "^0.2.3",
+    "grunt-http-server": "^2.1.0"
   }
 }

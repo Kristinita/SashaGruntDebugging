@@ -15,4 +15,4 @@ install:
 - npm install
 
 script:
-- grunt cwebp --verbose
+- grunt http-server crawl --verbose
