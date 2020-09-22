@@ -1,37 +1,18 @@
 module.exports = (grunt) ->
 
-	require('load-grunt-tasks')(grunt)
+	grunt.loadNpmTasks 'grunt-juwain-posthtml'
 
 	grunt.initConfig
-
-		devUpdate:
-			main:
-				options:
-					updateType: 'force'
 
 		posthtml:
 			options:
 				use: [
-					require('posthtml-aria-tabs')()
-					require('posthtml-doctype')(doctype : 'HTML 4.01 Frameset')
-					require('posthtml-alt-always')()
+					require('posthtml-doctype')(doctype: 'HTML 5')
 				]
 			single:
 				files: [
-					src: 'output/SashaPosthtml/SashaPosthtmlExample.html'
-					dest: 'output/SashaPosthtml/SashaPosthtmlExample.html'
+					src: 'KiraPostHTML.html'
+					dest: 'KiraPostHTMLGrunt.html'
 				]
 
-		postcss:
-			options:
-				map: false
-				processors: [
-					require('autoprefixer')()
-				]
-			dist:
-				src: ['output/SashaPosthtml/SashaPosthtmlExample.css']
-
-	grunt.registerTask 'update', [
-		'devUpdate'
-	]
 	return

@@ -1,0 +1,20 @@
+os: linux
+
+dist: focal
+
+git:
+  depth: 1
+
+language: node_js
+
+node_js:
+# [INFO] The latest Node.js version:
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions
+- node
+
+install:
+- npm install -g grunt-cli
+- npm install
+
+script:
+- grunt http-server crawl --verbose

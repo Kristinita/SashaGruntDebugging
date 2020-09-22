@@ -1,0 +1,28 @@
+platform: x64
+
+init:
+- SETX GRUNT_PYLINT_SKIP_POSTINSTALL yes
+- SETX PIPENV_VENV_IN_PROJECT 1
+- SETX PIPENV_IGNORE_VIRTUALENVS 1
+- SETX PYTHONIOENCODING utf-8
+
+environment:
+  nodejs_version: "12"
+  PYTHON: C:\Python37-x64
+
+install:
+- choco install gtools -y & refreshenv & pathed /APPEND %PYTHON% /USER & pathed /APPEND %PYTHON%\Scripts /USER
+- refreshenv
+- npm install -g grunt-cli
+- "%PYTHON%\\python -m pip install --upgrade pip & %PYTHON%\\python -m pip install pipenv==11.10.2 & pipenv install --dev"
+
+before_build:
+- refreshenv
+- echo %PATH%
+- echo %PIPENV_VENV_IN_PROJECT%
+- echo %PIPENV_IGNORE_VIRTUALENVS%
+- echo %GRUNT_PYLINT_SKIP_POSTINSTALL%
+- npm install
+
+build_script:
+- grunt pylint --verbose
