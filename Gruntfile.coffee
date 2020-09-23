@@ -7,7 +7,7 @@ module.exports = (grunt) ->
 		posthtml:
 			options:
 				use: [
-					require('posthtml-doctype')(doctype: 'HTML 5')
+					require('posthtml-lazyload')(loading: 'lazy')
 				]
 			single:
 				files: [
