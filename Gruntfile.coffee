@@ -1,18 +1,23 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks 'grunt-juwain-posthtml'
+	grunt.loadNpmTasks 'grunt-contrib-stylus'
+
+	postcss = ->
+		require('poststylus') [
+			'autoprefixer'
+		]
 
 	grunt.initConfig
 
-		posthtml:
+		stylus:
 			options:
-				use: [
-					require('posthtml-lazyload')(loading: 'lazy')
-				]
-			single:
+				compress: false
+				linenos: false
+				use: [postcss]
+			themecompile:
 				files: [
-					src: 'KiraPostHTML.html'
-					dest: 'KiraPostHTMLGrunt.html'
+					src: 'KiraPostStylus.styl'
+					dest: 'KiraPostStylus.css'
 				]
 
 	return
