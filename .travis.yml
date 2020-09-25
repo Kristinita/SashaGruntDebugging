@@ -11,7 +11,7 @@ node_js:
 - node
 
 install:
-- npm install -g grunt-cli
+- npm install -g grunt-cli npm-check
 - npm install
 - npm-check node_modules/poststylus -y
 
