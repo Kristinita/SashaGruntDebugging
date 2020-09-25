@@ -13,6 +13,8 @@ node_js:
 install:
 - npm install -g grunt-cli
 - npm install
+- npm-check node_modules/poststylus -y
 
 script:
 - grunt stylus --verbose
+- cat KiraPostStylus.css
