@@ -1,0 +1,66 @@
+/*
+ * @Author: Kristinita
+ * @Date:   2017-01-30 16:32:10
+ * @Last Modified by:   Kristinita
+ * @Last Modified time: 2017-05-09 14:46:21
+ */
+/* [INFO] Webfonts-helper — site for getting generic-names for Google Fonts:
+https://google-webfonts-helper.herokuapp.com/
+[WARNING] Post comments before tags and classes, not selectors;
+Stylint have a bug:
+https://github.com/SimenB/stylint/issues/457
+*/
+/* [NOTE] Disable “unique-headings” for this file, I get a known bug:
+https://github.com/CSSLint/csslint/issues/80
+*/
+/* csslint ignore:start */
+h1,
+.SashaCategory,
+.SashaButtonCategory,
+.SashaBottomAside,
+.SashaOnlineScanners,
+.SashaCheckYourSite {
+  font-family: "Play", sans-serif;
+}
+h1,
+.SashaCategory,
+.SashaButtonCategory,
+.SashaBottomAside {
+  font-size: 1.9375rem;
+  font-weight: lighter;
+  font-style: normal;
+}
+h2 {
+  font-family: "Scada", sans-serif;
+  font-size: 1.9375rem;
+  font-style: italic;
+}
+a {
+  font-family: "El Messiri", sans-serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: bold;
+}
+pre,
+code {
+  font-family: "Fira Mono", monospace;
+  font-size: 1.1875rem;
+}
+.WorkOnYourself {
+  font-family: "Marck Script", fantasy;
+  font-size: 3.5625rem;
+  margin-bottom: 1rem;
+}
+/* For Sasha Black */
+.SashaOnlineScanners {
+  font-size: 1.375rem;
+  font-weight: lighter;
+  font-style: normal;
+  color: #ff6347;
+}
+.SashaDifferentUrl,
+.SashaReadHelp {
+  font-family: "Scada", sans-serif;
+  font-size: 1.4375rem;
+}
+/* csslint ignore:end */

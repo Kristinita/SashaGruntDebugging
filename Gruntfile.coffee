@@ -1,19 +1,21 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks 'grunt-pagespeed'
+	require('time-grunt') grunt
+
+	grunt.loadNpmTasks 'grunt-critical'
 
 	grunt.initConfig
 
-		pagespeed:
-			options:
-				nokey: true
-				url: "https://kristinita.netlify.app/"
-
-
-			prod:
+		critical:
+			dist:
 				options:
-					paths: ["Programs/KristinitaLuckyLink"]
-					locale: "en_US"
-					strategy: "desktop"
-
+					# [INFO] Removing the critical CSS per page results in a unique async loaded CSS file for every page:
+					# https://www.npmjs.com/package/critical#options
+					extract: false
+				files: [
+					expand: true
+					cwd: "."
+					src: ["output/**/*.html"]
+					dest: "."
+					]
 	return
