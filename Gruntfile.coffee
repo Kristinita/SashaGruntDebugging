@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 
 		pagespeed:
 			options:
-				key: process.env.API_KEY_PAGESPEED_INSIGHTS_V5
+				nokey: true
 				url: "https://kristinita.netlify.app/"
 
 

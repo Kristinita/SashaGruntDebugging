@@ -10,19 +10,6 @@ language: node_js
 node_js:
 - node
 
-env:
-  global:
-  # [INFO] Equivalent: API_KEY_PAGESPEED_INSIGHTS_V5 = my real key
-  - secure: >
-      u4bZ1LyhoUDKvng6cwQRlrKzR0EgFpnHSk0+zVH8entxT2tP8Ltir7IDrhY+v2+a7EXn3c/
-      61ukV3QpF3qCBA9zBk7awfG4cW6DIVE1ZyQPFcVeT/LGqD5kAzHOM3m06k2HD0LS97FxQF9b5de1Edx6vAwtdLBILneXtGpMwENCKYT/
-      FHkMLdRywIUSPAoQSuJRxX1OTxN7n5DA4nQ6YqOi4kZs2sWfFe3nGlIYjHtbJEnh11OBuwY5j2V8AoT/
-      DBpsXOJAtXI+aQ0rRYIdZvcchHjiV8bp3jNgbpWAeWKqwfgU8fCMx16poizGzqzlw4n4uCFuc7Rv5TSbkwDYy5eR/
-      vlBe+5XnbGCQcyefkpQabSYOXCNVeABGUc32snN8XdSq69m+lyO5+uSi7/
-      gLHg+7yEcR8nA3g+ZC2cFWLA92HTqM7tMhAbNjQ+V9rqJLqAHYQtaItFiCXveoe6p3f628RU/
-      lmIISg0P2VtPLZIw4sCSJ9ts3dnOtADkYDiruXF1laoKmw4+73TpbNsvxNTYitSnWFsAOKoZqzCX3+t5v+swkb7gc7i+pXKDwuLaF6pF1lemV/
-      3bpq7yay5d6KmMIPpDwW+rBNLhCbzxPLpGdG40xd9Gs+w6iRoRXIlChh6PuGohDAPcA/oMofXtHic3hx5ViAPDcxsoB5pjc8CM=
-
 install:
 - npm install -g grunt-cli
 - npm install
