@@ -1,23 +1,19 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks 'grunt-contrib-stylus'
-
-	postcss = ->
-		require('poststylus') [
-			'autoprefixer'
-		]
+	grunt.loadNpmTasks 'grunt-pagespeed'
 
 	grunt.initConfig
 
-		stylus:
+		pagespeed:
 			options:
-				compress: false
-				linenos: false
-				use: [postcss]
-			themecompile:
-				files: [
-					src: 'KiraPostStylus.styl'
-					dest: 'KiraPostStylus.css'
-				]
+				key: process.env.API_KEY_PAGESPEED_INSIGHTS_V5
+				url: "https://kristinita.netlify.app/"
+
+
+			prod:
+				options:
+					paths: ["Programs/KristinitaLuckyLink"]
+					locale: "en_US"
+					strategy: "desktop"
 
 	return

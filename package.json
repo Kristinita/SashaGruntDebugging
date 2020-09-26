@@ -7,11 +7,8 @@
   "license": "MIT",
   "author": "Sasha Chernykh",
   "devDependencies": {
-    "autoprefixer": "^10.0.0",
     "coffeescript": "^2.5.1",
     "grunt": "^1.3.0",
-    "grunt-contrib-stylus": "^1.2.0",
-    "postcss": "^8.0.9",
-    "poststylus": "^1.0.0"
+    "grunt-pagespeed": "^2.0.1"
   }
 }
