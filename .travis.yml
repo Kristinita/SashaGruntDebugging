@@ -11,9 +11,8 @@ node_js:
 - node
 
 install:
-- npm install -g grunt-cli npm-check
-- npm install
-- npm-check node_modules/grunt-pagespeed -y
+- npm install -g grunt-cli
+- npm install --loglevel verbose
 
 script:
-- grunt pagespeed --verbose
+- grunt critical --verbose
