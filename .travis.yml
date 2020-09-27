@@ -12,7 +12,7 @@ node_js:
 
 install:
 - npm install -g grunt-cli
-- npm install --loglevel verbose
+- npm install
 
 script:
 - grunt critical --verbose

@@ -12,7 +12,7 @@ module.exports = (grunt) ->
 					extract: false
 				files: [
 					expand: true
-					cwd: "output/"
+					cwd: "./output/"
 					src: [
 							"IT-Articles/*.html"
 							"Sublime-Text/*.html"
