@@ -14,7 +14,7 @@ module.exports = (grunt) ->
 					expand: true
 					cwd: "output/"
 					src: [
-							"IT-Articles/*.html"
+							"IT-articles/*.html"
 							"Sublime-Text/*.html"
 							"Programs/*.html"]
 					dest: "."
