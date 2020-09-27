@@ -2,6 +2,8 @@ os: linux
 
 dist: focal
 
+cache: false
+
 git:
   depth: 1
 
