@@ -1,0 +1,284 @@
+<!--==========================
+=          Beginning         =
+===========================-->
+<!DOCTYPE html>
+<html lang="en">
+<!--==========================
+=            Head            =
+===========================-->
+
+<head>
+	<!--=======================
+	=          Meta           =
+	========================-->
+	<meta charset="utf-8">
+	<title>PaletteMira</title>
+	<meta name="description" content="Add to command palette commands from external Sublime Text packages">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--==========================
+	=       Structured data      =
+	===========================-->
+	<meta property="og:title" content="PaletteMira">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://i.imgur.com/kqrsFwc.jpg">
+	<meta property="og:url" content=".\Programs/PaletteMira.html">
+	<meta property="og:description" content="Add to command palette commands from external Sublime Text packages">
+	<meta property="og:site_name" content="Поиск Кристиниты">
+	<meta property="article:published_time" content="2018-04-04">
+	<meta property="article:modified_time" content="2020-09-24">
+	<meta property="article:section" content="Programs">
+	<meta property="article:tag" content="programs">
+	<meta property="article:tag" content="sublime-text">
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "PaletteMira",
+			"description": "Add to command palette commands from external Sublime Text packages",
+			"headline": "PaletteMira",
+			"datePublished": "2018-04-04 16:33:14+03:00",
+			"dateModified": "2020-09-24 13:13:17+03:00",
+			"author": {
+				"@type": "Person",
+				"name": "Sasha Chernykh"
+			},
+			"image": "https://i.imgur.com/kqrsFwc.jpg",
+			"url": "../Programs/PaletteMira.html"
+		}
+
+	</script>
+	<!--=============================
+	=            Scripts            =
+	==============================-->
+	<!-- JQuery
+	CDN vs Locally, see:
+	http://stackoverflow.com/a/3832498/5951529
+	defer preferred, than async, see:
+	https://stackoverflow.com/a/39711009/5951529
+	JQuery not a good candidate for async, see:
+	https://stackoverflow.com/a/10808243/5951529
+	-->
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script><!-- Gemini -->
+
+	<script src="https://rawcdn.githack.com/Kristinita/gemini-scrollbar/fd4400bd136ae02e34d94db3d0570d8ebce7acf1/index.min.js" defer></script>
+	<!-- No smooth scrolling, if JQuery Lazy:
+	https://github.com/eisbehr-/jquery.lazy/issues/98#issuecomment-376064894 -->
+
+	<script src="../theme/js/Gemini/GeminiAndJQueryLazy.js" defer></script><!-- JQuery Lazy -->
+
+	<script src="https://cdn.jsdelivr.net/jquery.lazy/latest/jquery.lazy.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/jquery.lazy/latest/jquery.lazy.plugins.min.js" defer></script><!-- typo-reporter -->
+
+	<script src="https://cdn.jsdelivr.net/npm/typo-reporter/lib/TypoReporter.min.js" defer></script>
+	<script src="../theme/js/typo-reporter/typo-reporter-en.js" defer></script>
+	<!-- Fancybox
+	[NOTE] In CDNJS not possible latest version
+	https://stackoverflow.com/q/14801334/5951529
+	-->
+
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" defer></script>
+	<script src="../theme/js/Fancybox/fancybox.js" defer></script>
+	<!--===============================
+	= For specific articles and pages =
+	================================-->
+	<!--===============================
+	=           Not critical          =
+	================================-->
+
+	<script src="../theme/js/Browser-Update/browser-update.js" async></script>
+	<script src="../theme/js/AddToAny/addtoany.js" async></script>
+	<script src="https://static.addtoany.com/menu/page.js" defer></script>
+	<script src="../theme/js/Wildfire/wildfire.js" async></script>
+	<script src="https://analytics.ostr.io/P9KT8uEk3KHYs7PnY.js" async></script>
+	<!--============================
+	=            Styles            =
+	=============================-->
+	<!-- [WARNING] “link rel="preload"” instead of "stylesheet" doesn't work in Firefox 58, wait Firefox 59.
+	https://github.com/filamentgroup/loadCSS#how-to-use-loadcss-recommended-example
+	https://github.com/filamentgroup/loadCSS/issues/246
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1222633
+	[WARNING] In Firefox 59 also doesn't work. Wait Firefox 60.
+	-->
+	<!-- Gemini
+	[NOTE] Gemini styles must load first, otherwise bugs on page -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gemini-scrollbar/gemini-scrollbar.min.css">
+	<link rel="stylesheet" href="../theme/css/script-colors/Gemini/gemini.css"><!-- SashaPelican theme -->
+	<link rel="stylesheet" href="../theme/css/general/basic.css">
+	<link rel="stylesheet" href="../theme/css/general/fonts.css">
+	<link rel="stylesheet" href="../theme/css/general/aside.css"><!-- Aside image -->
+
+	<script src="../theme/js/Modernizr/modernizr-custom.min.js" defer></script>
+	<style>
+		.webp .SashaIconAside {
+			background-image: url(../theme/images/aside/KateZakharova.webp)
+		}
+
+		.no-webp .SashaIconAside {
+			background-image: url(../theme/images/aside/KateZakharova.jpg)
+		}
+
+	</style>
+	<link rel="stylesheet" href="../theme/css/general/image_right.css">
+	<link rel="stylesheet" href="../theme/css/sections/programs.css"><!-- External -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="../theme/css/script-colors/typo-reporter/typo-reporter.css"><!-- Custom CSS -->
+	<!--============================
+	=                         Fonts            =
+	=============================-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play:700%7CEl+Messiri%7CScada:700i%7CFira+Mono%7CMaterial+Icons%7CMarck+Script&amp;subset=cyrillic&amp;display=swap">
+	<!--============================
+	=                        Favicon           =
+	=============================-->
+	<!--=========================
+	=            Feed           =
+	==========================-->
+	<!-- Atom feed -->
+	<link href="https://kristinita.netlify.app/feeds/all.atom.xml" rel="alternate" type="application/atom+xml">
+	<!-- [BUG] For Pelican 4.0+ we need to replace CATEGORY_FEED_ATOM|format(category.slug) to CATEGORY_FEED_ATOM|format(slug=category.slug):
+	https://github.com/getpelican/pelican/blob/master/docs/changelog.rst#401-2018-11-30  -->
+	<link href="https://kristinita.netlify.app/feeds/programs.atom.xml" rel="alternate" type="application/atom+xml">
+	<!--=========================
+	=      target="_blank"      =
+	==========================-->
+	<base target="_blank">
+</head>
+
+<body>
+	<div role="alert"><noscript>
+			<p>Sorry, this site doesn't work, if JavaScript disabled. Please, <a href="http://activatejavascript.org/en/instructions">enable JavaScript for your browser</a>.</p>
+			<p>This site is open source; you can view <a href="https://github.com/Kristinita/Kristinita.github.io/blob/master/Programs/PaletteMira.html">source of this page</a>, to make sure that it's not dangerous for your computer.</p>
+			Owner of this site think that <a href="https://stackoverflow.com/a/17073999/5951529">JavaScript disabling — is obsolete action in 2020</a> and <a href="https://www.reddit.com/r/webdev/comments/48z7jz/do_you_take_into_account_those_who_disable/d0nxftd/">will not support users who did this</a>. Probably, <a href="https://www.howtogeek.com/138865/htg-explains-should-you-disable-javascript/">you don't need turn off JavaScript</a>.
+		</noscript></div>
+	<aside role="presentation">
+		<div class="a2a_kit a2a_kit_size_17 a2a_floating_style a2a_vertical_style"><a class="a2a_button_mastodon"></a> <a class="a2a_button_diaspora"></a> <a class="a2a_button_telegram"></a> <a class="a2a_button_care2_news"></a> <a class="a2a_button_printfriendly"></a> <a class="a2a_dd"></a></div>
+	</aside>
+	<aside class="SashaIconAside">
+		<div class="SashaBottomAside">PaletteMira</div>
+	</aside>
+	<!--=============================
+	=            Content            =
+	==============================-->
+	<main>
+		<article>
+			<header>
+				<h1 class="SashaTopHeader">PaletteMira</h1>
+				<img class="SashaPageLoading" src="https://2no.co/1g9b6.png" alt="Page loading, please, little wait">
+				<div class="SashaVersion">Version 0.0.1</div>
+				<div class="SashaVersion">Posted — 2018-04-04T16:33:14+0300</div>
+				<div class="SashaVersion">Last modified — 2020-09-24T13:13:17+0300</div>
+				<div>
+					<div class="SashaEpigraph">
+						<p><em>I dedicated PaletteMira the most goodhearted creation — <a href="https://vk.com/id193658076">Ekaterina Zakharova</a>. Mira from “PaletteMira” — name of <a href="https://vk.com/id388308587">Her account</a> in social network.</em></p>
+					</div>
+					<p>
+						<picture>
+							<source srcset="../images/header/KateZGirlfriend.webp" type="image/webp"> <img src="../images/header/KateZGirlfriend.jpg" alt="Header image">
+						</picture>
+					</p>
+				</div>
+			</header>
+			<section>
+				<!-- MarkdownTOC -->
+				<ol>
+					<li><a href="#Overview">Overview</a></li>
+					<li><a href="#Limitations">Limitations</a></li>
+					<li><a href="#Motivation">Motivation</a></li>
+					<li><a href="#Installation">Installation</a>
+						<ol>
+							<li><a href="#Dependencies">Dependencies</a></li>
+							<li><a href="#PaletteMira">PaletteMira</a></li>
+						</ol>
+					</li>
+					<li><a href="#Activation">Activation</a></li>
+					<li><a href="#Usage">Usage</a></li>
+					<li><a href="#Known-problems-and-bugs">Known problems and bugs</a>
+						<ol>
+							<li><a href="#PaletteMira-1">PaletteMira</a></li>
+							<li><a href="#Dependencies-1">Dependencies</a></li>
+						</ol>
+					</li>
+				</ol>
+				<!-- /MarkdownTOC -->
+				<p><a id="Overview"></a></p>
+				<h2>1. Overview <a class="headerlink" href="#Overview" title="Permanent link">¶</a></h2>
+				<p>Sublime Text package, that add to <a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/command_palette.html">command palette</a> existing commands from third-party packages, if author(s) of them did not do this.</p>
+				<p>I include to PaletteMira commands of all known packages, that doesn’t have command palette caption, not obsolete and haven’t critical errors.</p>
+				<p><a id="Limitations"></a></p>
+				<h2>2. Limitations <a class="headerlink" href="#Limitations" title="Permanent link">¶</a></h2>
+				<ol>
+					<li>You must be Sublime Text user.</li>
+				</ol>
+				<p><a id="Motivation"></a></p>
+				<h2>3. Motivation <a class="headerlink" href="#Motivation" title="Permanent link">¶</a></h2>
+				<ol>
+					<li>#SashaHateKeyBindings,</li>
+					<li>#SashaHateContextMenu,</li>
+					<li>#SashaHateNoSuricate.</li>
+				</ol>
+				<p><a id="Installation"></a></p>
+				<h2>4. Installation <a class="headerlink" href="#Installation" title="Permanent link">¶</a></h2>
+				<p><a id="Dependencies"></a></p>
+				<h3>4.1. Dependencies <a class="headerlink" href="#Dependencies" title="Permanent link">¶</a></h3>
+				<ol>
+					<li>Install <a href="https://packagecontrol.io/packages/Suricate">Suricate</a> <a href="https://packagecontrol.io/docs/usage">via Package Control</a>.</li>
+				</ol>
+				<p><a id="PaletteMira"></a></p>
+				<h3>4.2. PaletteMira <a class="headerlink" href="#PaletteMira" title="Permanent link">¶</a></h3>
+				<p>Install PaletteMira, using <a href="https://stackoverflow.com/a/44441455/5951529"><em>Package Control: Add Repository</em></a> with tree <a href="https://github.com/Kristinita/PaletteMira/tree/SashaDevelop">github.com/Kristinita/PaletteMira/tree/SashaDevelop</a>.</p>
+				<p><a id="Activation"></a></p>
+				<h2>5. Activation <a class="headerlink" href="#Activation" title="Permanent link">¶</a></h2>
+				<p><kbd>Ctrl+Shift+P</kbd> (<kbd>⌘⇧p</kbd> for Mac) → <em>Suricate: Add Profile</em> → Select <em>PaletteMira</em> → <kbd>Enter</kbd>.</p>
+				<p><a class="fancybox" href="https://i.imgur.com/LAS3eTl.png"><img class="SashaLazy" src="https://kristinita.netlify.app/theme/images/interface-images/transparent-one-pixel.png" data-src="https://i.imgur.com/LAS3eTl.png" alt="Activate PaletteMira"></a></p>
+				<p><a id="Usage"></a></p>
+				<h2>6. Usage <a class="headerlink" href="#Usage" title="Permanent link">¶</a></h2>
+				<p>After activation, you can run commands of packages from list. Print package name in command palette → you get result: <em>Suricate: &#60;Your Package&#62;</em>.</p>
+				<p>Example for <a href="https://github.com/titoBouzout/Open-Include">Sublime OpenInclude</a> package:</p>
+				<p><a class="fancybox" href="https://i.imgur.com/EQNWf9y.png"><img class="SashaLazy" src="https://kristinita.netlify.app/theme/images/interface-images/transparent-one-pixel.png" data-src="https://i.imgur.com/EQNWf9y.png" alt="OpenInclude"></a></p>
+				<p><a id="Known-problems-and-bugs"></a></p>
+				<h2>7. Known problems and bugs <a class="headerlink" href="#Known-problems-and-bugs" title="Permanent link">¶</a></h2>
+				<p><a id="PaletteMira-1"></a></p>
+				<h3>7.1. PaletteMira <a class="headerlink" href="#PaletteMira-1" title="Permanent link">¶</a></h3>
+				<p><a id="Dependencies-1"></a></p>
+				<h3>7.2. Dependencies <a class="headerlink" href="#Dependencies-1" title="Permanent link">¶</a></h3>
+				<p>In progress.</p>
+			</section>
+			<!--=============================
+			=            Footer             =
+			==============================-->
+			<footer>
+				<div class="clearfix"><span class="SashaPreviousNeighbor"><a href="../Programs/KristinitaLuckyLink.html" title="KristinitaLuckyLink">← Previous article</a></span> <span class="SashaHeadPageRight"><a href=".." title="Kristinita's Search">Kristinita's Search</a></span></div>
+				<div class="SashaClearBoth"></div>
+				<!-- Footer: new disgruntled Russian and sign
+				E-Mail obfuscate: http://rot13.florianbersier.com/
+				Get relative source path like https://github.com/kura/kura.io/blob/e8f2c6801a0013201d734aa1ac48d9ac92a40b96/ghastly/templates/kira_object.html#L10 -->
+				<div class="SashaEmNoColorBottom">
+					<p><a id="Like"></a></p>
+					<h2>Like? <a class="headerlink" href="#Like" title="Permanent link">¶</a></h2>
+					<ol>
+						<li>Share this web-page in your preferred social network, use share buttons on the side of page.</li>
+						<li>
+							<p>Subcsribe to all articles or specific tag/category, use your preferred RSS Reader. I use <a href="http://quiterss.org">QuiteRSS</a> for Windows.</p>
+						</li>
+					</ol>
+					<p><a id="Problems"></a></p>
+					<h2>Problems? <a class="headerlink" href="#Problems" title="Permanent link">¶</a></h2>
+					<ol>
+						<li>(PC only, not for mobile devices). If you find in this article typo or small error, please, report about it use <a href="../IT-articles/typo-reporter">typo-reporter</a>. Select text with typo → press <kbd>Ctrl+Enter</kbd> (<kbd>⌘Enter</kbd> for Mac) → write comment → send typo report.</li>
+						<li>If you find more serious errors in this article and/or site, <a href="https://github.com/Kristinita/KristinitaPelican/issues/new">create GitHub issue</a>.</li>
+						<li>You can also <a href="https://github.com/Kristinita/KristinitaPelican/edit/master/content/Programs/PaletteMira.md">edit this page yourself</a> and send <a href="http://ru.stackoverflow.com/a/598162/199934">pull request</a>.</li>
+						<li>Or write comment here. <a href="https://github.github.com/gfm/">Markdown GFM support in comments</a>. You can use <a href="https://github.com/GhostText/GhostText">GhostText</a>, that write issue in your preferred editor.
+							<div class="wildfire_thread" data-loader="KiraComments"></div>
+						</li>
+					</ol>
+					<p>I hate private communication, solely open support.</p>
+					<p>If you write in the style of <a href="../Smert-svobode/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BD%D0%B5%D0%B4%D0%BE%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5">new disgruntled Russian</a> I reserve the right to dispose of my own discretion.</p>
+					<p>All rights reserved ©.</p>
+				</div>
+				<div class="WorkOnYourself">Работайте над собой</div>
+			</footer>
+		</article>
+	</main>
+</body>
+
+</html>

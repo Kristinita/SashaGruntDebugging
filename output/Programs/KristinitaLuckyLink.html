@@ -1,0 +1,609 @@
+<!--==========================
+=          Beginning         =
+===========================-->
+<!DOCTYPE html>
+<html lang="en">
+<!--==========================
+=            Head            =
+===========================-->
+
+<head>
+	<!--=======================
+	=          Meta           =
+	========================-->
+	<meta charset="utf-8">
+	<title>KristinitaLuckyLink</title>
+	<meta name="description" content="Sublime Text 3 package, that wrap the selected text to DuckDuckGo or Google top query URL">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--==========================
+	=       Structured data      =
+	===========================-->
+	<meta property="og:title" content="KristinitaLuckyLink">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://i.imgur.com/TuyxneV.png">
+	<meta property="og:url" content=".\Programs/KristinitaLuckyLink.html">
+	<meta property="og:description" content="Sublime Text 3 package, that wrap the selected text to DuckDuckGo or Google top query URL">
+	<meta property="og:site_name" content="Поиск Кристиниты">
+	<meta property="article:published_time" content="2018-01-09">
+	<meta property="article:modified_time" content="2020-09-24">
+	<meta property="article:section" content="Programs">
+	<meta property="article:tag" content="programs">
+	<meta property="article:tag" content="sublime-text">
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "KristinitaLuckyLink",
+			"description": "Sublime Text 3 package, that wrap the selected text to DuckDuckGo or Google top query URL",
+			"headline": "KristinitaLuckyLink",
+			"datePublished": "2018-01-09 19:27:14+03:00",
+			"dateModified": "2020-09-24 13:13:00+03:00",
+			"author": {
+				"@type": "Person",
+				"name": "Sasha Chernykh"
+			},
+			"image": "https://i.imgur.com/TuyxneV.png",
+			"url": "../Programs/KristinitaLuckyLink.html"
+		}
+
+	</script>
+	<!--=============================
+	=            Scripts            =
+	==============================-->
+	<!-- JQuery
+	CDN vs Locally, see:
+	http://stackoverflow.com/a/3832498/5951529
+	defer preferred, than async, see:
+	https://stackoverflow.com/a/39711009/5951529
+	JQuery not a good candidate for async, see:
+	https://stackoverflow.com/a/10808243/5951529
+	-->
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" defer></script><!-- Gemini -->
+
+	<script src="https://rawcdn.githack.com/Kristinita/gemini-scrollbar/fd4400bd136ae02e34d94db3d0570d8ebce7acf1/index.min.js" defer></script>
+	<!-- No smooth scrolling, if JQuery Lazy:
+	https://github.com/eisbehr-/jquery.lazy/issues/98#issuecomment-376064894 -->
+
+	<script src="../theme/js/Gemini/GeminiAndJQueryLazy.js" defer></script><!-- JQuery Lazy -->
+
+	<script src="https://cdn.jsdelivr.net/jquery.lazy/latest/jquery.lazy.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/jquery.lazy/latest/jquery.lazy.plugins.min.js" defer></script><!-- typo-reporter -->
+
+	<script src="https://cdn.jsdelivr.net/npm/typo-reporter/lib/TypoReporter.min.js" defer></script>
+	<script src="../theme/js/typo-reporter/typo-reporter-en.js" defer></script>
+	<!-- Fancybox
+	[NOTE] In CDNJS not possible latest version
+	https://stackoverflow.com/q/14801334/5951529
+	-->
+
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" defer></script>
+	<script src="../theme/js/Fancybox/fancybox.js" defer></script>
+	<!--===============================
+	= For specific articles and pages =
+	================================-->
+
+	<script src="https://cdn.jsdelivr.net/jquery.tooltipster/latest/js/tooltipster.bundle.min.js" defer></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.tooltipster/latest/css/tooltipster.bundle.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css">
+	<script src="../theme/js/Tooltipster/tooltip.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/clipboard.js/latest/clipboard.min.js" defer></script>
+	<script src="../theme/js/Clipboard-js/Clipboard.js" defer></script>
+	<!--===============================
+	=           Not critical          =
+	================================-->
+
+	<script src="../theme/js/Browser-Update/browser-update.js" async></script>
+	<script src="../theme/js/AddToAny/addtoany.js" async></script>
+	<script src="https://static.addtoany.com/menu/page.js" defer></script>
+	<script src="../theme/js/Wildfire/wildfire.js" async></script>
+	<script src="https://analytics.ostr.io/P9KT8uEk3KHYs7PnY.js" async></script>
+	<!--============================
+	=            Styles            =
+	=============================-->
+	<!-- [WARNING] “link rel="preload"” instead of "stylesheet" doesn't work in Firefox 58, wait Firefox 59.
+	https://github.com/filamentgroup/loadCSS#how-to-use-loadcss-recommended-example
+	https://github.com/filamentgroup/loadCSS/issues/246
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1222633
+	[WARNING] In Firefox 59 also doesn't work. Wait Firefox 60.
+	-->
+	<!-- Gemini
+	[NOTE] Gemini styles must load first, otherwise bugs on page -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gemini-scrollbar/gemini-scrollbar.min.css">
+	<link rel="stylesheet" href="../theme/css/script-colors/Gemini/gemini.css"><!-- SashaPelican theme -->
+	<link rel="stylesheet" href="../theme/css/general/basic.css">
+	<link rel="stylesheet" href="../theme/css/general/fonts.css">
+	<link rel="stylesheet" href="../theme/css/general/aside.css"><!-- Aside image -->
+
+	<script src="../theme/js/Modernizr/modernizr-custom.min.js" defer></script>
+	<style>
+		.webp .SashaIconAside {
+			background-image: url(../theme/images/aside/KristinaGold.webp)
+		}
+
+		.no-webp .SashaIconAside {
+			background-image: url(../theme/images/aside/KristinaGold.jpg)
+		}
+
+	</style>
+	<link rel="stylesheet" href="../theme/css/general/image_right.css">
+	<link rel="stylesheet" href="../theme/css/sections/programs.css"><!-- External -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="../theme/css/script-colors/typo-reporter/typo-reporter.css"><!-- Custom CSS -->
+	<!--============================
+	=                         Fonts            =
+	=============================-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play:700%7CEl+Messiri%7CScada:700i%7CFira+Mono%7CMaterial+Icons%7CMarck+Script&amp;subset=cyrillic&amp;display=swap">
+	<!--============================
+	=                        Favicon           =
+	=============================-->
+	<!--=========================
+	=            Feed           =
+	==========================-->
+	<!-- Atom feed -->
+	<link href="https://kristinita.netlify.app/feeds/all.atom.xml" rel="alternate" type="application/atom+xml">
+	<!-- [BUG] For Pelican 4.0+ we need to replace CATEGORY_FEED_ATOM|format(category.slug) to CATEGORY_FEED_ATOM|format(slug=category.slug):
+	https://github.com/getpelican/pelican/blob/master/docs/changelog.rst#401-2018-11-30  -->
+	<link href="https://kristinita.netlify.app/feeds/programs.atom.xml" rel="alternate" type="application/atom+xml">
+	<!--=========================
+	=      target="_blank"      =
+	==========================-->
+	<base target="_blank">
+</head>
+
+<body>
+	<div role="alert"><noscript>
+			<p>Sorry, this site doesn't work, if JavaScript disabled. Please, <a href="http://activatejavascript.org/en/instructions">enable JavaScript for your browser</a>.</p>
+			<p>This site is open source; you can view <a href="https://github.com/Kristinita/Kristinita.github.io/blob/master/Programs/KristinitaLuckyLink.html">source of this page</a>, to make sure that it's not dangerous for your computer.</p>
+			Owner of this site think that <a href="https://stackoverflow.com/a/17073999/5951529">JavaScript disabling — is obsolete action in 2020</a> and <a href="https://www.reddit.com/r/webdev/comments/48z7jz/do_you_take_into_account_those_who_disable/d0nxftd/">will not support users who did this</a>. Probably, <a href="https://www.howtogeek.com/138865/htg-explains-should-you-disable-javascript/">you don't need turn off JavaScript</a>.
+		</noscript></div>
+	<aside role="presentation">
+		<div class="a2a_kit a2a_kit_size_17 a2a_floating_style a2a_vertical_style"><a class="a2a_button_mastodon"></a> <a class="a2a_button_diaspora"></a> <a class="a2a_button_telegram"></a> <a class="a2a_button_care2_news"></a> <a class="a2a_button_printfriendly"></a> <a class="a2a_dd"></a></div>
+	</aside>
+	<aside class="SashaIconAside">
+		<div class="SashaBottomAside">KristinitaLuckyLink</div>
+	</aside>
+	<!--=============================
+	=            Content            =
+	==============================-->
+	<main>
+		<article>
+			<header>
+				<h1 class="SashaTopHeader">KristinitaLuckyLink</h1>
+				<img class="SashaPageLoading" src="https://2no.co/1g9b6.png" alt="Page loading, please, little wait">
+				<div class="SashaVersion">Version 0.1.0</div>
+				<div class="SashaVersion">Posted — 2018-01-09T19:27:14+0300</div>
+				<div class="SashaVersion">Last modified — 2020-09-24T13:13:00+0300</div>
+				<div>
+					<p>
+						<picture>
+							<source srcset="../images/header/KristinitaLuckyLink.webp" type="image/webp"> <img src="../images/header/KristinitaLuckyLink.jpg" alt="Header image">
+						</picture>
+					</p>
+				</div>
+			</header>
+			<section>
+				<!-- MarkdownTOC -->
+				<ol>
+					<li><a href="#Description">Description</a>
+						<ol>
+							<li><a href="#Reason">Reason</a></li>
+							<li><a href="#Demonstration">Demonstration</a></li>
+							<li><a href="#Examples">Examples</a></li>
+							<li><a href="#Saving-time">Saving time</a></li>
+							<li><a href="#Supported-search-engines">Supported search engines</a></li>
+							<li><a href="#Supported-markups">Supported markups</a></li>
+							<li><a href="#Features">Features</a></li>
+						</ol>
+					</li>
+					<li><a href="#Limitations">Limitations</a></li>
+					<li><a href="#Installation">Installation</a>
+						<ol>
+							<li><a href="#Depenedencies">Depenedencies</a></li>
+							<li><a href="#KristinitaLuckyLink">KristinitaLuckyLink</a>
+								<ol>
+									<li><a href="#Stable-version">Stable version</a></li>
+									<li><a href="#Development-version">Development version</a></li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li><a href="#Activation">Activation</a>
+						<ol>
+							<li><a href="#Environment-variable">Environment variable</a></li>
+							<li><a href="#Commands-and-hotkeys">Commands and hotkeys</a></li>
+							<li><a href="#Restart">Restart</a></li>
+						</ol>
+					</li>
+					<li><a href="#Usage">Usage</a>
+						<ol>
+							<li><a href="#Shortcuts">Shortcuts</a></li>
+							<li><a href="#Command-palette">Command palette</a></li>
+						</ol>
+					</li>
+					<li><a href="#Documentation">Documentation</a></li>
+					<li><a href="#Tricks">Tricks</a>
+						<ol>
+							<li><a href="#Clarify">Clarify</a></li>
+						</ol>
+					</li>
+					<li><a href="#Testing-environment">Testing environment</a></li>
+					<li><a href="#TODO">TODO</a></li>
+					<li><a href="#Known-bugs-and-another-problems">Known bugs and another problems</a>
+						<ol>
+							<li><a href="#KristinitaLuckyLink-1">KristinitaLuckyLink</a></li>
+							<li><a href="#External">External</a></li>
+						</ol>
+					</li>
+					<li><a href="#Troubleshooting">Troubleshooting</a>
+						<ol>
+							<li><a href="#Incorrect-links">Incorrect links</a>
+								<ol>
+									<li><a href="#SublimeREPL">SublimeREPL</a></li>
+									<li><a href="#DuckDuckGo">DuckDuckGo</a></li>
+									<li><a href="#Google">Google</a></li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li><a href="#Contributing">Contributing</a></li>
+					<li><a href="#Thanks">Thanks</a></li>
+					<li><a href="#Terms-and-conditions">Terms and conditions</a></li>
+					<li><a href="#License">License</a></li>
+				</ol>
+				<!-- /MarkdownTOC -->
+				<p><a id="Description"></a></p>
+				<h2>1. Description <a class="headerlink" href="#Description" title="Permanent link">¶</a></h2>
+				<p><a id="Reason"></a></p>
+				<h3>1.1. Reason <a class="headerlink" href="#Reason" title="Permanent link">¶</a></h3>
+				<p>I insert to my texts links to external sites. Before using KristinitaLuckyLink, that insert link, I need to make these actions:</p>
+				<ol>
+					<li>move from Sublime Text to browser,</li>
+					<li>write search query in search bar,</li>
+					<li>press <kbd>Enter</kbd>,</li>
+					<li>copy link,</li>
+					<li>move from browser to Sublime Text,</li>
+					<li>insert link.</li>
+				</ol>
+				<p>It may take a lot of time. Use KristinitaLuckyLink I can make all these actions, <strong>press one shortcut</strong>.</p>
+				<p><a id="Demonstration"></a></p>
+				<h3>1.2. Demonstration <a class="headerlink" href="#Demonstration" title="Permanent link">¶</a></h3>
+				<div class="SashaVideo"><iframe class="SashaLazy" title="KristinitaLuckyLink demonstration" data-src="https://video.ploud.fr/videos/embed/5d800b76-c468-4510-b2af-d84d28def4a9"></iframe></div>
+				<p><a id="Examples"></a></p>
+				<h3>1.3. Examples <a class="headerlink" href="#Examples" title="Permanent link">¶</a></h3>
+				<p>Conversion examples:</p>
+				<ul>
+					<li><code class="SashaInlineHighlight">kristinitaluckylife</code> → <code class="SashaInlineHighlight">[kristinitaluckylife](https://www.instagram.com/kristinitaluckylife/)</code>,</li>
+					<li><code class="SashaInlineHighlight">Поиск Кристиниты</code> → <code class="SashaInlineHighlight">[Поиск Кристиниты](https://kristinita.netlify.app/)</code>.</li>
+				</ul>
+				<ol>
+					<li>You select text,</li>
+					<li>KristinitaLuckyLink get query to search engine; query = your selected text,</li>
+					<li>KristinitaLuckyLink return first link from search engine SERP,</li>
+					<li>Your selected text wrap to Markdown link.</li>
+				</ol>
+				<p><a class="fancybox" href="https://i.imgur.com/1KsfoM6.png"><img class="SashaLazy" src="https://kristinita.netlify.app/theme/images/interface-images/transparent-one-pixel.png" data-src="https://i.imgur.com/1KsfoM6.png" alt="KristinitaLuckyLink example"></a></p>
+				<p><a id="Saving-time"></a></p>
+				<h3>1.4. Saving time <a class="headerlink" href="#Saving-time" title="Permanent link">¶</a></h3>
+				<p>When I wrote this article, I get these links, use KristinitaLuckyLink:</p>
+				<ol>
+					<li><a href="https://www.instagram.com/kristinitaluckylife/">kristinitaluckylife</a>,</li>
+					<li><a href="https://github.com/essanpupil/pygoogling">pygoogling</a>,</li>
+					<li><a href="https://github.com/nsubiron/SublimeSuricate">Sublime Suricate</a>,</li>
+					<li><a href="https://github.com/wuub/SublimeREPL">SublimeREPL</a>,</li>
+					<li><a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>,</li>
+					<li><a href="https://lintly.com/">Lintly</a>,</li>
+					<li><a href="https://github.com/keith-hall">keith-hall</a>,</li>
+					<li><a href="https://github.com/facelessuser">facelessuser</a>.</li>
+				</ol>
+				<p>I save minutes of my time.</p>
+				<p><a id="Supported-search-engines"></a></p>
+				<h3>1.5. Supported search engines <a class="headerlink" href="#Supported-search-engines" title="Permanent link">¶</a></h3>
+				<ol>
+					<li>DuckDuckGo,</li>
+					<li>Google.com.</li>
+				</ol>
+				<p><a id="Supported-markups"></a></p>
+				<h3>1.6. Supported markups <a class="headerlink" href="#Supported-markups" title="Permanent link">¶</a></h3>
+				<ol>
+					<li>Markdown</li>
+				</ol>
+				<p><a id="Features"></a></p>
+				<h3>1.7. Features <a class="headerlink" href="#Features" title="Permanent link">¶</a></h3>
+				<ol>
+					<li>Must work with selection text has any UTF-8 symbols.</li>
+				</ol>
+				<p><a id="Limitations"></a></p>
+				<h2>2. Limitations <a class="headerlink" href="#Limitations" title="Permanent link">¶</a></h2>
+				<ol>
+					<li>
+						<p>Use KristinitaLuckyLink you can get alone top link of search engines. I'm sorry, if in top link not that you want.</p>
+					</li>
+					<li>
+						<p>I'm not affiliated with Google Search or DuckDuckGo Developers. I am not responsible for the fact that there is one or another result in the top of SERP. You can get unexpected link.</p>
+						<p>But if in top of SERP one link, but KristinitaLuckyLink out another link, please make <a href="#Incorrect-links">these actions</a>.</p>
+					</li>
+					<li>
+						<p>If you don’t want by some reasons make actions from <a href="#Installation">installation</a> and <a href="#Activation">activation</a> section, please, don’t install KristinitaLuckyLink.</p>
+					</li>
+					<li>
+						<p>Copy from <a href="https://github.com/aviaryan/python-gsearch#warning">here</a>:</p>
+						<blockquote>
+							<p>Overusing KristinitaLuckyLink might lead to your IP being blocked by Google Search servers. Searches through browser might still work but KristinitaLuckyLink will stop working. I recommend keeping a 5 seconds gap after each usage of this library. In most cases, much lower gaps or even continuous use of the library will still work but still this is something to be kept in mind. If you see a 'rate limit' or a 503 error, it's best to stop using the library and try back after some time (~1 minute).</p>
+						</blockquote>
+					</li>
+					<li>
+						<p>At the time supported:</p>
+						<ol>
+							<li>Markdown link style,</li>
+							<li>English DuckDuckGo and Google search engines.</li>
+						</ol>
+					</li>
+				</ol>
+				<p>Personally I use Markdown markup for my articles and Google and DuckDuckGo enough for me. If you use another markups and/or search engines, <a href="#Contributing">pull requests welcome</a>.</p>
+				<p><a id="Installation"></a></p>
+				<h2>3. Installation <a class="headerlink" href="#Installation" title="Permanent link">¶</a></h2>
+				<p><a id="Depenedencies"></a></p>
+				<h3>3.1. Depenedencies <a class="headerlink" href="#Depenedencies" title="Permanent link">¶</a></h3>
+				<ol>
+					<li>You need to install Python 3 with pip to your computer, if no.</li>
+					<li><code class="SashaInlineHighlight">pip install git+https://github.com/Kristinita/python-duckduckgo</code> — install <a href="https://github.com/crazedpsyc/python-duckduckgo">DuckDuckGo module</a>, that I <a href="https://github.com/Kristinita/python-duckduckgo">ported for Python 3</a>.</li>
+					<li><code class="SashaInlineHighlight">pip install pygoogling</code> — install <a href="https://github.com/essanpupil/pygoogling">pygoogling</a> module.</li>
+					<li>Install <a href="https://github.com/nsubiron/SublimeSuricate">Sublime Suricate</a> package <a href="https://stackoverflow.com/a/19598084/5951529">via Package Control</a>.</li>
+				</ol>
+				<p><a id="KristinitaLuckyLink"></a></p>
+				<h3>3.2. KristinitaLuckyLink <a class="headerlink" href="#KristinitaLuckyLink" title="Permanent link">¶</a></h3>
+				<p><a id="Stable-version"></a></p>
+				<h4>3.2.1. Stable version <a class="headerlink" href="#Stable-version" title="Permanent link">¶</a></h4>
+				<p><kbd>Ctrl+Shift+P</kbd> (<kbd>⌘⇧p</kbd> for Mac) → <em>Package Control: Add Repository</em> → paste in opened input field <code class="SashaInlineHighlight">https://github.com/Kristinita/KristinitaLuckyLink</code> → <kbd>Enter</kbd> → <em>Package Control: Install Package</em> → print <em>KristinitaLuckyLink</em> → <kbd>Enter</kbd>.</p>
+				<p><a id="Development-version"></a></p>
+				<h4>3.2.2. Development version <a class="headerlink" href="#Development-version" title="Permanent link">¶</a></h4>
+				<p>As <a href="#Stable-version">stable version</a>. Solely replace <code class="SashaInlineHighlight">https://github.com/Kristinita/KristinitaLuckyLink</code> to <code class="SashaInlineHighlight">https://github.com/Kristinita/KristinitaLuckyLink/tree/SashaDevelop</code> in instruction above.</p>
+				<p>You will get all changes from <code class="SashaInlineHighlight">SashaDevelop</code> branch in each Sublime Text start.</p>
+				<p><a id="Activation"></a></p>
+				<h2>4. Activation <a class="headerlink" href="#Activation" title="Permanent link">¶</a></h2>
+				<p><a id="Environment-variable"></a></p>
+				<h3>4.1. Environment variable <a class="headerlink" href="#Environment-variable" title="Permanent link">¶</a></h3>
+				<p>In your operating system add environment variable <code class="SashaInlineHighlight">PYTHONPACKAGES</code> with value — your Python <code class="SashaInlineHighlight">site-packages</code> folder, if already no. To find out your path, see “<a href="https://docs.python.org/3/install/index.html#how-installation-works">How installation works</a>” item of Python documentation.</p>
+				<div class="justtable">
+					<table>
+						<thead>
+							<tr>
+								<th>Platform</th>
+								<th>Default value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Unix</td>
+								<td><code class="SashaInlineHighlight">/usr/local/lib/pythonX.Y/site-packages</code></td>
+							</tr>
+							<tr>
+								<td>Windows</td>
+								<td><code class="SashaInlineHighlight">C:\PythonXY\Lib\site-packages</code></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p>For example, <code class="SashaInlineHighlight">C:\\Python36\\Lib\\site-packages</code> — path on my Windows.</p>
+				<p>See <a href="https://www.schrodinger.com/kb/1842">examples</a>, how you can add environment variable in your operating system.</p>
+				<p>If you know, how possible develop a plugin without adding new environment variable, please, answer to <a href="https://stackoverflow.com/q/48276861/5951529">this question</a>.</p>
+				<p><a id="Commands-and-hotkeys"></a></p>
+				<h3>4.2. Commands and hotkeys <a class="headerlink" href="#Commands-and-hotkeys" title="Permanent link">¶</a></h3>
+				<p><kbd>Ctrl+Shift+P</kbd> (<kbd>⌘⇧p</kbd> for Mac) → <em>Suricate: Add Profile</em> → select <em>KristinitaLuckyLink</em> → <kbd>Enter</kbd>.</p>
+				<p><a id="Restart"></a></p>
+				<h3>4.3. Restart <a class="headerlink" href="#Restart" title="Permanent link">¶</a></h3>
+				<p>After all installation and activation actions restart Sublime Text. Operating system restart may be necessary.</p>
+				<p>KristinitaLuckyLink must successful works.</p>
+				<p><a id="Usage"></a></p>
+				<h2>5. Usage <a class="headerlink" href="#Usage" title="Permanent link">¶</a></h2>
+				<p>Select text, for which you want to get link and…</p>
+				<p><a id="Shortcuts"></a></p>
+				<h3>5.1. Shortcuts <a class="headerlink" href="#Shortcuts" title="Permanent link">¶</a></h3>
+				<p>… press hotkey. Wait a moment to get the result.</p>
+				<p>Default hotkeys for platforms:</p>
+				<div class="justtable">
+					<table>
+						<thead>
+							<tr>
+								<th>Platform</th>
+								<th>DuckDuckGo default shortcut</th>
+								<th>Google default shortcut</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Windows and Linux</td>
+								<td><kbd>Ctrl+Shift+Alt+D</kbd></td>
+								<td><kbd>Ctrl+Shift+Alt+D</kbd></td>
+							</tr>
+							<tr>
+								<td>macOS</td>
+								<td><kbd>⌘⇧⌥d</kbd></td>
+								<td><kbd>⌘⇧⌥g</kbd></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p>If these hotkeys used in you another packages or you don’t want use default hotkeys by another reasons: <em>Preferences</em> → <em>Browse packages…</em> → <em>User</em> → create a file <em>Default.suricate-profile</em>, if no, and add to them these lines:</p>
+				<div class="SashaBlockHighlight">
+					<pre><button class="SashaButton SashaTooltip"><img class="SashaNotModify" src="https://kristinita.netlify.app/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><code><span class="p">{</span>
+	<span class="nt">&quot;user_commands&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="nt">&quot;sasha_kristinitaluckylink_duckduckgo&quot;</span><span class="p">:</span> <span class="p">{</span>
+			<span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;super+keypad_multiply&quot;</span><span class="p">],</span>
+			<span class="nt">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;KristinitaLuckyLink: DuckDuckGo&quot;</span><span class="p">,</span>
+			<span class="nt">&quot;call&quot;</span><span class="p">:</span> <span class="s2">&quot;sublime.kristinita_lucky_link_duck_duck_go&quot;</span>
+		<span class="p">},</span>
+		<span class="nt">&quot;sasha_kristinitaluckylink_google&quot;</span><span class="p">:</span> <span class="p">{</span>
+			<span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;c&gt;+super+browser_home&quot;</span><span class="p">],</span>
+			<span class="nt">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;KristinitaLuckyLink: Google&quot;</span><span class="p">,</span>
+			<span class="nt">&quot;call&quot;</span><span class="p">:</span> <span class="s2">&quot;sublime.kristinita_lucky_link_google&quot;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+				</div>
+				<p>Replace <code class="SashaInlineHighlight">super+keypad8</code> and <code class="SashaInlineHighlight">&lt;c&gt;+super+browser_home</code> from example to your preferred keys. See <a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html#bindable-keys">key name convention</a> in Sublime Text 3.</p>
+				<p>For detailed information about Suricate key bindings see <a href="https://readthedocs.org/projects/sublime-suricate/">Sublime Suricate documentation</a>.</p>
+				<p><a id="Command-palette"></a></p>
+				<h3>5.2. Command palette <a class="headerlink" href="#Command-palette" title="Permanent link">¶</a></h3>
+				<p>… use <a href="https://www.youtube.com/watch?v=VYNkebGdl9Q">command palette</a>. Wait a moment to … the result.</p>
+				<p>Captions:</p>
+				<ul>
+					<li><code class="SashaInlineHighlight">Suricate: KristinitaLuckyLink: DuckDuckGo</code>,</li>
+					<li>
+						<p><code class="SashaInlineHighlight">Suricate: KristinitaLuckyLink: Google</code>.</p>
+						<p><a class="fancybox" href="https://i.imgur.com/SjWzTcb.png"><img class="SashaLazy" src="https://kristinita.netlify.app/theme/images/interface-images/transparent-one-pixel.png" data-src="https://i.imgur.com/SjWzTcb.png" alt="Command palette"></a></p>
+					</li>
+				</ul>
+				<p><a id="Documentation"></a></p>
+				<h2>6. Documentation <a class="headerlink" href="#Documentation" title="Permanent link">¶</a></h2>
+				<!-- [NOTE:] escapeall facelessuser plugin -->
+				<ul>
+					<li><em>#FuckTheDocs</em>.</li>
+				</ul>
+				<p><a id="Tricks"></a></p>
+				<h2>7. Tricks <a class="headerlink" href="#Tricks" title="Permanent link">¶</a></h2>
+				<p><a id="Clarify"></a></p>
+				<h3>7.1. Clarify <a class="headerlink" href="#Clarify" title="Permanent link">¶</a></h3>
+				<p>To increase the probability of the expected result сlarify search queries as you clarify, when search in search engines.</p>
+				<p>For example:</p>
+				<div class="justtable">
+					<table>
+						<thead>
+							<tr>
+								<th>Selected text</th>
+								<th>KristinitaLuckyLink DuckDuckGo link</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Kristina Kiva</td>
+								<td><a href="https://www.facebook.com/public/Kristina-Kiva">www.facebook.com/public/Kristina-Kiva</a></td>
+							</tr>
+							<tr>
+								<td>Kristina Kiva Marbella</td>
+								<td><a href="https://www.instagram.com/kristinitaluckylife/">www.instagram.com/kristinitaluckylife/</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p><a id="Testing-environment"></a></p>
+				<h2>8. Testing environment <a class="headerlink" href="#Testing-environment" title="Permanent link">¶</a></h2>
+				<ol>
+					<li>Windows 10 Enterprise LTSB 64-bit EN_</li>
+					<li>Python 3.6.4,</li>
+					<li>Sublime Text Build 3143,</li>
+					<li>pygoogling 0.0.2,</li>
+					<li>Python DuckDuckGo for Python 3 0.242.</li>
+				</ol>
+				<p>KristinitaLuckyLink must be works in new versions macOS and Linux.</p>
+				<p><a id="TODO"></a></p>
+				<h2>9. TODO <a class="headerlink" href="#TODO" title="Permanent link">¶</a></h2>
+				<ol>
+					<li>unit tests,</li>
+					<li>add plugin to Package Control.</li>
+				</ol>
+				<p><a id="Known-bugs-and-another-problems"></a></p>
+				<h2>10. Known bugs and another problems <a class="headerlink" href="#Known-bugs-and-another-problems" title="Permanent link">¶</a></h2>
+				<p><a id="KristinitaLuckyLink-1"></a></p>
+				<h3>10.1. KristinitaLuckyLink <a class="headerlink" href="#KristinitaLuckyLink-1" title="Permanent link">¶</a></h3>
+				<p><a id="External"></a></p>
+				<h3>10.2. External <a class="headerlink" href="#External" title="Permanent link">¶</a></h3>
+				<p><a id="Troubleshooting"></a></p>
+				<h2>11. Troubleshooting <a class="headerlink" href="#Troubleshooting" title="Permanent link">¶</a></h2>
+				<p>About all detected bugs please report to <a href="https://github.com/Kristinita/KristinitaLuckyLink/issues">issues</a> page. Please, add information about your operation system, Sublime Text 3 and KristinitaLuckyLink versions.</p>
+				<p><a id="Incorrect-links"></a></p>
+				<h3>11.1. Incorrect links <a class="headerlink" href="#Incorrect-links" title="Permanent link">¶</a></h3>
+				<p>If use KristinitaLuckyLink you get not top link of Google or DuckDuckGo SERP, please, make actions below.</p>
+				<p><a id="SublimeREPL"></a></p>
+				<h4>11.1.1. SublimeREPL <a class="headerlink" href="#SublimeREPL" title="Permanent link">¶</a></h4>
+				<ol>
+					<li>Install <a href="https://github.com/wuub/SublimeREPL">SublimeREPL</a> via Package Control.</li>
+					<li><kbd>Ctrl+Shift+P</kbd> (<kbd>⌘⇧p</kbd> for Mac) → <em>SublimeREPL: Python</em>. Paste to opened tab code below.</li>
+				</ol>
+				<p><a id="DuckDuckGo"></a></p>
+				<h4>11.1.2. DuckDuckGo <a class="headerlink" href="#DuckDuckGo" title="Permanent link">¶</a></h4>
+				<p>Replace <code class="SashaInlineHighlight">Кристина Кива</code> to your real selection text.</p>
+				<div class="SashaBlockHighlight">
+					<pre><button class="SashaButton SashaTooltip"><img class="SashaNotModify" src="https://kristinita.netlify.app/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">duckduckgo</span> <span class="kn">import</span> <span class="n">query</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dlink</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span><span class="s1">&#39;! Кристина Кива&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">redirect</span><span class="o">.</span><span class="n">url</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dlink</span>
+</code></pre>
+				</div>
+				<p>Press <kbd>Enter</kbd>.</p>
+				<p>If link, that you get via KristinitaLuckyLink, and this link match; it <a href="https://github.com/crazedpsyc/python-duckduckgo">DuckDuckGo</a> module problem.</p>
+				<p><a id="Google"></a></p>
+				<h4>11.1.3. Google <a class="headerlink" href="#Google" title="Permanent link">¶</a></h4>
+				<p>Replace <code class="SashaInlineHighlight">Кристина Кива</code> to your real selection text.</p>
+				<div class="SashaBlockHighlight">
+					<pre><button class="SashaButton SashaTooltip"><img class="SashaNotModify" src="https://kristinita.netlify.app/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pygoogling.googling</span> <span class="kn">import</span> <span class="n">GoogleSearch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">google_search</span> <span class="o">=</span> <span class="n">GoogleSearch</span><span class="p">(</span><span class="s1">&#39;Кристина Кива&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">google_search</span><span class="o">.</span><span class="n">start_search</span><span class="p">(</span><span class="n">max_page</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">glink</span> <span class="o">=</span> <span class="n">google_search</span><span class="o">.</span><span class="n">search_result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">glink</span>
+</code></pre>
+				</div>
+				<p>Press <kbd>Enter</kbd>.</p>
+				<p>If link, that you get via KristinitaLuckyLink, and this link match; it <a href="https://github.com/essanpupil/pygoogling">pygoogling</a> module problem.</p>
+				<p><a id="Contributing"></a></p>
+				<h2>12. Contributing <a class="headerlink" href="#Contributing" title="Permanent link">¶</a></h2>
+				<p>Pull requests welcome! But, please, adhere to the following rules.</p>
+				<ol>
+					<li>Please, not add inside this package external modules. My code “philosophy” is that all modules must installed separately.</li>
+					<li>Code must match <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> rules. Max line length — 120 symbols.</li>
+				</ol>
+				<p><a id="Thanks"></a></p>
+				<h2>13. Thanks <a class="headerlink" href="#Thanks" title="Permanent link">¶</a></h2>
+				<ul>
+					<li><a href="https://github.com/keith-hall">keith-hall</a>,</li>
+					<li><a href="https://github.com/facelessuser">facelessuser</a>.</li>
+				</ul>
+				<p><a id="Terms-and-conditions"></a></p>
+				<h2>14. Terms and conditions <a class="headerlink" href="#Terms-and-conditions" title="Permanent link">¶</a></h2>
+				<p>By using this package, you agree that the KristinitaLuckyLink, Sublime Text, Python DuckDuckGo and pygoogling authors won't be responsible for any damage that comes to you and/or your property. You hereby agree to take all responsibilities for using this package. The author is merely a developer who created this package but you are the one who is using it.</p>
+				<p><a id="License"></a></p>
+				<h2>15. License <a class="headerlink" href="#License" title="Permanent link">¶</a></h2>
+				<ul>
+					<li><a href="https://github.com/Kristinita/KristinitaLuckyLink/blob/SashaDevelop/License.md">MIT</a>.</li>
+				</ul>
+			</section>
+			<!--=============================
+			=            Footer             =
+			==============================-->
+			<footer>
+				<div class="clearfix"><span class="SashaHeadPageLeft"><a href=".." title="Kristinita's Search">Kristinita's Search</a></span> <span class="SashaNextNeighbor"><a href="../Programs/PaletteMira.html" title="PaletteMira">Next article →</a></span></div>
+				<div class="SashaClearBoth"></div>
+				<!-- Footer: new disgruntled Russian and sign
+				E-Mail obfuscate: http://rot13.florianbersier.com/
+				Get relative source path like https://github.com/kura/kura.io/blob/e8f2c6801a0013201d734aa1ac48d9ac92a40b96/ghastly/templates/kira_object.html#L10 -->
+				<div class="SashaEmNoColorBottom">
+					<p><a id="Like"></a></p>
+					<h2>Like? <a class="headerlink" href="#Like" title="Permanent link">¶</a></h2>
+					<ol>
+						<li>Share this web-page in your preferred social network, use share buttons on the side of page.</li>
+						<li>
+							<p>Subcsribe to all articles or specific tag/category, use your preferred RSS Reader. I use <a href="http://quiterss.org">QuiteRSS</a> for Windows.</p>
+						</li>
+					</ol>
+					<p><a id="Problems"></a></p>
+					<h2>Problems? <a class="headerlink" href="#Problems" title="Permanent link">¶</a></h2>
+					<ol>
+						<li>(PC only, not for mobile devices). If you find in this article typo or small error, please, report about it use <a href="../IT-articles/typo-reporter">typo-reporter</a>. Select text with typo → press <kbd>Ctrl+Enter</kbd> (<kbd>⌘Enter</kbd> for Mac) → write comment → send typo report.</li>
+						<li>If you find more serious errors in this article and/or site, <a href="https://github.com/Kristinita/KristinitaPelican/issues/new">create GitHub issue</a>.</li>
+						<li>You can also <a href="https://github.com/Kristinita/KristinitaPelican/edit/master/content/Programs/KristinitaLuckyLink.md">edit this page yourself</a> and send <a href="http://ru.stackoverflow.com/a/598162/199934">pull request</a>.</li>
+						<li>Or write comment here. <a href="https://github.github.com/gfm/">Markdown GFM support in comments</a>. You can use <a href="https://github.com/GhostText/GhostText">GhostText</a>, that write issue in your preferred editor.
+							<div class="wildfire_thread" data-loader="KiraComments"></div>
+						</li>
+					</ol>
+					<p>I hate private communication, solely open support.</p>
+					<p>If you write in the style of <a href="../Smert-svobode/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BD%D0%B5%D0%B4%D0%BE%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5">new disgruntled Russian</a> I reserve the right to dispose of my own discretion.</p>
+					<p>All rights reserved ©.</p>
+				</div>
+				<div class="WorkOnYourself">Работайте над собой</div>
+			</footer>
+		</article>
+	</main>
+</body>
+
+</html>
