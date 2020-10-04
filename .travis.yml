@@ -5,6 +5,8 @@ dist: focal
 git:
   depth: 1
 
+cache: false
+
 language: node_js
 
 node_js:
@@ -17,4 +19,4 @@ install:
 - npm install
 
 script:
-- grunt http-server crawl --verbose
+- grunt posthtml --verbose

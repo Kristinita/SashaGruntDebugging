@@ -7,12 +7,10 @@ module.exports = (grunt) ->
 		posthtml:
 			options:
 				use: [
-					require('posthtml-lazyload')(loading: 'lazy')
+					require('posthtml-img-autosize')(processEmptySize: true)
 				]
 			single:
 				files: [
 					src: 'KiraPostHTML.html'
 					dest: 'KiraPostHTMLGrunt.html'
 				]
-
-	return
