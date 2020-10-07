@@ -1,6 +1,6 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks 'grunt-juwain-posthtml'
+	grunt.loadNpmTasks 'grunt-posthtml'
 
 	grunt.initConfig
 

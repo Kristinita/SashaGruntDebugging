@@ -5,6 +5,8 @@ dist: focal
 git:
   depth: 1
 
+cache: false
+
 language: node_js
 
 node_js:
