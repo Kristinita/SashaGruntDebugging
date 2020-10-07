@@ -12,7 +12,7 @@ module.exports = (grunt) ->
 			single:
 				files: [
 					src: 'KiraPostHTML.html'
-					dest: 'KiraPostHTMLGrunt.html'
+					dest: 'KiraPostHTMLLazyload.html'
 				]
 
 	return

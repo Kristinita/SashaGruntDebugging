@@ -8,8 +8,6 @@ git:
 language: node_js
 
 node_js:
-# [INFO] The latest Node.js version:
-# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions
 - node
 
 install:
@@ -17,4 +15,5 @@ install:
 - npm install
 
 script:
-- grunt http-server crawl --verbose
+- grunt posthtml --verbose
+- cat KiraPostHTMLLazyload.html
