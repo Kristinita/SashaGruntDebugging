@@ -9,9 +9,6 @@
   "devDependencies": {
     "coffeescript": "^2.5.1",
     "grunt": "^1.3.0",
-    "grunt-posthtml": "^0.5.1",
-    "posthtml-alt-always": "^1.0.1",
-    "posthtml-aria-tabs": "^1.0.0",
-    "posthtml-doctype": "^1.1.1"
+    "grunt-shell": "^3.0.1"
   }
 }

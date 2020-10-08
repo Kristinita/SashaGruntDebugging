@@ -13,9 +13,10 @@ node_js:
 - node
 
 install:
+- rvm install ruby --latest
+- gem install travis
 - npm install -g grunt-cli
 - npm install
 
 script:
-- grunt posthtml --verbose
-- cat KiraPosthtmlOutput.html
+- grunt shell --verbose
