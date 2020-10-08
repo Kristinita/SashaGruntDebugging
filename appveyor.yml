@@ -1,0 +1,16 @@
+platform: x64
+
+image: Visual Studio 2019
+
+clone_depth: 1
+
+install:
+- choco install nodejs -y
+- npm install -g grunt-cli
+- npm install
+
+build_script:
+- grunt posthtml --verbose
+
+test_script:
+- type KiraPostHTMLAsync.html
