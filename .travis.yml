@@ -20,3 +20,4 @@ install:
 
 script:
 - grunt posthtml --verbose
+- cat KiraPostHTMLAsync.html

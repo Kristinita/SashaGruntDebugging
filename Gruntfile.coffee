@@ -1,6 +1,6 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks 'grunt-juwain-posthtml'
+	grunt.loadNpmTasks 'grunt-posthtml'
 
 	grunt.initConfig
 
@@ -12,5 +12,5 @@ module.exports = (grunt) ->
 			single:
 				files: [
 					src: 'KiraPostHTML.html'
-					dest: 'KiraPostHTMLGrunt.html'
+					dest: 'KiraPostHTMLAsync.html'
 				]
