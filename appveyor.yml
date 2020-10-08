@@ -17,5 +17,3 @@ test_script:
 
 on_failure:
 - grunt posthtml --verbose
-- cat KiraImgAutosizeCLI.html
-- cat KiraImgAutosizeGrunt.html
