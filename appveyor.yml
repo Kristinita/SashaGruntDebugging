@@ -9,10 +9,8 @@ install:
 - npm install -g grunt-cli posthtml-cli posthtml-img-autosize
 - npm install
 
-build_script:
+test_script:
 - posthtml KiraPostHTML.html -o KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
 - grunt posthtml --verbose
-
-test_script:
 - cat KiraImgAutosizeCLI.html
 - cat KiraImgAutosizeGrunt.html
