@@ -6,7 +6,7 @@ clone_depth: 1
 
 install:
 - choco install nodejs -y
-- npm install -g grunt-cli posthtml posthtml-img-autosize
+- npm install -g grunt-cli posthtml-cli posthtml-img-autosize
 - npm install
 
 build_script:
