@@ -1,13 +1,8 @@
 module.exports = (grunt) ->
 
-	require('load-grunt-tasks')(grunt)
+	grunt.loadNpmTasks 'grunt-posthtml'
 
 	grunt.initConfig
-
-		devUpdate:
-			main:
-				options:
-					updateType: 'force'
 
 		posthtml:
 			options:
@@ -18,20 +13,6 @@ module.exports = (grunt) ->
 				]
 			single:
 				files: [
-					src: 'output/SashaPosthtml/SashaPosthtmlExample.html'
-					dest: 'output/SashaPosthtml/SashaPosthtmlExample.html'
+					src: 'KiraPosthtmlInput.html'
+					dest: 'KiraPosthtmlOutput.html'
 				]
-
-		postcss:
-			options:
-				map: false
-				processors: [
-					require('autoprefixer')()
-				]
-			dist:
-				src: ['output/SashaPosthtml/SashaPosthtmlExample.css']
-
-	grunt.registerTask 'update', [
-		'devUpdate'
-	]
-	return

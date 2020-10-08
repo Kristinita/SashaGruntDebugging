@@ -1,38 +1,42 @@
-            {
-         }   }   {
-        {   {  }  }
-         }   }{  {
-        {  }{  }  }                    _____       __  __
-       { }{ }{  { }                   / ____|     / _|/ _|
-     .- { { }  { }} -.               | |     ___ | |_| |_ ___  ___
-    (  { } { } { } }  )              | |    / _ \|  _|  _/ _ \/ _ \
-    |`-..________ ..-'|              | |___| (_) | | | ||  __/  __/
-    |                 |               \_____\___/|_| |_| \___|\___|
-    |                 ;--.
-    |                (__  \            _____           _       _
-    |                 | )  )          / ____|         (_)     | |
-    |                 |/  /          | (___   ___ _ __ _ _ __ | |_
-    |                 (  /            \___ \ / __| '__| | '_ \| __|
-    |                 |/              ____) | (__| |  | | |_) | |_
-    |                 |              |_____/ \___|_|  |_| .__/ \__|
-     `-.._________..-'                                  | |
-                                                        |_|
+```
+      @@@@@@@                @@@@  @@@@@
+     @@@@@@@@@@              @@@   @@@                                           {
+    @@@@     @@              @@@   @@@                                        }   }   {
+   @@@@          @@@@@@@    @@@   @@@     @@@@@@    @@@@@@                   {   {  }  }
+  @@@@          @@@   @@  @@@@@  @@@@@@  @@@   @@  @@@@  @@                   }   }{  {
+  @@@@         @@@@   @@   @@@    @@@   @@@   @@@ @@@   @@@                  {  }{  }  }
+  @@@@        @@@@    @@   @@@    @@@   @@@@@@@@  @@@@@@@@                  { }{ }{  { }
+  @@@@@       @@@@   @@    @@@    @@@   @@@       @@@                     {  { } { } { }  }
+   @@@@@@@@@@ @@@@@@@@    @@@    @@@    @@@@@@@@  @@@@@@@@                 { }   { }   { }
+      @@@@@               @@@    @@@      @@@@@     @@@@@           @@@@@@   { }   { }    @@@@@@@
+                         @@@    @@@                                 @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      @@@@@@            @@@    @@@                                @@ @@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@    @@          @@@   @@@@                                @@   @@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@   @@@                       @@                  @@@@     @@@   @@@@@@@@@@@@@@@@@@@@@
+   @@@@@          @@@@@   @@  @@   @@@     @@@@@@@     @@@@@      @@@    @@@@@@@@@@@@@@@@@@
+     @@@@@      @@@  @@@ @@@@@@@@         @@@@  @@@@  @@@@@@@       @@@   @@@@@@@@@@@@@@@@
+       @@@@@   @@@       @@@@     @@@@    @@@    @@@   @@@                 @@@@@@@@@@@@@@
+ @@@@@  @@@@  @@@@      @@@@      @@@@   @@@@   @@@@  @@@@
+@@@     @@@@  @@@       @@@@     @@@@    @@@    @@@@  @@@@
+@@@     @@@@  @@@@     @@@@      @@@@   @@@@   @@@@  @@@@
+ @@@@@@@@@     @@@@@@  @@@@       @@@@  @@@@@@@@@    @@@@
+                                       @@@          @@@@
+                                      @@@
+                                      @@@
+```
 
 CoffeeScript is a little language that compiles into JavaScript.
 
 ## Installation
 
-If you have the node package manager, npm, installed:
+Once you have Node.js installed:
 
 ```shell
-npm install -g coffee-script
-```
+# Install locally for a project:
+npm install --save-dev coffeescript
 
-Leave off the `-g` if you don't wish to install globally. If you don't wish to use npm:
-
-```shell
-git clone https://github.com/jashkenas/coffeescript.git
-sudo coffeescript/bin/cake install
+# Install globally to execute .coffee files anywhere:
+npm install --global coffeescript
 ```
 
 ## Getting Started
@@ -49,14 +53,14 @@ Compile a script:
 coffee -c /path/to/script.coffee
 ```
 
-For documentation, usage, and examples, see: http://coffeescript.org/
+For documentation, usage, and examples, see: https://coffeescript.org/
 
-To suggest a feature or report a bug: http://github.com/jashkenas/coffeescript/issues
+To suggest a feature or report a bug: https://github.com/jashkenas/coffeescript/issues
 
-If you'd like to chat, drop by #coffeescript on Freenode IRC.
+If you’d like to chat, drop by #coffeescript on Freenode IRC.
 
 The source repository: https://github.com/jashkenas/coffeescript.git
 
-Changelog: http://coffeescript.org/#changelog
+Changelog: https://coffeescript.org/#changelog
 
-Our lovely and talented contributors are listed here: http://github.com/jashkenas/coffeescript/contributors
+Our lovely and talented contributors are listed here: https://github.com/jashkenas/coffeescript/contributors
