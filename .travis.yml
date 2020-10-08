@@ -10,13 +10,22 @@ cache: false
 language: node_js
 
 node_js:
+# [INFO] The latest stable Node.js release:
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions
 - node
 
 install:
+# [INFO] Install the latest stable Ruby release:
+# https://askubuntu.com/a/505276/582218
 - rvm install ruby --latest
 - gem install travis
 - npm install -g grunt-cli
 - npm install
 
 script:
+# [INFO] Lint “.travis.yml” file locally:
+# https://stackoverflow.com/a/35607499/5951529
+# [INFO] “-x” option — exit code 1 if there are any warnings:
+# https://www.rubydoc.info/list/gems/travis/1.10.0#lint
+- travis lint -x
 - grunt shell --verbose
