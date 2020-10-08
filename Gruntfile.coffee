@@ -7,10 +7,10 @@ module.exports = (grunt) ->
 		posthtml:
 			options:
 				use: [
-					require('posthtml-img-autosize')(processEmptySize: true, root: process.cwd())
+					require('posthtml-img-autosize')(processEmptySize: true)
 				]
 			single:
 				files: [
 					src: 'KiraPostHTML.html'
-					dest: 'KiraPostHTMLAsync.html'
+					dest: 'KiraImgAutosizeGrunt.html'
 				]

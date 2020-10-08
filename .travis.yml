@@ -10,14 +10,14 @@ cache: false
 language: node_js
 
 node_js:
-# [INFO] The latest Node.js version:
-# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions
 - node
 
 install:
-- npm install -g grunt-cli
+- npm install -g grunt-cli posthtml posthtml-img-autosize
 - npm install
 
 script:
 - grunt posthtml --verbose
-- cat KiraPostHTMLAsync.html
+- posthtml KiraPostHTML.html -o KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
+- cat KiraImgAutosizeCLI.html
+- cat KiraImgAutosizeGrunt.html
