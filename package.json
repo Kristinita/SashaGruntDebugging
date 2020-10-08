@@ -9,7 +9,7 @@
   "devDependencies": {
     "coffeescript": "^2.5.1",
     "grunt": "^1.3.0",
-    "grunt-posthtml": "github:posthtml/grunt-posthtml",
+    "grunt-posthtml": "^0.5.1",
     "posthtml-lazyload": "^1.0.7"
   }
 }
