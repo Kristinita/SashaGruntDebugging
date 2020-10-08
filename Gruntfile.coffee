@@ -7,7 +7,7 @@ module.exports = (grunt) ->
 		posthtml:
 			options:
 				use: [
-					require('posthtml-img-autosize')(processEmptySize: true, root: "./")
+					require('posthtml-img-autosize')(processEmptySize: true, root: process.cwd())
 				]
 			single:
 				files: [
