@@ -21,9 +21,9 @@ node_js:
 - node
 
 install:
-# [INFO] Install the latest stable Ruby release:
-# https://askubuntu.com/a/505276/582218
-- rvm install ruby --latest
+# [INFO] The latest stable Ruby version already default for Focal Fossa Build environment
+# on the October 2020:
+# https://docs.travis-ci.com/user/reference/focal/#ruby-support
 - gem install travis
 - npm install -g grunt-cli
 - npm install
