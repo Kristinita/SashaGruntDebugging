@@ -13,17 +13,7 @@ language: node_js
 # http://blog.code4hire.com/2016/06/adding-github-token-to-travis-ci-configuration/
 env:
   global:
-  - secure: >
-      L2my4oDf6RtE36cchK+NOYQYovfbsDYGGKzjwnUVOYflbZMA8++p3m7jrK/43RtOZ6l0z7ITX80yc/
-      TqZk4owULulRcmU3iQsWbRYQlFUJmKZ0rKYLMz3FAK5bWBPO/ZcKC8N0egAb7+
-      OFFQV0At6nyuIpwlVMKuFMqyfYxDeHZUMRzOxj8/El1xSKf71wtC3Ms+
-      NGZojUN4ixpt5EU0e8x8INUMk4zhVpCwT2GyERpIaPA0Tdocqbbcu2JAua4+JhWXfgq/
-      W3q1F3DJgBxFawaYarlMlOOrIv8Ax4JZGTUFMaLzVRS+g2IzNNVID3fT5PTJ5Ifn8PZxuyV2WgF8+
-      iHMORFINOCdRcrA8SfyTXpcq0aJ4/I+q9oK35lwdL8fwXLb4sjQ8L/2siKPQoa58QjsWYlUrUE/EhVi+
-      Ujmi4taIjXBCLk1VZfSN1tbxIHESCzzBgvHDlrWqp3CoZHUMZx6Ay3VCOBtORcYQpSajnK9oWGhzVpphdV0gU1Ubncrt8iTSiCqMDjCCk7I1YfY+
-      S0ICg0ld84hiLP5AsSXobipyinQvxMhlBPf2yxchVTMbASo8L0mT8Q9WHNCB//
-      DcrRLq+KR6C4O3JG18KJnX+6TkbP+
-      1wmWiKrjRmRoN68YwQAyzmXcgvRXXcxKoSch8DbVIEW2AAd388Tfw5dibHk=
+    secure: QVIMzZgQewWOrweiXZwOpRFMp2Xs6VgDpM7BR50hGIPEA5A5cmstI6gJAhi0M55DPkNWrtTLIKtbNhOvR861wVlZwqg1bxnmuqxhonpMooIV24PTFDo4tDo50UvuwhUqhqHvf0ugXalkA0QEoEaIBZlqXX+tvkvMJHwV7uONAYgxOx7z8tQ9v9yTXq2/Aos9Yt6Wb+37oFJGsLlZX6CLYIUOq5iFem+hkVrIOJrxB3PUch8L/L+pHy3i9NnGm95HBqptwkR+6NBgE/A3ZFFFLs7R28hDcQvtFZqJe1OIdclFutcNSAlElyn/i6y41oIIRnEnote7mZ5q3tzX+Mo6hjXZV2+nzKUc98x4QRWGqj3HghxcFtCSC4SZRt6gI2ayxzglWsaCfNqT6J6R+xBEN08jUwfZAHzXudeENrUzJaWm8iH3LEf4w4rMAoBHg7RO0lIz+LrmVtuBfM4Czkk8nyE+uhxdFDXNNmb6Pup/BwlOxcwjnbM+QU6mpoJyzb/HTUO2azoOx5D5zGDcBQ/J7BWNfbHmbx8hINYKnkylMOufkd/4F54iWStiuegX/vAGfDfBD4cjlGw0M0hAuO7r7ZNinWW0jWH/sD8z/XgXy0pDVH5Hl6tSGvK3rXfd88b5vwTXYv7rw7OwJjLCKlHEfNM0tOKc1f0mxgdatxzLCqE=
 
 node_js:
 # [INFO] The latest stable Node.js release:
@@ -42,6 +32,6 @@ script:
 # [INFO] Lint “.travis.yml” file locally:
 # https://stackoverflow.com/a/35607499/5951529
 # [INFO] “-x” option — exit code 1 if there are any warnings:
-# https://www.rubydoc.info/list/gems/travis/1.10.0#lint
+# https://www.rubydoc.info/gems/travis/1.10.0#lint
 - travis lint -x
 - grunt shell --verbose
