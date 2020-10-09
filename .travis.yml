@@ -9,6 +9,22 @@ cache: false
 
 language: node_js
 
+# [REQUIRED] Secure GitHub token for the Travis CI configuration:
+# http://blog.code4hire.com/2016/06/adding-github-token-to-travis-ci-configuration/
+env:
+  global:
+  - secure: >
+      L2my4oDf6RtE36cchK+NOYQYovfbsDYGGKzjwnUVOYflbZMA8++p3m7jrK/43RtOZ6l0z7ITX80yc/
+      TqZk4owULulRcmU3iQsWbRYQlFUJmKZ0rKYLMz3FAK5bWBPO/ZcKC8N0egAb7+
+      OFFQV0At6nyuIpwlVMKuFMqyfYxDeHZUMRzOxj8/El1xSKf71wtC3Ms+
+      NGZojUN4ixpt5EU0e8x8INUMk4zhVpCwT2GyERpIaPA0Tdocqbbcu2JAua4+JhWXfgq/
+      W3q1F3DJgBxFawaYarlMlOOrIv8Ax4JZGTUFMaLzVRS+g2IzNNVID3fT5PTJ5Ifn8PZxuyV2WgF8+
+      iHMORFINOCdRcrA8SfyTXpcq0aJ4/I+q9oK35lwdL8fwXLb4sjQ8L/2siKPQoa58QjsWYlUrUE/EhVi+
+      Ujmi4taIjXBCLk1VZfSN1tbxIHESCzzBgvHDlrWqp3CoZHUMZx6Ay3VCOBtORcYQpSajnK9oWGhzVpphdV0gU1Ubncrt8iTSiCqMDjCCk7I1YfY+
+      S0ICg0ld84hiLP5AsSXobipyinQvxMhlBPf2yxchVTMbASo8L0mT8Q9WHNCB//
+      DcrRLq+KR6C4O3JG18KJnX+6TkbP+
+      1wmWiKrjRmRoN68YwQAyzmXcgvRXXcxKoSch8DbVIEW2AAd388Tfw5dibHk=
+
 node_js:
 # [INFO] The latest stable Node.js release:
 # https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions
