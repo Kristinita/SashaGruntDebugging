@@ -4,6 +4,9 @@ image: Visual Studio 2019
 
 clone_depth: 1
 
+init:
+- SETX NODE_NO_WARNINGS 1
+
 install:
 - choco install nodejs -y
 - npm install -g grunt-cli posthtml-cli posthtml-img-autosize
