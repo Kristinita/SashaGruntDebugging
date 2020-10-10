@@ -17,7 +17,7 @@ install:
 - npm install
 
 script:
-- posthtml KiraPostHTML.html -o KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
+- posthtml KiraFolder/KiraPostHTML.html -o KiraFolder/KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
 - grunt posthtml --verbose
-- cat KiraImgAutosizeCLI.html
-- cat KiraImgAutosizeGrunt.html
+- cat KiraFolder/KiraImgAutosizeCLI.html
+- cat KiraFolder/KiraPostHTML.output.html
