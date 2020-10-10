@@ -11,5 +11,7 @@ install:
 
 build_script:
 - grunt posthtml --verbose
-- type KiraImgAutosizeGrunt.html
 - posthtml KiraPostHTML.html -o KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
+
+on_failure:
+- type KiraImgAutosizeGrunt.html
