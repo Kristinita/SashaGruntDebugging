@@ -10,10 +10,6 @@ install:
 - npm install
 
 build_script:
-- echo Kira Goddess!
-
-test_script:
-- posthtml KiraPostHTML.html -o KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
 - grunt posthtml --verbose
-- type KiraImgAutosizeCLI.html
 - type KiraImgAutosizeGrunt.html
+- posthtml KiraPostHTML.html -o KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
