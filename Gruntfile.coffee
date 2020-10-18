@@ -8,7 +8,7 @@ module.exports = (grunt) ->
 			options:
 				use: [
 					require('posthtml-img-autosize')(
-							root: 'KiraFolder',
+							root: 'output',
 							processEmptySize: true
 							)
 				]
@@ -16,7 +16,7 @@ module.exports = (grunt) ->
 				files: [
 					expand: true
 					cwd: '.'
-					src: 'KiraFolder/*.html'
+					src: 'output/**/*.html'
 					dest: '.'
 					ext: '.output.html'
 				]
