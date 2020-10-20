@@ -8,8 +8,8 @@ module.exports = (grunt) ->
 			options:
 				use: [
 					require('posthtml-img-autosize')(
-							root: 'output',
-							processEmptySize: true
+								root: 'byEntry',
+								processEmptySize: true
 							)
 				]
 			target:
