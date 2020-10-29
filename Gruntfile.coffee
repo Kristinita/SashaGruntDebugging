@@ -15,5 +15,3 @@ module.exports = (grunt) ->
 					paths: ["Programs/KristinitaLuckyLink"]
 					locale: "en_US"
 					strategy: "desktop"
-
-	return
