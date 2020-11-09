@@ -1,14 +1,13 @@
 module.exports = (grunt) ->
+
+	# grunt.loadNpmTasks '@lodder/grunt-postcss'
+	grunt.loadNpmTasks 'grunt-purgecss'
+
 	grunt.initConfig
+
 		purgecss:
-			options:
-				content: ["KiraGoddess.html"]
-				whitelist: [".KiraSecond"]
-				whitelistPatterns: [/\.KiraSecond/g]
-				whitelistPatternsChildren: [/\.KiraSecond/g]
-			main:
+			kiratarget:
+				options:
+					content: ["KiraGoddess.html"]
 				files:
 					"KiraGoddess.css": ["KiraGoddess.css"]
-
-	grunt.loadNpmTasks 'grunt-purgecss'
-	return

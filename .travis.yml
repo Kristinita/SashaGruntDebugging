@@ -1,17 +1,22 @@
+os: linux
+
+dist: focal
+
 git:
   depth: 1
+
+cache: false
+
 language: node_js
+
 node_js:
-- 11
+- node
+
 install:
-- npm install -g grunt-cli purgecss
-before_script:
-- npm install
-matrix:
-  include:
-  - script:
-    - grunt purgecss --verbose
-  - script:
-    - "purgecss --css KiraGoddess.css --con KiraGoddess.html --out . --whitelist KiraSecond"
-after_success:
+- npm i -g grunt-cli purgecss
+- npm i
+
+script:
+- purgecss --css KiraGoddess.css --content KiraGoddess.html
+- grunt purgecss --verbose --stack
 - cat KiraGoddess.css
