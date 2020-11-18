@@ -13,7 +13,8 @@ node_js:
 - node
 
 install:
-- npm install -g uglify-js
+- npm i -g grunt-cli
+- npm i
 
 script:
-- uglifyjs KiraUglify.js
+- grunt uglify --verbose --stack

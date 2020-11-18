@@ -1,16 +1,14 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks 'grunt-posthtml'
+	grunt.loadNpmTasks 'grunt-contrib-uglify'
 
 	grunt.initConfig
 
-		posthtml:
+		uglify:
 			options:
-				use: [
-					require('posthtml-img-autosize')(processEmptySize: true)
-				]
-			single:
+				sourceMap: true
+			kira_target:
 				files: [
-					src: 'KiraPostHTML.html'
-					dest: 'KiraImgAutosizeGrunt.html'
+					src: 'KiraSrc.js'
+					dest: 'KiraDest.js'
 				]
