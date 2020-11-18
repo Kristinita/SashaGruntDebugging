@@ -13,11 +13,7 @@ node_js:
 - node
 
 install:
-- npm install -g grunt-cli posthtml-cli posthtml-img-autosize
-- npm install
+- npm install -g uglify-js
 
 script:
-- posthtml KiraPostHTML.html -o KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
-- grunt posthtml --verbose
-- cat KiraImgAutosizeCLI.html
-- cat KiraImgAutosizeGrunt.html
+- uglifyjs KiraUglify.js
