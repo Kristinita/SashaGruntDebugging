@@ -13,8 +13,10 @@ node_js:
 - node
 
 install:
-- npm i -g grunt-cli
+- npm i -g grunt-cli google-closure-compiler
 - npm i
 
 script:
-- grunt uglify --verbose --stack
+- grunt closure-compiler --verbose --stack
+- google-closure-compiler --js KiraChocolat.js --language_out ECMASCRIPT_NEXT --warning_level VERBOSE --jscomp_warning * --jscomp_off undefinedVars
+- google-closure-compiler --js KiraChocolat.js --language_out ECMASCRIPT_NEXT --warning_level VERBOSE --jscomp_warning *
