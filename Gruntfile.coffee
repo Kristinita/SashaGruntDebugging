@@ -12,10 +12,7 @@ module.exports = (grunt) ->
 
 		'closure-compiler':
 			options:
-				jscomp_off: [
-							'missingProperties'
-							'undefinedVars'
-						]
+				jscomp_off: ['undefinedVars']
 				jscomp_warning: "*"
 				language_out: "ECMASCRIPT_NEXT"
 				warning_level: "VERBOSE"
