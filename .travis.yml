@@ -18,6 +18,6 @@ install:
 
 script:
 - posthtml KiraFolder/KiraPostHTML.html -o KiraFolder/KiraImgAutosizeCLI.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
-- grunt posthtml --verbose
+- grunt posthtml --verbose --stack
 - cat KiraFolder/KiraImgAutosizeCLI.html
 - cat KiraFolder/KiraPostHTML.output.html
