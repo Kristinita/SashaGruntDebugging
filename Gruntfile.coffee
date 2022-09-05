@@ -15,5 +15,5 @@ module.exports = (grunt) ->
 					cwd: '.'
 					src: 'KiraFolder/*.html'
 					dest: '.'
-					ext: '.output.html'
+					ext: '.outputgrunt.html'
 				]
