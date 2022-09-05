@@ -12,8 +12,9 @@ module.exports = (grunt) ->
 			target:
 				files: [
 					expand: true
-					cwd: '.'
-					src: 'KiraFolder/*.html'
+					cwd: 'output'
+					src: ['*.html'
+						'KiraFolder/**/*.html']
 					dest: '.'
 					ext: '.outputgrunt.html'
 				]

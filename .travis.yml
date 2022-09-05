@@ -19,5 +19,3 @@ install:
 script:
 - posthtml KiraFolder/KiraRelativePathToImage.html -o KiraFolder/KiraRelativePathToImage.outputcli.html -u posthtml-img-autosize --posthtml-img-autosize.processEmptySize true
 - grunt posthtml --verbose --stack
-- cat KiraFolder/KiraRelativePathToImage.outputcli.html
-- cat KiraFolder/KiraRelativePathToImage.outputgrunt.html
