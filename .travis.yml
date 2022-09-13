@@ -1,0 +1,18 @@
+os: linux
+
+dist: jammy
+
+git:
+  depth: 1
+
+language: node_js
+
+node: node
+
+install:
+- npm install -g grunt-cli
+- npm install
+
+script:
+- node --version
+- grunt closure-compiler --verbose --stack
