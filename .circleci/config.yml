@@ -6,7 +6,7 @@ jobs:
       image: ubuntu-2204:current
     steps:
     - checkout
-    - run: nvm install node
+    - run: nvm install node --reinstall-packages-from=node
     - run: npm install -g grunt-cli
     - run: npm install
     - run: grunt closure-compiler --verbose --stack
