@@ -2,10 +2,12 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-    - image: cimg/node:current
+    machine:
+      image: ubuntu-2204:current
     steps:
     - checkout
+    - run: nvm use 18
+    - run: nvm alias default 18
     - run: node --version
     - run: npm install -g grunt-cli
     - run: npm install
