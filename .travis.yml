@@ -13,8 +13,9 @@ cache:
   npm: false
 
 install:
-- npm install -g grunt-cli
+- npm install -g google-closure-compiler grunt-cli
 - npm install
 
 script:
+- google-closure-compiler --js="js/**.js"
 - grunt closure-compiler --verbose --stack
