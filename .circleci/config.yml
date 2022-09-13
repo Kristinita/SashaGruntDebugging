@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   build:
-    machine:
-      image: ubuntu-2204:current
+    docker:
+    - image: cimg/node:current
     steps:
     - checkout
     - run: nvm use 18
