@@ -1,14 +1,14 @@
 {
   "name": "SashaGruntDebugging",
   "version": "0.1.0",
-  "description": "Kristinita's Search site",
+  "description": "Repository for debugging Grunt plugins",
   "main": "Gruntfile.coffee",
   "repository": "https://github.com/Kristinita/SashaGruntDebugging",
   "license": "MIT",
   "author": "Sasha Chernykh",
   "devDependencies": {
-    "coffeescript": "^2.5.1",
-    "google-closure-compiler": "^20201102.0.1",
-    "grunt": "^1.3.0"
+    "coffeescript": "^2.7.0",
+    "google-closure-compiler": "^20220905.0.0",
+    "grunt": "^1.5.3"
   }
 }
