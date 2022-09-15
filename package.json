@@ -8,7 +8,9 @@
   "author": "Sasha Chernykh",
   "devDependencies": {
     "coffeescript": "^2.7.0",
-    "google-closure-compiler": "^20220905.0.0",
-    "grunt": "^1.5.3"
+    "grunt": "^1.5.3",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-purgecss": "^5.0.0",
+    "merge-source-maps": "^0.6.1",
   }
 }

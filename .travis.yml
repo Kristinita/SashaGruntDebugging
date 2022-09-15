@@ -13,9 +13,12 @@ cache:
   npm: false
 
 install:
-- npm install -g google-closure-compiler grunt-cli
+- npm install -g grunt-cli
 - npm install
 
 script:
-- google-closure-compiler --js="js/**.js"
-- grunt closure-compiler --verbose --stack
+- grunt stylus --verbose --stack
+- cat css/KiraStylus.css
+- grunt purgecss --verbose --stack
+- cat css/KiraStylus.css
+- grunt merge-source-maps --verbose --stack

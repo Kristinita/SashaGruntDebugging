@@ -1,15 +1,29 @@
 module.exports = (grunt) ->
 
-	require('google-closure-compiler').grunt grunt
+	grunt.loadNpmTasks('grunt-contrib-stylus')
+	grunt.loadNpmTasks('grunt-purgecss')
+	grunt.loadNpmTasks('merge-source-maps')
 
 	grunt.initConfig
 
-		'closure-compiler':
+		stylus:
+			options:
+				sourcemap:
+					comment: true
+					inline: true
+			compile:
+				files:
+					"css/KiraStyles.css": "stylus/KiraStyles.styl"
+
+		purgecss:
+			options:
+				content: ["KiraHTML.html"]
+				sourceMap: true
 			target:
-				files: [
-					expand: true
-					cwd: "js/"
-					src: ['**/*.js']
-					dest: "js/"
-					ext: '.min.js'
-					]
+				files:
+					"css/KiraStyles.css": ["css/KiraStyles.css"]
+
+		'merge-source-maps':
+			target:
+				files:
+					"css/KiraStyles.css": ["css/KiraStyles.css"]
