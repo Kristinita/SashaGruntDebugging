@@ -18,7 +18,7 @@ install:
 
 script:
 - grunt stylus --verbose --stack
-- cat css/KiraStyles.css
+- nl css/KiraStyles.css
 - grunt purgecss --verbose --stack
-- cat css/KiraStyles.css
+- nl css/KiraStyles.css
 - grunt merge-source-maps --verbose --stack
