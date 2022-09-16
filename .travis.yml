@@ -17,8 +17,4 @@ install:
 - npm install
 
 script:
-- grunt stylus --verbose --stack
-- nl css/KiraStyles.css
-- grunt purgecss --verbose --stack
-- nl css/KiraStyles.css
-- grunt merge-source-maps --verbose --stack
+- grunt markdownlint --verbose --stack
