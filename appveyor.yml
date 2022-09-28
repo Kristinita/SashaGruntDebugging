@@ -1,0 +1,11 @@
+platform: x64
+
+image: Visual Studio 2022
+
+install:
+- choco install nodejs
+- npm install -g grunt-cli
+- npm install
+
+build_script:
+- grunt shell --verbose --stack
