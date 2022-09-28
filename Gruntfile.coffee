@@ -6,4 +6,4 @@ module.exports = (grunt) ->
 
 		shell:
 			remark:
-				command: "npx remark **/*.md --silently-ignore --frail"
+				command: "npx remark . --silently-ignore --frail"
