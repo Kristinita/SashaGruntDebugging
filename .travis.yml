@@ -18,5 +18,5 @@ install:
 
 script:
 - grunt postcss --verbose --stack
-- more "KiraOutput/KiraExpected.html"
-- more "KiraOutput/KiraBug.html"
+- cat KiraOutput/KiraExpected.html
+- cat KiraOutput/KiraBug.html
