@@ -17,4 +17,6 @@ install:
 - npm install
 
 script:
-- grunt shell --verbose --stack
+- grunt postcss --verbose --stack
+- more "KiraOutput/KiraExpected.html"
+- more "KiraOutput/KiraBug.html"

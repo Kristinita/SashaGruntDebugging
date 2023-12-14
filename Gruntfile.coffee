@@ -1,9 +1,23 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks("grunt-shell")
+	grunt.loadNpmTasks("@lodder/grunt-postcss")
 
 	grunt.initConfig
 
-		shell:
-			remark:
-				command: "npx remark **/*.md --silently-ignore --frail"
+		postcss:
+
+			fixinlinecssinhtml:
+				options:
+					failOnError: true
+					processors: [
+						require('postcss-combine-media-query')
+					]
+
+					syntax: require('postcss-html')
+
+				files: [
+					expand: true
+					cwd: "KiraInput"
+					src: ['*.html']
+					dest: "KiraOutput"
+					]
