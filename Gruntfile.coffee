@@ -1,9 +1,20 @@
 module.exports = (grunt) ->
 
-	grunt.loadNpmTasks("grunt-shell")
+	grunt.loadNpmTasks "@lodder/grunt-postcss"
 
 	grunt.initConfig
 
-		shell:
-			remark:
-				command: "npx remark **/*.md --silently-ignore --frail"
+		postcss:
+			lintcss:
+				options:
+
+					map: true
+					writeDest: false
+
+					processors: [
+						# require('stylelint')
+						require('doiuse')([])
+					]
+
+				src: "KiraExampleFile.css"
+				dest: "KiraExampleFile.css"

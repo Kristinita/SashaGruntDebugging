@@ -1,0 +1,28 @@
+.SashaImageWidth140 {
+	width: 8.75rem
+}
+
+.SashaImageWidth280 {
+	width: 17.5rem
+}
+
+.SashaImageWidth470 {
+	width: 29.375rem
+}
+
+h1:has(+ p) {
+	margin-bottom: 0;
+}
+
+h2:has(+ p) {
+	margin-top: 0;
+}
+
+.Kira {
+	color: red;
+}
+
+.Kira {
+	color: yellow;
+}
+/*# sourceMappingURL=korvers.min.css.map */
