@@ -9,7 +9,7 @@ module.exports = (grunt) ->
 				api_key_appveyor: process.env.API_KEY_APPVEYOR
 
 		shell:
-			appveyorlintvalid:
+			appveyorlintvalidconfig:
 				command: "curl --no-progress-meter \
 							--header \"Authorization: Bearer <%= templates.tokens.api_key_appveyor %>\" \
 							--header \"Content-Type: application/json\" \
@@ -24,7 +24,7 @@ module.exports = (grunt) ->
 							else (print('Congratulations! Your AppVeyor configuration file is valid!'), exit(0)) \"
 							"
 
-			appveyorlintnonvalid:
+			appveyorlintnonvalidconfig:
 				command: "curl --no-progress-meter \
 							--header \"Authorization: Bearer <%= templates.tokens.api_key_appveyor %>\" \
 							--header \"Content-Type: application/json\" \

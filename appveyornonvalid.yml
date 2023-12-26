@@ -20,5 +20,5 @@ install:
 - npm install
 
 build_script:
-- grunt shell:appveyorvalidconfig --verbose --stack
-- grunt shell:appveyornonvalidconfig --verbose --stack
+- grunt shell:appveyorlintvalidconfig --verbose --stack
+- grunt shell:appveyorlintnonvalidconfig --verbose --stack
