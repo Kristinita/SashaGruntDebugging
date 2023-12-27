@@ -12,6 +12,7 @@ install:
 - choco install nodejs
 - npm install -g grunt-cli
 - npm install
+- python -m pip install --upgrade pip
 - pip install djlint
 
 build_script:
