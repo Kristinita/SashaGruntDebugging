@@ -7,7 +7,7 @@ git:
 
 language: python
 
-python: nigthly
+python: nightly
 
 
 install:
