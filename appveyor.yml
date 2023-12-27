@@ -15,8 +15,7 @@ environment:
 install:
 - choco install nodejs
 - npm install -g grunt-cli
-- npm install
+- pip install djlint
 
 build_script:
-- grunt shell:appveyorlintvalidconfig
-- grunt shell:appveyorlintnonvalidconfig
+- grunt shell:djlint

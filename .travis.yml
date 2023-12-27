@@ -10,6 +10,7 @@ language: python
 python: nightly
 
 env:
+
   global:
 
   # [INFO] Equivalent: API_KEY_APPVEYOR = my real key:
@@ -25,10 +26,10 @@ env:
 
 
 install:
+- pip install djlint
 - npm install -g grunt-cli
 - npm install
 
 
 script:
-- grunt shell:appveyorlintvalidconfig
-- grunt shell:appveyorlintnonvalidconfig
+- grunt shell:djlint
