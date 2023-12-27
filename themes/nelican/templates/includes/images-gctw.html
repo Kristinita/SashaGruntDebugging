@@ -1,0 +1,34 @@
+{# [INFO] gooogle-custom-translate widget — translating web pages by click, using Google Translate:
+https://get-web.site/blog/29-kastomnyj-vidzhet-googletranslate-dlja-sajta.html
+
+[INFO] Icons from the “All-in-One Country Flag” icon set by “CustomIconDesign” design studio:
+http://www.customicondesign.com/free-icons/flag-icon-set/all-in-one-country-flag-icon-set/
+
+[INFO] ISO 639-1 Alpha-2 language codes, used as values in the attribute “data-google-lang”:
+https://cloud.google.com/translate/docs/languages
+https://github.com/get-web/google-translate-custom-widget#add-new-lang
+
+[INFO] I use ISO 3166-1 Alpha-2 codes for country flags:
+https://www.iso.org/obp/ui/#search
+
+[INFO] I added “tabindex="0"” for images so that users without a mouse can select a language
+
+[NOTE] “tabindex="0"” must be added to HTML; no CSS styles for it:
+https://stackoverflow.com/q/4971912/5951529
+https://stackoverflow.com/q/52021177/5951529
+
+[INFO] I set height and width of the flags in my “basic.styl”.
+So I set an exception for djlint.
+#}
+
+{# djlint:off H006 #}
+
+<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/flags/ps.webp" tabindex="0" alt="Palestine" data-google-lang="ar" class="language__img">
+<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/flags/nz.webp" tabindex="0" alt="New Zealand" data-google-lang="en" class="language__img">
+<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/flags/ve.webp" tabindex="0" alt="Venezuela" data-google-lang="es" class="language__img">
+<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/flags/cd.webp" tabindex="0" alt="Democratic Republic of the Congo" data-google-lang="fr" class="language__img">
+<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/flags/ru.webp" tabindex="0" alt="Russia" data-google-lang="ru" class="language__img">
+{# [INFO] Macao as Taiwan and Hong Kong uses Traditional Chinese #}
+<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/flags/mo.webp" tabindex="0" alt="Macao" data-google-lang="zh-TW" class="language__img">
+
+{# djlint:on #}

@@ -11,4 +11,5 @@ module.exports = (grunt) ->
 
 		shell:
 			djlint:
-				command: "djlint <%= templates.paths.theme %>/templates/*.html --lint"
+				cwd: "<%= templates.paths.theme %>/templates"
+				command: "djlint . --lint"

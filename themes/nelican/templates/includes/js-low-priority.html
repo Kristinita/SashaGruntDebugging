@@ -1,0 +1,10 @@
+{# [INFO] AddToAny — social share buttons:
+https://www.addtoany.com
+
+[PATCH][ACCESSIBILITY] Scipt from “AddToAny/addtoany.coffee”
+replace “title” attribute to “aria-label”
+#}
+<script>
+	Defer.js('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/AddToAny/addtoany{{ MIN }}.js', 'addtoany-local', 6400, null, true);
+	Defer.js('https://static.addtoany.com/menu/page.js', 'addtoany', 7000, null, true);
+</script>

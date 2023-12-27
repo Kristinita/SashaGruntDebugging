@@ -1,0 +1,10 @@
+{# [INFO] Preload critical images:
+https://addyosmani.com/blog/preload-hero-images/ #}
+
+
+<!-- Flags for GCTW preload -->
+
+{# [INFO] Preload flags for google-custom-translate-widget #}
+{% for kira_country_code in ["ps", "nz", "ve", "cd", "ru", "mo"] %}
+	<link rel="preload" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/flags/{{ kira_country_code }}.webp" as="image">
+{% endfor %}
