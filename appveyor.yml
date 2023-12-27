@@ -6,15 +6,12 @@ clone_depth: 1
 
 environment:
 
-  API_KEY_APPVEYOR:
-
-    secure: +tAYCLWvKpNefBmIFHBZzSdFnN8mu71hBU1MqYbrjlY=
-
   PYTHON: C:\Python312-x64
 
 install:
 - choco install nodejs
 - npm install -g grunt-cli
+- npm install
 - pip install djlint
 
 build_script:
