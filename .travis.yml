@@ -13,7 +13,7 @@ python: 3.12
 install:
 - npm install -g grunt-cli
 - npm install
-
+- npx simple-git-hooks
 
 script:
 - grunt shell:commitlint --debug --stack --verbose

@@ -11,6 +11,7 @@ environment:
 install:
 - npm install -g grunt-cli
 - npm install
+- npx simple-git-hooks
 
 build_script:
 - grunt shell:commitlint --debug --stack --verbose
