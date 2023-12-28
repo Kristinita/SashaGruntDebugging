@@ -6,4 +6,4 @@ module.exports = (grunt) ->
 
 		shell:
 			commitlint:
-				command: "git log -1 --pretty=format:\"%b\" | npx commitlint --verbose"
+				command: "git log -1 --pretty=format:\"%s%n%B\" | npx commitlint --verbose"
