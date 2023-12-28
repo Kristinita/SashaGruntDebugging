@@ -34,8 +34,9 @@ rules:
     - always
 
   body-max-length:
-    - 0
+    - 2
     - always
+    - 10
 
   body-min-length:
     - 0
@@ -46,8 +47,9 @@ rules:
     - always
 
   footer-max-length:
-    - 0
+    - 2
     - always
+    - 10
 
   footer-min-length:
     - 0

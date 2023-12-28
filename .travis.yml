@@ -13,7 +13,10 @@ python: 3.12
 install:
 - npm install -g grunt-cli
 - npm install
-- npx simple-git-hooks
 
 script:
+- git log -1
+- git log -1 --pretty=format:"%s%n%n%b"
+- git log -1 --pretty=format:"%s%n%b"
 - grunt shell:commitlint --debug --stack --verbose
+- grunt shell:commitlint-codemagic
