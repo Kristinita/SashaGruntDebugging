@@ -9,6 +9,7 @@ environment:
   PYTHON: C:\Python312-x64
 
 install:
+- npm install -g grunt-cli
 - npm install
 
 build_script:
