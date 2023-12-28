@@ -4,7 +4,7 @@
 		"coffeescript": "^2.7.0",
 		"grunt": "^1.5.3",
 		"grunt-shell": "^4.0.0",
-		"husky": "^8.0.3"
+		"husky": "^8.0.0"
 	},
 	"scripts": {
 		"prepare": "husky install"
