@@ -4,12 +4,6 @@ module.exports = (grunt) ->
 
 	grunt.initConfig
 
-		templates:
-			paths:
-				cwd: process.cwd()
-				theme: "themes/nelican"
-
 		shell:
-			djlint:
-				cwd: "./<%= templates.paths.theme %>/templates/"
-				command: "djlint **/*.html --lint"
+			commitlint:
+				command: "git log -1 --pretty=format:\"%s\" | npx commitlint --verbose"

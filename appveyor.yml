@@ -9,11 +9,7 @@ environment:
   PYTHON: C:\Python312-x64
 
 install:
-- choco install nodejs
-- npm install -g grunt-cli
 - npm install
-- python -m pip install --upgrade pip
-- pip install djlint
 
 build_script:
-- grunt shell:djlint
+- grunt shell:commitlint --debug --stack --verbose
