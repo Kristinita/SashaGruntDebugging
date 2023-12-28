@@ -4,9 +4,9 @@
 		"coffeescript": "^2.7.0",
 		"grunt": "^1.5.3",
 		"grunt-shell": "^4.0.0",
-		"simple-git-hooks": "^2.9.0"
+		"husky": "^8.0.3"
 	},
-	"simple-git-hooks": {
-		"pre-commit": "npx commitlint --from HEAD~1 --verbose"
+	"scripts": {
+		"prepare": "husky install"
 	}
 }
