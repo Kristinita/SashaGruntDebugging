@@ -1,4 +1,4 @@
 // Testing
 module.exports = {
-	"commit-msg": "npx --no -- commitlint --edit \"$1\""
+	"commit-msg": "npx --no -- commitlint --edit \"$1\" --verbose"
 };
