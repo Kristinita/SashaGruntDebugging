@@ -22,6 +22,7 @@
 # https://github.com/ahmed-taj/commitlint-bot/pull/8
 # https://probot.github.io/apps/commitlint/
 #
+#
 # [INFO] commitlint rules:
 # 0 — disable, 1 — warning, 2 — error:
 # I’m not use warnings, that CI exit if any warning.
@@ -46,6 +47,18 @@ rules:
   - 2
   - always
   - 120
+
+  # [INFO] “references” — is issues references in footer as “fix #4147” and “re #4147”:
+  # https://commitlint.js.org/#/reference-prompt?id=questions
+  references-empty:
+  - 0
+
+  # [NOTE] Enforce scope usage.
+  # [EXAMPLE] “git commit -m "feat: Kira Goddess" — non-valid”,
+  # “git commit -m "feat(kirascope): Kira Goddess — valid”
+  scope-empty:
+  - 2
+  - never
 
   # [NOTE] I set that subject may be written in any case, because many words and objects in programming,
   # with which I begin my subjects, begin with a small letter
@@ -124,12 +137,19 @@ rules:
   # [INFO] Sign-off commits:
   # https://stackoverflow.com/a/14044024/5951529
   #
+  # [INFO] “Sign-off is a requirement for getting patches into the Linux kernel and a few other projects,
+  # but most projects don't actually use it.”:
+  # https://stackoverflow.com/a/1962112/5951529
+  #
+  # [INFO] For sign off commit add “--signoff” or “-s” command to “git commit” command:
+  # https://stackoverflow.com/a/45974435/5951529
+  #
   # I’m not use it in my projects:
   # 1. gpg-sign more really certify commit author,
   # 2. unobfuscate e-mail push to GitHub,
   # 3. User needs add “Signed-off-by: Your Name <your.email@example.com>” each time,
   # it may take a lot of time.
-  signed-off-by:
+  trailer-exists:
   - 2
   - always
   - "Signed-off-by:"
