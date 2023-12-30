@@ -4,14 +4,14 @@
 # [OVERVIEW] Lint commit messages for compliance with the Conventional Commits specification:
 # https://commitlint.js.org
 #
-# [INFO] Conventional Commits description:
+# [INFO] Conventional Commits documentation:
 # https://conventionalcommits.org
+#
+# [OPTIONS]
+# https://commitlint.js.org/#/reference-configuration?id=javascript
 #
 # [RULES]
 # https://commitlint.js.org/#/reference-rules
-#
-# [INFO] Default rules preset, installed by “npm install --save-dev @commitlint/config-conventional”:
-# https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-conventional/index.js
 #
 #
 # [INFO] Probot Commitlint check commits in GitHub pull requests:
@@ -21,13 +21,26 @@
 # [NOTE] Probot Commitlint doesn’t work with commitlint configuration files:
 # https://github.com/ahmed-taj/commitlint-bot/pull/8
 # https://probot.github.io/apps/commitlint/
+
+
+##################################
+# Commitlint config-conventional #
+##################################
+# [INFO] Default rules preset, installed by “npm install --save-dev @commitlint/config-conventional”:
+# https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-conventional/index.js
 #
-#
-# [INFO] commitlint rules:
-# 0 — disable, 1 — warning, 2 — error:
-# I’m not use warnings, that CI exit if any warning.
+# [INFO] Set-up default “config-conventional” preset:
+# https://commitlint.js.org/#/guides-local-setup?id=install-commitlint
+# https://commitlint.js.org/#/reference-configuration?id=javascript
+extends:
+- "@commitlint/config-conventional"
+
+
+# [INFO] 0 — disable, 1 — warning, 2 — error:
 # https://github.com/marionebl/commitlint/blob/master/docs/reference-rules.md#rules
 # https://github.com/SuperPaintman/commitlint-config-pedantic/blob/master/configs/base.yml
+#
+# [INFO] I prefer errors rather than warnings so that CI build exits at every warning
 rules:
 
   # [NOTE] “body” is the long commit description, which may contain long URL’s. I think it makes sense to set it to a high value.
