@@ -162,7 +162,7 @@ rules:
   # 2. unobfuscate e-mail push to GitHub,
   # 3. User needs add “Signed-off-by: Your Name <your.email@example.com>” each time,
   # it may take a lot of time.
-  trailer-exists:
-  - 2
-  - always
-  - "Signed-off-by:"
+  # trailer-exists:
+  # - 2
+  # - always
+  # - "Signed-off-by:"
