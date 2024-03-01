@@ -18,5 +18,7 @@ install:
 build_script:
 - which xmllint
 - xmllint --version
+- which fd
+- fd --version
 - mv KiraGoddess output
 - grunt shell:xmllint --debug --stack --verbose
