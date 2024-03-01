@@ -1,21 +1,29 @@
-os: linux
+cache:
+  directories:
+  # - $HOME/.cache/pip
+  # - $HOME/.cache/pipenv
+  - $HOME/.npm
 
 dist: jammy
 
 git:
   depth: 1
 
-language: python
+language: node_js
 
-python: 3.12
+node_js: node
+
+os: linux
 
 
 install:
-- npm install -g grunt-cli
-- npm install
+- sudo apt update
+- sudo apt install $(grep --extended-regexp --invert-match "^(#|$)" aptpackages)
+- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
+- npm install --global grunt-cli
+- npm ci --loglevel=error
 
 script:
-- git log -1
-- git log -1 --pretty=format:"%s%n%n%b"
-- git log -1 --pretty=format:"%s%n%b"
-- grunt shell:commitlint
+- which xmllint
+- xmllint --version
+- grunt shell:xmllint --debug --stack --verbose

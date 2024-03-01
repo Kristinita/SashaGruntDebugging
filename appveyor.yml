@@ -1,20 +1,21 @@
-platform: x64
-
-image: Visual Studio 2022
+cache:
+- "%LOCALAPPDATA%\\npm-cache"
+# - "%LOCALAPPDATA%\\pip\\cache"
+# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 clone_depth: 1
 
-environment:
+image: Visual Studio 2022
 
-  PYTHON: C:\Python312-x64
+platform: x64
+
 
 install:
-- npm install -g grunt-cli
-- npm install
-- npx simple-git-hooks
+- choco install --yes chocolatey.config
+- npm install --global grunt-cli
+- npm ci --loglevel=error
 
 build_script:
-- git log -1
-- git log -1 --pretty=format:"%s%n%n%b"
-- git log -1 --pretty=format:"%s%n%b"
-- grunt shell:commitlint --debug --stack --verbose
+- which xmllint
+- xmllint --version
+- grunt shell:xmllint --debug --stack --verbose
