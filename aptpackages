@@ -68,5 +68,6 @@
 # [NOTE] No snap fd package:
 # https://snapcraft.io/search?q=fd
 # fd-find
+fd-find=9.0.0-1
 
 libxml2-utils

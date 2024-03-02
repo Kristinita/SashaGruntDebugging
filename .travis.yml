@@ -19,7 +19,7 @@ os: linux
 install:
 - sudo apt update
 - sudo apt install $(grep --extended-regexp --invert-match "^(#|$)" aptpackages)
-- npm install --global fd-find grunt-cli
+- npm install --global grunt-cli
 - sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
 - npm ci --loglevel=error
 
