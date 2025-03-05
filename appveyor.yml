@@ -1,3 +1,9 @@
+build_script:
+- node --version
+- npx eslint --version
+- grunt shell:eslintfix --verbose
+- grunt shell:eslintlint --verbose
+
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
 # - "%LOCALAPPDATA%\\pip\\cache"
@@ -5,20 +11,13 @@ cache:
 
 clone_depth: 1
 
+environment:
+  nodejs_version: "23"
+
 image: Visual Studio 2022
 
-platform: x64
-
-
 install:
-- choco install --yes chocolatey.config
 - npm install --global grunt-cli
 - npm ci --loglevel=error
 
-build_script:
-- which xmllint
-- xmllint --version
-- which fd
-- fd --version
-- mv KiraGoddess output
-- grunt shell:xmllint --debug --stack --verbose
+platform: x64

@@ -1,7 +1,13 @@
+###
+@Author: SashaChernykh
+@Date: 2024-02-08 19:55:11
+@Last Modified by: SashaChernykh
+@Last Modified time: 2025-03-05 08:35:55
+###
 module.exports =
 
-	"git-upload":
-		command: "npx gitu <%= templates.CommitMessage %>"
+	eslintfix:
+		command: "npx eslint output/**/*.{js,html} --fix --debug"
 
-	xmllint:
-		command: "fd \"(chocolatey.config|xml)$\" . output --exec xmllint --noout --pedantic \; --exec echo"
+	eslintlint:
+		command: "npx eslint *.{js,mjs} output/**/*.{js,html} --debug"

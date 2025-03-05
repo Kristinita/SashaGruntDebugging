@@ -1,6 +1,16 @@
 {
 	"devDependencies": {
+		"@eslint/js": "^9.21.0",
 		"coffeescript": "^2.7.0",
+		"eslint": "^9.21.0",
+		"eslint-plugin-compat": "^6.0.2",
+		"eslint-plugin-html": "^8.1.2",
+		"eslint-plugin-no-unsanitized": "^4.1.2",
+		"eslint-plugin-perfectionist": "^4.9.0",
+		"eslint-plugin-prefer-arrow-functions": "^3.6.2",
+		"eslint-plugin-sonarjs": "^3.0.2",
+		"eslint-plugin-unicorn": "^57.0.0",
+		"globals": "^16.0.0",
 		"grunt": "^1.5.3",
 		"grunt-concurrent": "^3.0.0",
 		"grunt-shell": "^4.0.0",
