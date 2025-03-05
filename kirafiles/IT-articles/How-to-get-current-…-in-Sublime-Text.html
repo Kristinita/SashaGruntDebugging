@@ -1,0 +1,1222 @@
+
+
+
+
+<!--=============================
+=			Variables			=
+==============================-->
+
+
+<!--=============================
+=			Beginning			=
+==============================-->
+
+
+<!DOCTYPE html>
+
+<!--=========================
+=			HTML			=
+==========================-->
+
+<html lang="en">
+
+<!--=========================
+=			Head			=
+==========================-->
+
+<head>
+
+	<!--=========================
+	=			Meta			=
+	==========================-->
+
+
+
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<title>How to get current … in Sublime Text</title>
+
+
+<meta name="description" content="Tutorial, how to get some variable parameters for your Sublime Text">
+
+
+
+	<!--=============================
+	=		Critical images			=
+	==============================-->
+
+
+
+
+<!-- Flags for GCTW preload -->
+
+	<link rel="preload" href="../theme/images/flags/ps.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/nz.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/ve.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/cd.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/ru.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/mo.webp" as="image">
+
+
+<!-- Aside icon preload -->
+
+<link rel="preload" href="../theme/images/aside/SashaGreenSweater.webp" as="image">
+
+<!-- Titleimage preload -->
+
+
+	<!--=================================
+	=			Critical styles			=
+	==================================-->
+
+
+
+
+<!-- Basic styles -->
+
+<link rel="preload" href="../theme/css/components/basic.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Aside styles -->
+
+<link rel="preload" href="../theme/css/components/Aside-icons/aside-icons.css" as="style" onload="this.rel='stylesheet'">
+
+<!-- Left/right aside icon styles -->
+
+<link rel="preload" href="../theme/css/components/Aside-icons/aside-icon-left.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Aside icon -->
+
+<style>
+	.SashaIconAside {
+		background-image: url(../theme/images/aside/SashaGreenSweater.webp)
+	}
+</style>
+
+
+<!-- Images styles -->
+
+
+	<link rel="preload" href="../theme/css/components/images.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+<!-- Admonition -->
+
+
+
+	<link rel="preload" href="../theme/css/third-party/Admonition/admonition.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+
+
+
+
+	<link rel="preload" href="../theme/css/third-party/Admonition/admonition-hint.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+
+	<link rel="preload" href="../theme/css/third-party/Admonition/admonition-warning.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+
+<!-- Hide body scrollbar -->
+
+<link rel="preload" href="../theme/css/components/scrollbar-body-hide.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Fonts styles -->
+
+<link rel="preload" href="../theme/css/components/fonts.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Bulma styles -->
+
+<link rel="preload" href="../theme/css/third-party/Bulma/bulma-modules.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="../theme/css/third-party/Bulma/bulma-local.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Gemini scrollbar styles -->
+
+<link rel="preload" href="../theme/css/third-party/Gemini/gemini.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="../theme/css/third-party/Gemini/gemini-local.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Stork styles -->
+
+
+
+
+<!-- Theme -->
+
+<link rel="preload" href="../theme/css/nelican-themes/it-articles.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Background for header on aside icon -->
+
+	<link rel="preload" href="../theme/css/nelican-themes-aside-header-backgrounds/KiraSeagreen.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!--=====================
+=		Header CSS		=
+======================-->
+
+<link rel="preload" href="../theme/css/components/header-main.css" as="style" onload="this.rel='stylesheet'">
+	<!--=============================
+	=		Critical scripts		=
+	==============================-->
+
+
+
+
+<!-- Defer.js -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js" as="script">
+<script src="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js"></script>
+
+
+<!-- Wait elements -->
+
+<link rel="preload" href="../theme/js/Accessibility/wait-elements.js" as="script">
+<script src="../theme/js/Accessibility/wait-elements.js" defer=""></script>
+
+
+<!-- Gemini scrollbar -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/noeldelgado/gemini-scrollbar/index.min.js" as="script">
+<script src="https://cdn.jsdelivr.net/gh/noeldelgado/gemini-scrollbar/index.min.js" defer=""></script>
+<script src="../theme/js/Gemini/gemini-scrollbar.js" defer=""></script>
+
+
+<!-- Bulma -->
+
+<link rel="preload" href="../theme/js/Bulma/bulma-navbar.js" as="script">
+<script src="../theme/js/Bulma/bulma-navbar.js" defer=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=================
+	=		Fonts		=
+	==================-->
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="">
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap" media="print" onload="this.media='all'">
+
+<noscript>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap">
+</noscript>
+
+
+
+<script>
+	let kiraScadaFontLoaded = false;
+	var kiraDeferImmediately = 0;
+	Defer.dom("h2", kiraDeferImmediately, "KiraScadaFontHeaderDeferJS", () => {
+		if (!kiraScadaFontLoaded) {
+			const kiraScadaFontHeaderDefer = document.createElement("link");
+			kiraScadaFontHeaderDefer.setAttribute("href", "https://fonts.googleapis.com/css2?family=Scada:ital,wght@1,700&amp;display=swap");
+			kiraScadaFontHeaderDefer.setAttribute("rel", "stylesheet");
+			document.querySelector("head").append(kiraScadaFontHeaderDefer);
+			kiraScadaFontLoaded = true;
+		}
+	});
+</script>
+
+
+
+
+	<script>
+		let kiraFiraMonoFontLoaded = false;
+		var kiraDeferImmediately = 0;
+		Defer.dom("code", kiraDeferImmediately, "KiraFiraMonoFontCodeBlocksDeferJS", () => {
+			if (!kiraFiraMonoFontLoaded) {
+				const kiraFiraMonoFontCodeBlocksDefer = document.createElement("link");
+				kiraFiraMonoFontCodeBlocksDefer.setAttribute("href", "https://fonts.googleapis.com/css2?family=Fira+Mono&amp;display=swap");
+				kiraFiraMonoFontCodeBlocksDefer.setAttribute("rel", "stylesheet");
+				document.querySelector("head").append(kiraFiraMonoFontCodeBlocksDefer);
+				kiraFiraMonoFontLoaded = true;
+			}
+		});
+	</script>
+
+
+
+<script>
+	var kiraDeferImmediately = 0;
+	Defer.dom(".SashaWorkOnYourself", kiraDeferImmediately, "KiraMarckScriptFontWorkOnYourselfDeferJS", () => {
+			const kiraMarckScriptFontWorkOnYourselfDefer = document.createElement("link");
+			kiraMarckScriptFontWorkOnYourselfDefer.setAttribute("href", "https://fonts.googleapis.com/css2?family=Marck+Script&amp;display=swap&amp;text=Работйендс");
+			kiraMarckScriptFontWorkOnYourselfDefer.setAttribute("rel", "stylesheet");
+			document.querySelector("head").append(kiraMarckScriptFontWorkOnYourselfDefer);
+		});
+</script>
+
+
+
+	<!--=================================
+	=	Styles for specific categories	=
+	==================================-->
+
+
+
+
+
+<!-- Neliateka navigation menu -->
+
+
+
+<!-- Kristinograd icons -->
+
+
+
+<!-- Kristinograd examples blocks -->
+
+
+	<!--=========================
+	=	Styles of components	=
+	==========================-->
+
+
+
+
+
+<!-- Tables -->
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.css('../theme/css/components/tables.css', 'table', kiraDeferEarly);
+	</script>
+
+
+
+<!-- Blockquotes -->
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.css('../theme/css/components/Blockquotes/blockquotes-leftborderstyle.css', 'blockquotes-leftborderstyle', kiraDeferEarly);
+	</script>
+
+
+
+
+<!-- Iframes -->
+
+
+
+<!-- Code styles -->
+
+
+
+
+
+
+
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.css('https://cdn.jsdelivr.net/npm/balloon-css/balloon.min.css', 'balloon', kiraDeferEarly);
+		Defer.css('../theme/css/components/Code/code-blocks.css', 'code-blocks-css', kiraDeferEarly);
+	</script>
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.css('../theme/css/components/Code/code-inline.css', 'code-inline', kiraDeferEarly);
+	</script>
+
+
+<!-- Small icons -->
+
+
+
+
+
+
+
+<!-- Shadows around the text -->
+
+
+
+<!-- Relative pages -->
+
+
+
+<!-- GRights -->
+
+
+
+<!-- Custom CSS -->
+
+
+
+<!-- Footer for articles and pages -->
+
+<script>
+	var kiraDeferEarly = 400;
+	Defer.css('../theme/css/components/footer-main.css', 'footer-main', kiraDeferEarly);
+</script>
+	<!--=========================
+	=	Scripts of components	=
+	==========================-->
+
+
+
+
+
+<!-- Code scripts -->
+
+	<script>
+		var kiraDeferEarly = 400, kiraDeferEarlySecond = 700;
+		Defer.js('https://cdn.jsdelivr.net/clipboard.js/latest/clipboard.min.js', 'clipboard-js', kiraDeferEarly);
+		Defer.js('../theme/js/ClipboardJS/clipboard.js', 'clipboard-js-local', kiraDeferEarlySecond);
+	</script>
+
+
+<!-- Translate GCTW scripts -->
+
+
+
+<!-- Translate GCTW scripts -->
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.js('../theme/js/google-translate-custom-widget/gtcw-en.js', 'gtcw-en', kiraDeferEarly);
+	</script>
+
+<script>
+	var kiraDeferEarlySecond = 700, kiraDeferEarlyThird = 1000;
+	Defer.js('../theme/js/google-translate-custom-widget/gtcw-accessibility.js', 'gtcw-accessibility', kiraDeferEarlySecond);
+	Defer.js('https://cdn.jsdelivr.net/gh/Kristinita/google-translate-custom-widget@KiraSeparateConfigAndTranslateScript/nativejs/js/google-translate.min.js', 'gtcw', kiraDeferEarlySecond);
+	Defer.js('https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js', 'js-cookie', kiraDeferEarlyThird);
+	Defer.js('https://translate.google.com/translate_a/element.js?cb=TranslateWidgetIsLoaded', 'google-translate-element', kiraDeferEarlyThird);
+</script>
+	<!--=============================
+	=		Third-party styles		=
+	==============================-->
+
+
+
+
+
+	<script>
+		var kiraDeferMedium = 1000;
+		Defer.css('https://cdn.jsdelivr.net/npm/hes-gallery/dist/hes-gallery.min.css', 'hes-gallery-styles', kiraDeferMedium);
+	</script>
+
+
+
+
+		<script>
+			var kiraDeferEarlySecond = 700;
+			Defer.css('../theme/css/nelican-themes-third-party/Pygments/pygments-paraiso-light.css', 'pygments-paraiso-light', kiraDeferEarlySecond);
+		</script>
+
+
+
+
+
+
+
+
+
+	<!--=============================
+	=		Third-party scripts		=
+	==============================-->
+
+
+
+
+	<script>
+		var kiraDeferMedium = 1000, kiraDeferMediumSecond = 1500;
+		Defer.js('https://cdn.jsdelivr.net/gh/demtario/hes-gallery/dist/hes-gallery.min.js', 'hes-gallery', kiraDeferMedium);
+		Defer.js('../theme/js/hes-gallery/hes-gallery.js', 'hes-gallery-local', kiraDeferMediumSecond);
+	</script>
+
+
+
+
+
+
+
+
+	<!--=================================
+	=		Low-priority styles		    =
+	==================================-->
+
+
+<link rel="stylesheet" href="../theme/css/components/javascript-disabled.css">
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.css('../theme/css/third-party/AddToAny/addtoany.css', 'addtoany-styles', kiraDeferLate, undefined, true);
+</script>
+
+<script>
+	var kiraDeferLateSecond = 6500;
+	Defer.css('../theme/css/third-party/typo-reporter/typo-reporter.css', 'typo-reporter-css', kiraDeferLateSecond, undefined, true);
+</script>
+	<!--=================================
+	=		Low-priority scripts		=
+	==================================-->
+
+
+
+<script>
+	var kiraDeferLateSecond = 6500, kiraDeferLateThird = 7000;
+	Defer.js('../theme/js/AddToAny/addtoany.js', 'addtoany-local', kiraDeferLateSecond, undefined, true);
+	Defer.js('https://static.addtoany.com/menu/page.js', 'addtoany', kiraDeferLateThird, undefined, true);
+</script>
+
+
+
+
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.js('../theme/js/Browser-Update/browser-update.js', 'browser-update-local', kiraDeferLate);
+	Defer.js('https://browser-update.org/update.min.js', 'browser-update', kiraDeferLate);
+</script>
+
+
+
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.js('https://cdn.jsdelivr.net/npm/typo-reporter/lib/TypoReporter.min.js', 'typo-reporter', kiraDeferLate, undefined, true);
+</script>
+
+	<script>
+		var kiraDeferLateSecond = 6500;
+		Defer.js('../theme/js/typo-reporter/typo-reporter-en.js', 'typo-reporter-local-en', kiraDeferLateSecond, undefined, true);
+	</script>
+
+
+
+
+<script>
+	var kiraDeferImmediately = 0;
+	Defer.dom('.KiraUtterances', kiraDeferImmediately, 'KiraUtterancesDeferJS', () => {
+			const kiraUtterancesDefer = document.createElement('script');
+			kiraUtterancesDefer.setAttribute("src", "https://utteranc.es/client.js");
+			kiraUtterancesDefer.setAttribute("repo", "Kristinita/KristinitaPelican");
+			kiraUtterancesDefer.setAttribute("issue-term", "title");
+			kiraUtterancesDefer.setAttribute("label", "Utterances");
+			kiraUtterancesDefer.setAttribute("theme", "preferred-color-scheme");
+			kiraUtterancesDefer.setAttribute("crossorigin", "anonymous");
+			document.querySelector(".KiraUtterances").append(kiraUtterancesDefer);
+		});
+</script>
+
+
+
+
+
+
+
+
+
+	<!--=========================
+	=			base			=
+	==========================-->
+
+
+	<!--=================================
+	=			Structured data			=
+	==================================-->
+
+
+	<meta property="og:title" content="How to get current … in Sublime Text">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://i.imgur.com/nwNgLkR.png">
+	<meta property="og:url" content=".\IT-articles/How-to-get-current-…-in-Sublime-Text.html">
+	<meta property="og:description" content="Tutorial, how to get some variable parameters for your Sublime Text">
+	<meta property="og:site_name" content="Поиск Кристиниты">
+	<meta property="article:published_time" content="2018-04-05">
+	<meta property="article:modified_time" content="2025-02-21">
+	<meta property="article:section" content="IT-articles">
+	<meta property="article:tag" content="it-articles">
+	<meta property="article:tag" content="sublime-text">
+
+
+
+
+<script type="application/ld+json">
+{
+		"@context": "https://schema.org",
+		"@type": "HowTo",
+		"name": "How to get current … in Sublime Text",
+		"description": "Tutorial, how to get some variable parameters for your Sublime Text",
+		"headline": "How to get current … in Sublime Text",
+		"datePublished": "2018-04-05 07:30:14+03:00",
+		"dateModified": "2025-02-21 20:19:58+03:00",
+		"author": {
+			"@type": "Person",
+			"name": "Sasha Chernykh"
+		},
+		"image": "https://i.imgur.com/nwNgLkR.png",
+		"url": "../IT-articles/How-to-get-current-…-in-Sublime-Text.html"
+}
+</script>
+	<!--=========================
+	=			Feeds			=
+	==========================-->
+
+	<!-- Atom feeds -->
+
+
+	<link href="../feeds/feeds-all/all.atom.xml" rel="alternate" type="application/atom+xml">
+
+
+		<link href="../feeds/feeds-categories/it-articles.atom.xml" rel="alternate" type="application/atom+xml">
+
+			<link href="../feeds/feeds-tags/it-articles.atom.xml" rel="alternate" type="application/atom+xml">
+			<link href="../feeds/feeds-tags/sublime-text.atom.xml" rel="alternate" type="application/atom+xml">
+
+		<link href="../feeds/feeds-languages/all-en.atom.xml" rel="alternate" type="application/atom+xml">
+
+			<link href="../feeds/feeds-authors/sasha-chernykh.atom.xml" rel="alternate" type="application/atom+xml">
+
+
+
+	<!-- RSS feeds -->
+
+
+	<link href="../feeds/feeds-all/all.rss.xml" rel="alternate" type="application/rss+xml">
+
+
+		<link href="../feeds/feeds-categories/it-articles.rss.xml" rel="alternate" type="application/rss+xml">
+
+			<link href="../feeds/feeds-tags/it-articles.rss.xml" rel="alternate" type="application/rss+xml">
+			<link href="../feeds/feeds-tags/sublime-text.rss.xml" rel="alternate" type="application/rss+xml">
+
+		<link href="../feeds/feeds-languages/all-en.rss.xml" rel="alternate" type="application/rss+xml">
+
+			<link href="../feeds/feeds-authors/sasha-chernykh.rss.xml" rel="alternate" type="application/rss+xml">
+
+
+
+</head>
+
+
+<body class="gm-scrollbar-container">
+
+	<!--=====================================
+	=			Skip to main link			=
+	======================================-->
+
+
+	<a class="KiraSkipToContent" href="#KiraUniqueContent">Skip to main content</a>
+
+	<!--=============================
+	=			Scrollbar			=
+	==============================-->
+
+	<div class="gm-scrollbar -vertical"><div class="thumb"></div></div>
+	<div class="gm-scrollbar -horizontal"><div class="thumb"></div></div>
+	<div class="gm-scroll-view">
+
+		<!--=============================
+		=			Side icon			=
+		==============================-->
+
+
+
+
+<aside class="SashaIconAside" aria-label="Icon on a third of the screen (for desktop devices) or at the top of the page (for mobile devices)">
+
+	<div class="SashaAsideBottomText">
+
+			How to get current … in Sublime Text
+
+	</div>
+</aside>
+		<!--=================================
+		=			Content area			=
+		==================================-->
+
+		<div class="KiraContentArea">
+
+			<!--=============================
+			=			noscript			=
+			==============================-->
+
+
+<div role="alert">
+	<noscript class="SashaDisabledJavaScriptMessage">
+		<p>Sorry, this site doesn’t work, if JavaScript disabled. Please, <a href="https://activatejavascript.org/en/instructions" rel="noopener" target="_blank">enable JavaScript for your browser</a>.</p>
+		<p>Owner of this site thinks that <a href="https://stackoverflow.com/a/17073999/5951529" rel="noopener" target="_blank">JavaScript disabling — is obsolete action in 2025</a> and <a href="https://www.reddit.com/r/webdev/comments/48z7jz/do_you_take_into_account_those_who_disable/d0nxftd/" rel="noopener" target="_blank">will not support users who did this</a>.</p>
+		<p>Probably, <a href="https://www.howtogeek.com/138865/htg-explains-should-you-disable-javascript/" rel="noopener" target="_blank">you don’t need turn off JavaScript</a>.</p>
+	</noscript>
+</div>
+			<!--=========================
+			=			Navbar			=
+			==========================-->
+
+
+
+<nav aria-label="main navigation" class="navbar">
+
+	<div class="navbar-brand">
+
+
+		<button aria-label="menu" aria-expanded="false" class="navbar-burger" data-target="navbar-menu">
+
+
+
+			<span aria-hidden="true">&#8203;</span>
+			<span aria-hidden="true">&#8203;</span>
+			<span aria-hidden="true">&#8203;</span>
+
+
+		</button>
+
+	</div>
+
+	<div class="navbar-menu">
+		<div class="navbar-start">
+
+			<!-- Library for life -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Library for life
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Neliateka-Documentation/Библиотека-для-жизни#KiraUniqueContent" rel="noopener" target="_blank">“Library for life” description</a>
+					<a class="navbar-item" href="../tag/library-for-life-main" rel="noopener" target="_blank">Literature of Neliateka by themes</a>
+					<a class="navbar-item" href="https://raw.githubusercontent.com/Kristinita/KristinitaPelican/master/content/Library-for-life/Библиотека-для-жизни-полный-список.txt" rel="noopener" target="_blank">Complete list of Neliateka books and other materials</a>
+					<a class="navbar-item" href="../Neliateka-Documentation/Библиотека-непрерывного-обучения#KiraUniqueContent" rel="noopener" target="_blank">Lifelong learning library</a>
+					<a class="navbar-item" href="../Neliateka-Wishlist/Вишлист-библиотеки-для-жизни#KiraUniqueContent" rel="noopener" target="_blank">Neliateka wishlist</a>
+				</div>
+			</div>
+
+			<!-- Nelia’s Rooms -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Nelia’s Rooms
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Nelias-Rooms/Комнаты-Нели#KiraUniqueContent" rel="noopener" target="_blank">Nelia’s Rooms description</a>
+					<a class="navbar-item" href="../Nelias-Rooms/Зелёная-Комната-Нели#KiraUniqueContent" rel="noopener" target="_blank">Nelia’s Green Room</a>
+					<a class="navbar-item" href="../Nelias-Rooms/Поиск-книг-для-Комнат-Нели#KiraUniqueContent" rel="noopener" target="_blank">Nelia’s Rooms wishlist</a>
+					<a class="navbar-item" href="../category/nelias-rooms" rel="noopener" target="_blank">All materials of the “Nelia’s Rooms” category</a>
+				</div>
+			</div>
+
+			<!-- Kristinita’s Search -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Kristinita’s Search
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href=".." rel="noopener" target="_blank">Kristinita’s Search</a>
+					<a class="navbar-item" href="https://cyclowiki.org/wiki/Участник:Саша_Черных/Поиск_Кристиниты" rel="noopener" target="_blank">Kristinita’s Search description</a>
+					<a class="navbar-item" href="https://raw.githubusercontent.com/Kristinita/KristinitaPelican/master/content/Kristinita's-Search/Kristinita's-Search__actual_catalogue.txt" rel="noopener" target="_blank">Complete catalog of the Kristinita’s Search</a>
+				</div>
+			</div>
+
+
+			<!-- IT -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					IT
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Sublime-Text/SashaSublime#KiraUniqueContent" rel="noopener" target="_blank">SashaSublime</a>
+
+					<a class="navbar-item" href="../Sasha-Black.html" rel="noopener" target="_blank">Sasha Black</a>
+					<a class="navbar-item" href="../tag/it-articles" rel="noopener" target="_blank">IT articles</a>
+					<a class="navbar-item" href="../tag/sasha-chernykh-software" rel="noopener" target="_blank">Programs and scripts</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- About site -->
+
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					About site
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait is-right">
+					<a class="navbar-item" href="../Pages/Terms-and-Conditions-and-Privacy-Policy#KiraUniqueContent" rel="noopener" target="_blank">Terms and Conditions and Privacy Policy</a>
+					<a class="navbar-item" href="../Pages/About-for-developers#KiraUniqueContent" rel="noopener" target="_blank">Information about this site for developers</a>
+					<a class="navbar-item" href="https://github.com/Kristinita/KristinitaPelican" rel="noopener" target="_blank">Open source of the site</a>
+					<a class="navbar-item" href="../sitemap.xml" rel="noopener" target="_blank">Sitemap</a>
+					<a class="navbar-item" href="../tag/alltags" rel="noopener" target="_blank">All site tags</a>
+					<a class="navbar-item" href="../categories" rel="noopener" target="_blank">All site categories</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</nav>
+			<!--=================================
+			=			Article area			=
+			==================================-->
+
+			<div class="KiraArticle">
+
+				<!--=========================
+				=			Header			=
+				==========================-->
+
+				<header>
+
+
+<!-- Header -->
+
+<!-- Title -->
+
+<h1 class="SashaTopHeader">
+		How to get current … in Sublime Text
+</h1>
+
+
+<!-- Analytics -->
+
+
+
+<!-- Version of article/page content -->
+
+<div class="SashaHeaderData">Version 0.2.0</div>
+
+
+<!-- Dates of creation and last modification -->
+
+<div class="SashaHeaderData">
+	Posted — 2018-04-05T07:30:14+0300
+</div>
+
+
+<div class="SashaHeaderData">
+	Last modified — 2025-02-21T20:19:58+0300
+</div>
+
+
+<!-- GCTW flags -->
+
+
+
+
+
+<img src="../theme/images/flags/ps.webp" tabindex="0" alt="Palestine" data-google-lang="ar" class="language__img" loading="lazy">
+<img src="../theme/images/flags/nz.webp" tabindex="0" alt="New Zealand" data-google-lang="en" class="language__img" loading="lazy">
+<img src="../theme/images/flags/ve.webp" tabindex="0" alt="Venezuela" data-google-lang="es" class="language__img" loading="lazy">
+<img src="../theme/images/flags/cd.webp" tabindex="0" alt="Democratic Republic of the Congo" data-google-lang="fr" class="language__img" loading="lazy">
+<img src="../theme/images/flags/ru.webp" tabindex="0" alt="Russia" data-google-lang="ru" class="language__img" loading="lazy">
+<img src="../theme/images/flags/mo.webp" tabindex="0" alt="Macao" data-google-lang="zh-TW" class="language__img" loading="lazy">
+
+
+
+<!-- Tags -->
+
+	<div class="tags are-medium">
+			<a class="tag is-rounded" href="../tag/it-articles.html">it-articles</a>
+			<a class="tag is-rounded" href="../tag/sublime-text.html">sublime-text</a>
+	</div>
+
+
+
+
+
+
+
+
+
+<!-- Skip TOC link -->
+
+<div class="KiraHeaderSkipTOC">
+		<a href="#KiraUniqueContent">Skip TOC</a>
+</div>
+
+
+				</header>
+
+				<!--=================================
+				=			Unique Content			=
+				==================================-->
+
+
+				<main>
+
+
+<nav class="KiraMarkdownToc"><!-- MarkdownTOC -->
+
+<ol>
+<li><a href="#Overview">Overview</a></li>
+<li><a href="#Audience">Audience</a></li>
+<li><a href="#Relevance">Relevance</a></li>
+<li><a href="#Features">Features</a></li>
+<li><a href="#Sublime-Text-console">Sublime Text console</a><ol>
+<li><a href="#Console-actions">Console actions</a></li>
+</ol>
+</li>
+<li><a href="#How-to-get-current-…">How to get current …</a><ol>
+<li><a href="#Packages-directory">Packages directory</a><ol>
+<li><a href="#What-is-it">What is it?</a></li>
+<li><a href="#What-should-you-do">What should you do?</a></li>
+<li><a href="#Method">Method</a></li>
+<li><a href="#Not-recommended">Not recommended</a></li>
+</ol>
+</li>
+<li><a href="#Syntax">Syntax</a><ol>
+<li><a href="#What-is-it-1">What is it?</a></li>
+<li><a href="#What-should-you-do-1">What should you do?</a></li>
+<li><a href="#Method-1">Method</a></li>
+</ol>
+</li>
+<li><a href="#Theme">Theme</a><ol>
+<li><a href="#What-is-it-2">What is it?</a></li>
+<li><a href="#What-should-you-do-2">What should you do?</a></li>
+<li><a href="#Method-2">Method</a></li>
+</ol>
+</li>
+<li><a href="#Color-scheme">Color scheme</a><ol>
+<li><a href="#What-is-it-3">What is it?</a></li>
+<li><a href="#What-should-you-do-3">What should you do?</a></li>
+<li><a href="#Method-3">Method</a></li>
+</ol>
+</li>
+<li><a href="#Scope">Scope</a><ol>
+<li><a href="#What-is-it-4">What is it?</a></li>
+<li><a href="#What-should-you-do-4">What should you do?</a></li>
+<li><a href="#Method-4">Method</a></li>
+<li><a href="#Not-recommended-1">Not recommended</a></li>
+</ol>
+</li>
+<li><a href="#Syntax-scope">Syntax scope</a><ol>
+<li><a href="#What-is-it-5">What is it?</a></li>
+<li><a href="#What-should-you-do-5">What should you do?</a></li>
+<li><a href="#Method-5">Method</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#External-links">External links</a></li>
+</ol>
+<!-- /MarkdownTOC --></nav><div id="KiraUniqueContent">
+
+<h2 id="Overview">1. Overview <a class="KiraAnchorPermanentLink" href="#Overview" title="Permanent link">¶</a></h2>
+<p>Article, how you can get some variable parameters for your Sublime Text. I wrote about the most common variable parameters, that you can found in my answers and comments in Stack Overflow.</p>
+<h2 id="Audience">2. Audience <a class="KiraAnchorPermanentLink" href="#Audience" title="Permanent link">¶</a></h2>
+<p>Sublime Text users:</p>
+<ul>
+<li>Inexperienced</li>
+<li>Which help inexperienced users</li>
+</ul>
+<h2 id="Relevance">3. Relevance <a class="KiraAnchorPermanentLink" href="#Relevance" title="Permanent link">¶</a></h2>
+<p>This article is relevant for April 2018. In the future, the data in this article may be obsolete.</p>
+<h2 id="Features">4. Features <a class="KiraAnchorPermanentLink" href="#Features" title="Permanent link">¶</a></h2>
+<ul>
+<li>Data of this article cross-platform. They are relevance for Windows, macOS and Linux users.</li>
+</ul>
+<h2 id="Sublime-Text-console">5. Sublime Text console <a class="KiraAnchorPermanentLink" href="#Sublime-Text-console" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/basic_concepts.html#sublime-text-is-programmable" rel="noopener" target="_blank">“Sublime Text is Programmable”</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/q/164225/264224" rel="noopener" target="_blank">“What is the purpose of Console in Sublime Text editor?”</a></li>
+</ul>
+<h3 id="Console-actions">5.1. Console actions <a class="KiraAnchorPermanentLink" href="#Console-actions" title="Permanent link">¶</a></h3>
+<ul>
+<li><code class="SashaCodeInline"><span class="nv">$parameter</span></code> — parameter, which you want to know.</li>
+</ul>
+<p><strong>Example</strong>: <strong>if</strong> you want to know your syntax, <code class="SashaCodeInline"><span class="nv">$parameter</span></code> is <em>Syntax</em>; <strong>else</strong> theme, <code class="SashaCodeInline"><span class="nv">$parameter</span></code> is <em>Theme</em> and so on.</p>
+<ol>
+<li>open Sublime Text</li>
+<li>open file whose <code class="SashaCodeInline"><span class="nv">$parameter</span></code> you want to know</li>
+<li>
+<p>place your caret before symbol whose <code class="SashaCodeInline"><span class="nv">$parameter</span></code> you want to know</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Please, do not confuse <a href="https://www.computerhope.com/jargon/t/textcurs.htm" rel="noopener" target="_blank">caret</a> and <a href="https://www.computerhope.com/jargon/m/mouspoin.htm" rel="noopener" target="_blank">mouse pointer</a>.</p>
+</div>
+</li>
+<li>open <a href="https://stackoverflow.com/q/13965877/5951529" rel="noopener" target="_blank">Sublime Text console</a></li>
+<li>paste method from <code class="SashaCodeInline"><span class="nv">$parameter</span></code> section to Sublime Text console input area → <kbd>Enter</kbd></li>
+</ol>
+<p>You should get console output, <strong>example</strong>:</p>
+<p><div class="hes-gallery"><img alt="Example Sublime Text console output" src="https://i.imgur.com/cQbwDkM.png" loading="lazy"></div></p>
+<h2 id="How-to-get-current-…">6. How to get current … <a class="KiraAnchorPermanentLink" href="#How-to-get-current-…" title="Permanent link">¶</a></h2>
+<h3 id="Packages-directory">6.1. Packages directory <a class="KiraAnchorPermanentLink" href="#Packages-directory" title="Permanent link">¶</a></h3>
+<h4 id="What-is-it">6.1.1. What is it? <a class="KiraAnchorPermanentLink" href="#What-is-it" title="Permanent link">¶</a></h4>
+<p><a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/basic_concepts.html#the-packages-directory" rel="noopener" target="_blank">Packages directory</a> — <em>Data/Packages</em> — path, where stored:</p>
+<ol>
+<li><a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/extensibility/packages.html#types-of-packages" rel="noopener" target="_blank">“user packages” except “installed packages”</a> in Sublime Text terminology</li>
+<li><em>User</em> folder, where stored <a href="https://www.sublimetext.com/docs/settings.html" rel="noopener" target="_blank">user settings</a></li>
+</ol>
+<h4 id="What-should-you-do">6.1.2. What should you do? <a class="KiraAnchorPermanentLink" href="#What-should-you-do" title="Permanent link">¶</a></h4>
+<p><a href="#Console-actions">Actions 1, 4, 5</a>.</p>
+<h4 id="Method">6.1.3. Method <a class="KiraAnchorPermanentLink" href="#Method" title="Permanent link">¶</a></h4>
+<div class="SashaBlockHighlight"><pre><button class="SashaClipboardButton" data-balloon-pos="left" aria-label="Copy the contents of this block"><img class="SashaClipboardImage" loading="lazy" src="/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><span></span><code><span class="n">sublime</span><span class="o">.</span><span class="n">packages_path</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>That get directory of <a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/extensibility/packages.html#types-of-packages" rel="noopener" target="_blank">“installed packages”</a>, use this method:</p>
+<div class="SashaBlockHighlight"><pre><button class="SashaClipboardButton" data-balloon-pos="left" aria-label="Copy the contents of this block"><img class="SashaClipboardImage" loading="lazy" src="/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><span></span><code><span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<h4 id="Not-recommended">6.1.4. Not recommended <a class="KiraAnchorPermanentLink" href="#Not-recommended" title="Permanent link">¶</a></h4>
+<p>In some sources (<a href="https://stackoverflow.com/a/19158010/5951529" rel="noopener" target="_blank">example</a>) you can read similar answers:</p>
+<blockquote>
+<p>For Sublime 3, the locations are the following:</p>
+<p>Windows: <em>%APPDATA%Sublime Text 3</em>,</p>
+<p>OS X: <em>~/Library/Application Support/Sublime Text 3</em>,</p>
+<p>Linux: <em>~/.config/sublime-text-3</em>.</p>
+</blockquote>
+<p>I’m not recommending this, arguments:</p>
+<ol>
+<li>it less simple</li>
+<li>in new versions of Sublime Text and/or operating systems paths may be change</li>
+<li>it <a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/extensibility/packages.html#types-of-packages" rel="noopener" target="_blank">doesn’t take</a> portable Sublime Text on Windows</li>
+</ol>
+<h3 id="Syntax">6.2. Syntax <a class="KiraAnchorPermanentLink" href="#Syntax" title="Permanent link">¶</a></h3>
+<h4 id="What-is-it-1">6.2.1. What is it? <a class="KiraAnchorPermanentLink" href="#What-is-it-1" title="Permanent link">¶</a></h4>
+<ul>
+<li><a href="https://www.computerhope.com/jargon/s/syntax.htm" rel="noopener" target="_blank">“Syntax” definition</a>.</li>
+</ul>
+<h4 id="What-should-you-do-1">6.2.2. What should you do? <a class="KiraAnchorPermanentLink" href="#What-should-you-do-1" title="Permanent link">¶</a></h4>
+<p><a href="#Console-actions">Actions 1, 2, 4, 5</a>.</p>
+<h4 id="Method-1">6.2.3. Method <a class="KiraAnchorPermanentLink" href="#Method-1" title="Permanent link">¶</a></h4>
+<div class="SashaBlockHighlight"><pre><button class="SashaClipboardButton" data-balloon-pos="left" aria-label="Copy the contents of this block"><img class="SashaClipboardImage" loading="lazy" src="/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><span></span><code><span class="n">view</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;syntax&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="Theme">6.3. Theme <a class="KiraAnchorPermanentLink" href="#Theme" title="Permanent link">¶</a></h3>
+<h4 id="What-is-it-2">6.3.1. What is it? <a class="KiraAnchorPermanentLink" href="#What-is-it-2" title="Permanent link">¶</a></h4>
+<p>Please, do not confuse theme and color scheme:</p>
+<ol>
+<li><strong>color scheme</strong> — file, that design your Sublime Text <a href="#Syntax">syntaxes</a>; its zone is area of your opened files</li>
+<li><strong>theme</strong> — file, that design your Sublime Text UI; almost everyone else, that not highlight color scheme</li>
+</ol>
+<p>In image below:</p>
+<ul>
+<li>color scheme design area in a pink rectangle</li>
+<li>theme — another area, blue rectangle</li>
+</ul>
+<p><div class="hes-gallery"><img alt="Color scheme and theme" src="https://i.imgur.com/nwNgLkR.png" loading="lazy"></div></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Also, some parameters have in <a href="https://www.sublimetext.com/docs/settings.html" rel="noopener" target="_blank"><em>Preferences.sublime-settings</em></a> and <em>stTheme</em> files. <a href="https://stackoverflow.com/a/19582360/5951529" rel="noopener" target="_blank"><em>stTheme</em></a> highlight and stylize regular expressions and another elements in input areas of your <a href="https://www.sublimetext.com/docs/themes.html#panels" rel="noopener" target="_blank">“Find”, “Find in Files” and “Replace panels”</a>.</p>
+<p><div class="hes-gallery"><img alt="stTheme" src="https://i.imgur.com/icfjatQ.png" loading="lazy"></div></p>
+</div>
+<h4 id="What-should-you-do-2">6.3.2. What should you do? <a class="KiraAnchorPermanentLink" href="#What-should-you-do-2" title="Permanent link">¶</a></h4>
+<p><a href="#Console-actions">Actions 1, 2, 4, 5</a>.</p>
+<h4 id="Method-2">6.3.3. Method <a class="KiraAnchorPermanentLink" href="#Method-2" title="Permanent link">¶</a></h4>
+<div class="SashaBlockHighlight"><pre><button class="SashaClipboardButton" data-balloon-pos="left" aria-label="Copy the contents of this block"><img class="SashaClipboardImage" loading="lazy" src="/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><span></span><code><span class="n">view</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;theme&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="Color-scheme">6.4. Color scheme <a class="KiraAnchorPermanentLink" href="#Color-scheme" title="Permanent link">¶</a></h3>
+<h4 id="What-is-it-3">6.4.1. What is it? <a class="KiraAnchorPermanentLink" href="#What-is-it-3" title="Permanent link">¶</a></h4>
+<ul>
+<li><a href="#Theme">#theme</a>.</li>
+</ul>
+<h4 id="What-should-you-do-3">6.4.2. What should you do? <a class="KiraAnchorPermanentLink" href="#What-should-you-do-3" title="Permanent link">¶</a></h4>
+<p><a href="#Console-actions">Actions 1, 2, 4, 5</a>.</p>
+<h4 id="Method-3">6.4.3. Method <a class="KiraAnchorPermanentLink" href="#Method-3" title="Permanent link">¶</a></h4>
+<div class="SashaBlockHighlight"><pre><button class="SashaClipboardButton" data-balloon-pos="left" aria-label="Copy the contents of this block"><img class="SashaClipboardImage" loading="lazy" src="/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><span></span><code><span class="n">view</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;color_scheme&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can get your another <a href="https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/customization/settings.html" rel="noopener" target="_blank">settings</a>, use <code class="SashaCodeInline"><span class="n">view</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></code>. <strong>Example</strong>: that get your current font face, you need <code class="SashaCodeInline"><span class="n">view</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;font_face&#39;</span><span class="p">)</span></code>.</p>
+</div>
+<h3 id="Scope">6.5. Scope <a class="KiraAnchorPermanentLink" href="#Scope" title="Permanent link">¶</a></h3>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>“Scope”, “syntax scope”, “syntax type scope” unconventional, not official terms. Please, read <a href="#What-is-it-4">links below</a> for more detailed information.</p>
+</div>
+<h4 id="What-is-it-4">6.5.1. What is it? <a class="KiraAnchorPermanentLink" href="#What-is-it-4" title="Permanent link">¶</a></h4>
+<p>
+<div class="justtable">
+    <table>
+        <thead>
+        <tr>
+            <th>“scope”</th>
+            <th>“syntax scope”</th>
+            <th>“syntax type scope”</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code class="SashaCodeInline">source.css meta.property-list.css meta.property-name.css support.type.property-name.css</code></td>
+                <td><code class="SashaCodeInline">source.css</code></td>
+                <td><code class="SashaCodeInline">source</code></td>
+            </tr>
+            <tr>
+                <td><code class="SashaCodeInline">text.html.basic source.css meta.property-list.css meta.property-name.css</code></td>
+                <td><code class="SashaCodeInline">text.html.basic</code></td>
+                <td><code class="SashaCodeInline">text</code></td>
+            </tr>
+            <tr>
+                <td><code class="SashaCodeInline">kira.genius kira.error</code></td>
+                <td><code class="SashaCodeInline">kira.genius</code></td>
+                <td><code class="SashaCodeInline">kira</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div></p>
+<ul>
+<li><a href="https://forum.sublimetext.com/t/question-terminology-scope-vs-scope-selector/36039?u=sasha_chernykh" rel="noopener" target="_blank">Scope vs. scope selector</a></li>
+<li><a href="https://macromates.com/blog/2005/introduction-to-scopes/" rel="noopener" target="_blank">Introduction to scopes</a></li>
+<li><a href="https://macromates.com/manual/en/scope_selectors" rel="noopener" target="_blank">“Scope selector” definition</a></li>
+</ul>
+<h4 id="What-should-you-do-4">6.5.2. What should you do? <a class="KiraAnchorPermanentLink" href="#What-should-you-do-4" title="Permanent link">¶</a></h4>
+<p><a href="#Console-actions">Actions 1, 2, 3, 4, 5</a>.</p>
+<h4 id="Method-4">6.5.3. Method <a class="KiraAnchorPermanentLink" href="#Method-4" title="Permanent link">¶</a></h4>
+<div class="SashaBlockHighlight"><pre><button class="SashaClipboardButton" data-balloon-pos="left" aria-label="Copy the contents of this block"><img class="SashaClipboardImage" loading="lazy" src="/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><span></span><code><span class="n">view</span><span class="o">.</span><span class="n">scope_name</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">sel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">begin</span><span class="p">())</span>
+</code></pre></div>
+<h4 id="Not-recommended-1">6.5.4. Not recommended <a class="KiraAnchorPermanentLink" href="#Not-recommended-1" title="Permanent link">¶</a></h4>
+<p>In some sources (<a href="https://stackoverflow.com/a/15911198/5951529" rel="noopener" target="_blank">example</a>) you can read similar answers:</p>
+<blockquote>
+<p>Windows — <kbd>Ctrl+Alt+Shift+P</kbd>,</p>
+<p>macOS — <kbd>Ctrl+Shift+P</kbd>.</p>
+</blockquote>
+<p>I not recommend it, arguments:</p>
+<ol>
+<li>Hotkeys conflict; one or more your plugins may use same hotkeys.</li>
+</ol>
+<!-- [TODO] Hate hotkeys -->
+
+<h3 id="Syntax-scope">6.6. Syntax scope <a class="KiraAnchorPermanentLink" href="#Syntax-scope" title="Permanent link">¶</a></h3>
+<h4 id="What-is-it-5">6.6.1. What is it? <a class="KiraAnchorPermanentLink" href="#What-is-it-5" title="Permanent link">¶</a></h4>
+<p>Syntax scope — for <a href="#Syntax">syntax</a>: part of any <a href="#Scope">scope</a> before first space symbol. Details <a href="#What-is-it-4">read above</a>.</p>
+<h4 id="What-should-you-do-5">6.6.2. What should you do? <a class="KiraAnchorPermanentLink" href="#What-should-you-do-5" title="Permanent link">¶</a></h4>
+<p><a href="#Console-actions">Actions 1, 2, 4, 5</a>.</p>
+<h4 id="Method-5">6.6.3. Method <a class="KiraAnchorPermanentLink" href="#Method-5" title="Permanent link">¶</a></h4>
+<div class="SashaBlockHighlight"><pre><button class="SashaClipboardButton" data-balloon-pos="left" aria-label="Copy the contents of this block"><img class="SashaClipboardImage" loading="lazy" src="/theme/images/interface-images/clippy.svg" alt="Clipboard button"></button><span></span><code><span class="n">view</span><span class="o">.</span><span class="n">scope_name</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="External-links">7. External links <a class="KiraAnchorPermanentLink" href="#External-links" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://www.sublimetext.com/docs/api_reference.html" rel="noopener" target="_blank">Sublime Text 3 API Reference</a></li>
+</ul>
+
+
+				</div></main>
+
+				<!--=========================
+				=			Footer			=
+				==========================-->
+
+				<footer>
+
+
+
+<div class="KiraNeighborsClearfix">
+
+	<span class="SashaNeighborsPreviousPage"><a href="../IT-articles/typo-reporter.html" title="typo reporter">← Previous article</a></span>
+
+	<span class="SashaNeighborsMainPageRight"><a href="..">Kristinita’s Search</a></span>
+</div>
+
+
+
+
+
+
+
+
+<div class="SashaFooterActions">
+
+	<h2 id="Share">Share <a class="KiraAnchorPermanentLink" href="#Share" title="Permanent link">¶</a></h2>
+		<p>You can share this page on social networks using the <a href="https://www.addtoany.com/" rel="noopener" target="_blank">AddToAny</a> social buttons widget on the side of the page</p>
+
+	<h2 id="Subscribe">Subcsribe <a class="KiraAnchorPermanentLink" href="#Subscribe" title="Permanent link">¶</a></h2>
+		<p>You can subscribe to the <a href="../feeds/feeds-all/all.atom.xml" rel="noopener" target="_blank">Atom</a> or <a href="../feeds/feeds-all/all.rss.xml" rel="noopener" target="_blank">RSS</a> feeds of all site materials and any of its <a href="https://github.com/Kristinita/Kristinita.github.io/tree/master/feeds/feeds-categories" rel="noopener" target="_blank">categories</a> and <a href="https://github.com/Kristinita/Kristinita.github.io/tree/master/feeds/feeds-tags" rel="noopener" target="_blank">tags</a>. To subscribe, you need to install any <a href="https://alternativeto.net/software/quiterss/?license=opensource" rel="noopener" target="_blank">feed reader software</a>. <a href="https://docs.getpelican.com/en/latest/faq.html#can-i-force-atom-feeds-to-show-only-summaries-instead-of-article-content" rel="noopener" target="_blank">Choose</a> subscriptions to Atom if preferable for you reading articles in your feed reader. Choose subscriptions to RSS feeds if more convenient for you to fully read articles in the browser; your feed reader will display solely the article abstracts.</p>
+
+
+	<h2 id="Report-a-typo-or-error">Report a typo or error <a class="KiraAnchorPermanentLink" href="#Report-a-typo-or-error" title="Permanent link">¶</a></h2>
+		<p>(Solely for desktop, not mobile devices). If you see a typo, inaccuracy or error on this page, please report it using <a href="../IT-articles/typo-reporter" rel="noopener" target="_blank">typo-reporter</a>: select text with a typo/mistake → press <kbd>Ctrl+Enter</kbd> (<kbd>⌘Enter</kbd> for Mac) → write your comment → <em>Send</em>.</p>
+
+	<h2 id="Edit-page">Edit page <a class="KiraAnchorPermanentLink" href="#Edit-page" title="Permanent link">¶</a></h2>
+
+		<p>You can edit this page <em>https://github.com/Kristinita/KristinitaPelican/edit/master/content/IT-articles/How-to-get-current-…-in-Sublime-Text.md</em> yourself on GitHub and send <a href="https://flaviocopes.com/how-to-make-first-github-pull-request/" rel="noopener" target="_blank">pull request</a>.</p>
+
+	<h2 id="Comment">Comment <a class="KiraAnchorPermanentLink" href="#Comment" title="Permanent link">¶</a></h2>
+		<p>For any questions please contact via <a href="https://utteranc.es/" rel="noopener" target="_blank">utterances</a> comment widget below. Please be polite and constructive.</p>
+		<p>To leave a comment, you need to be registered with GitHub. When writing comments, use <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax" rel="noopener" target="_blank">Markdown</a> syntax.
+		</p><p>Once sended, your comment should appear at the top of the <a href="https://github.com/Kristinita/KristinitaPelican/issues" rel="noopener" target="_blank">list of issues</a> for this site. Notification of a reply to your comment should be sent to the email associated with your GitHub account.</p>
+		<p>You can also write and send your message use <a href="https://github.com/Kristinita/KristinitaPelican/issues/new" rel="noopener" target="_blank">GitHub Issues</a> directly.</p>
+
+
+	<div class="KiraUtterances"></div>
+</div>
+
+<div class="SashaWorkOnYourself">Работайте над собой</div>
+				</footer>
+
+			</div>
+
+		</div>
+
+		<!--=================================
+		=			Share buttons			=
+		==================================-->
+
+
+
+
+<!-- AddToAny buttons -->
+
+<aside class="KiraAddToAny">
+	<div class="a2a_kit a2a_kit_size_17 a2a_floating_style a2a_vertical_style">
+		<a class="a2a_button_mastodon" href="https://joinmastodon.org/" aria-label="Share this web page on Mastodon"></a>
+		<a class="a2a_button_diaspora" href="https://diasporafoundation.org/" aria-label="Share this web page on diaspora*"></a>
+		<a class="a2a_button_bluesky" href="https://bsky.app/" aria-label="Share this web page on Bluesky"></a>
+		<a class="a2a_button_meneame" href="https://www.meneame.net/" aria-label="Share this web page on Menéame"></a>
+		<a class="a2a_button_copy_link" href="https://www.addtoany.com/services/copy_link_button" aria-label="Copy link to this web page"></a>
+		<a class="a2a_button_printfriendly" href="https://www.printfriendly.com/" aria-label="Print or convert to PDF this web page use PrintFriendly service"></a>
+		<a class="a2a_dd" href="https://www.addtoany.com/services/" aria-label="Select a web-service to share this page on it"></a>
+	</div>
+</aside>
+	</div>
+
+</body>
+
+</html>

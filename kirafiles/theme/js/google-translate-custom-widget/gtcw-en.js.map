@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "gtcw-en.js",
+  "sourceRoot": "../../coffee/google-translate-custom-widget/",
+  "sources": [
+    "gtcw-en.coffee"
+  ],
+  "names": [],
+  "mappings": "AAKG;;;;;;;;;;AAAA,IAAA;;AAOH,qBAAA,GACC;EAAA,IAAA,EAAM;AAAN;;AARE",
+  "sourcesContent": [
+    "###\n@Author: Kristinita\n@Date: 2023-12-12 07:50:06\n@Last Modified by: Kristinita\n@Last Modified time: 2025-02-20 19:36:51\n###\n\n###\n[INFO] google-custom-translate widget — translating web pages by click, using Google Translate:\nhttps://get-web.site/blog/29-kastomnyj-vidzhet-googletranslate-dlja-sajta.html\n###\n\ngoogleTranslateConfig =\n\tlang: \"en\"\n\t###\n\t[INFO] “FinishTranslate” event — the event is triggered when the page translation is finished:\n\n\tdocument.addEventListener(\"FinishTranslate\", function (e) {\n\t\t// some code\n\t});\n\n\thttps://github.com/get-web/google-translate-custom-widget#events\n\n\t[INFO] If you want to subscribe to the \"FinishTranslate\" event\n\t(The moment when the script finished translating),\n\tuncomment and add any test word in the original language\n\ttestWord: \"Язык\"\n\n\t[INFO] The language we translate into on the first visit:\n\tlangFirstVisit: \"en\"\n\n\t[INFO] If the script does not work or does not work correctly,\n\tuncomment and specify the main domain in the domain property:\n\tdomain: \"kristinita.netlify.app\"\n\t###\n"
+  ]
+}

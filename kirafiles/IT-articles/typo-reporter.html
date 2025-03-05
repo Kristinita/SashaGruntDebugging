@@ -1,0 +1,1060 @@
+
+
+
+
+<!--=============================
+=			Variables			=
+==============================-->
+
+
+<!--=============================
+=			Beginning			=
+==============================-->
+
+
+<!DOCTYPE html>
+
+<!--=========================
+=			HTML			=
+==========================-->
+
+<html lang="en">
+
+<!--=========================
+=			Head			=
+==========================-->
+
+<head>
+
+	<!--=========================
+	=			Meta			=
+	==========================-->
+
+
+
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<title>typo reporter</title>
+
+
+<meta name="description" content="Features, problems and its solutions, that not described in official typo-reporter Readme.">
+
+
+
+	<!--=============================
+	=		Critical images			=
+	==============================-->
+
+
+
+
+<!-- Flags for GCTW preload -->
+
+	<link rel="preload" href="../theme/images/flags/ps.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/nz.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/ve.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/cd.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/ru.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/mo.webp" as="image">
+
+
+<!-- Aside icon preload -->
+
+<link rel="preload" href="../theme/images/aside/SashaGreenSweater.webp" as="image">
+
+<!-- Titleimage preload -->
+
+
+	<!--=================================
+	=			Critical styles			=
+	==================================-->
+
+
+
+
+<!-- Basic styles -->
+
+<link rel="preload" href="../theme/css/components/basic.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Aside styles -->
+
+<link rel="preload" href="../theme/css/components/Aside-icons/aside-icons.css" as="style" onload="this.rel='stylesheet'">
+
+<!-- Left/right aside icon styles -->
+
+<link rel="preload" href="../theme/css/components/Aside-icons/aside-icon-left.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Aside icon -->
+
+<style>
+	.SashaIconAside {
+		background-image: url(../theme/images/aside/SashaGreenSweater.webp)
+	}
+</style>
+
+
+<!-- Images styles -->
+
+
+	<link rel="preload" href="../theme/css/components/images.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+<!-- Admonition -->
+
+
+
+	<link rel="preload" href="../theme/css/third-party/Admonition/admonition.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="preload" href="../theme/css/third-party/Admonition/admonition-warning.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+
+<!-- Hide body scrollbar -->
+
+<link rel="preload" href="../theme/css/components/scrollbar-body-hide.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Fonts styles -->
+
+<link rel="preload" href="../theme/css/components/fonts.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Bulma styles -->
+
+<link rel="preload" href="../theme/css/third-party/Bulma/bulma-modules.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="../theme/css/third-party/Bulma/bulma-local.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Gemini scrollbar styles -->
+
+<link rel="preload" href="../theme/css/third-party/Gemini/gemini.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="../theme/css/third-party/Gemini/gemini-local.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Stork styles -->
+
+
+
+
+<!-- Theme -->
+
+<link rel="preload" href="../theme/css/nelican-themes/it-articles.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Background for header on aside icon -->
+
+	<link rel="preload" href="../theme/css/nelican-themes-aside-header-backgrounds/KiraSeagreen.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!--=====================
+=		Header CSS		=
+======================-->
+
+<link rel="preload" href="../theme/css/components/header-main.css" as="style" onload="this.rel='stylesheet'">
+	<!--=============================
+	=		Critical scripts		=
+	==============================-->
+
+
+
+
+<!-- Defer.js -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js" as="script">
+<script src="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js"></script>
+
+
+<!-- Wait elements -->
+
+<link rel="preload" href="../theme/js/Accessibility/wait-elements.js" as="script">
+<script src="../theme/js/Accessibility/wait-elements.js" defer=""></script>
+
+
+<!-- Gemini scrollbar -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/noeldelgado/gemini-scrollbar/index.min.js" as="script">
+<script src="https://cdn.jsdelivr.net/gh/noeldelgado/gemini-scrollbar/index.min.js" defer=""></script>
+<script src="../theme/js/Gemini/gemini-scrollbar.js" defer=""></script>
+
+
+<!-- Bulma -->
+
+<link rel="preload" href="../theme/js/Bulma/bulma-navbar.js" as="script">
+<script src="../theme/js/Bulma/bulma-navbar.js" defer=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=================
+	=		Fonts		=
+	==================-->
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="">
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap" media="print" onload="this.media='all'">
+
+<noscript>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap">
+</noscript>
+
+
+
+<script>
+	let kiraScadaFontLoaded = false;
+	var kiraDeferImmediately = 0;
+	Defer.dom("h2", kiraDeferImmediately, "KiraScadaFontHeaderDeferJS", () => {
+		if (!kiraScadaFontLoaded) {
+			const kiraScadaFontHeaderDefer = document.createElement("link");
+			kiraScadaFontHeaderDefer.setAttribute("href", "https://fonts.googleapis.com/css2?family=Scada:ital,wght@1,700&amp;display=swap");
+			kiraScadaFontHeaderDefer.setAttribute("rel", "stylesheet");
+			document.querySelector("head").append(kiraScadaFontHeaderDefer);
+			kiraScadaFontLoaded = true;
+		}
+	});
+</script>
+
+
+
+
+
+
+
+<script>
+	var kiraDeferImmediately = 0;
+	Defer.dom(".SashaWorkOnYourself", kiraDeferImmediately, "KiraMarckScriptFontWorkOnYourselfDeferJS", () => {
+			const kiraMarckScriptFontWorkOnYourselfDefer = document.createElement("link");
+			kiraMarckScriptFontWorkOnYourselfDefer.setAttribute("href", "https://fonts.googleapis.com/css2?family=Marck+Script&amp;display=swap&amp;text=Работйендс");
+			kiraMarckScriptFontWorkOnYourselfDefer.setAttribute("rel", "stylesheet");
+			document.querySelector("head").append(kiraMarckScriptFontWorkOnYourselfDefer);
+		});
+</script>
+
+
+
+	<!--=================================
+	=	Styles for specific categories	=
+	==================================-->
+
+
+
+
+
+<!-- Neliateka navigation menu -->
+
+
+
+<!-- Kristinograd icons -->
+
+
+
+<!-- Kristinograd examples blocks -->
+
+
+	<!--=========================
+	=	Styles of components	=
+	==========================-->
+
+
+
+
+
+<!-- Tables -->
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.css('../theme/css/components/tables.css', 'table', kiraDeferEarly);
+	</script>
+
+
+
+<!-- Blockquotes -->
+
+
+
+
+
+<!-- Iframes -->
+
+
+
+<!-- Code styles -->
+
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.css('../theme/css/components/Code/code-inline.css', 'code-inline', kiraDeferEarly);
+	</script>
+
+
+<!-- Small icons -->
+
+
+
+
+
+
+
+<!-- Shadows around the text -->
+
+
+
+<!-- Relative pages -->
+
+
+
+<!-- GRights -->
+
+
+
+<!-- Custom CSS -->
+
+
+
+<!-- Footer for articles and pages -->
+
+<script>
+	var kiraDeferEarly = 400;
+	Defer.css('../theme/css/components/footer-main.css', 'footer-main', kiraDeferEarly);
+</script>
+	<!--=========================
+	=	Scripts of components	=
+	==========================-->
+
+
+
+
+
+<!-- Code scripts -->
+
+
+
+<!-- Translate GCTW scripts -->
+
+
+
+<!-- Translate GCTW scripts -->
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.js('../theme/js/google-translate-custom-widget/gtcw-en.js', 'gtcw-en', kiraDeferEarly);
+	</script>
+
+<script>
+	var kiraDeferEarlySecond = 700, kiraDeferEarlyThird = 1000;
+	Defer.js('../theme/js/google-translate-custom-widget/gtcw-accessibility.js', 'gtcw-accessibility', kiraDeferEarlySecond);
+	Defer.js('https://cdn.jsdelivr.net/gh/Kristinita/google-translate-custom-widget@KiraSeparateConfigAndTranslateScript/nativejs/js/google-translate.min.js', 'gtcw', kiraDeferEarlySecond);
+	Defer.js('https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js', 'js-cookie', kiraDeferEarlyThird);
+	Defer.js('https://translate.google.com/translate_a/element.js?cb=TranslateWidgetIsLoaded', 'google-translate-element', kiraDeferEarlyThird);
+</script>
+	<!--=============================
+	=		Third-party styles		=
+	==============================-->
+
+
+
+
+
+	<script>
+		var kiraDeferMedium = 1000;
+		Defer.css('https://cdn.jsdelivr.net/npm/hes-gallery/dist/hes-gallery.min.css', 'hes-gallery-styles', kiraDeferMedium);
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=============================
+	=		Third-party scripts		=
+	==============================-->
+
+
+
+
+	<script>
+		var kiraDeferMedium = 1000, kiraDeferMediumSecond = 1500;
+		Defer.js('https://cdn.jsdelivr.net/gh/demtario/hes-gallery/dist/hes-gallery.min.js', 'hes-gallery', kiraDeferMedium);
+		Defer.js('../theme/js/hes-gallery/hes-gallery.js', 'hes-gallery-local', kiraDeferMediumSecond);
+	</script>
+
+
+
+
+
+
+
+
+	<!--=================================
+	=		Low-priority styles		    =
+	==================================-->
+
+
+<link rel="stylesheet" href="../theme/css/components/javascript-disabled.css">
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.css('../theme/css/third-party/AddToAny/addtoany.css', 'addtoany-styles', kiraDeferLate, undefined, true);
+</script>
+
+<script>
+	var kiraDeferLateSecond = 6500;
+	Defer.css('../theme/css/third-party/typo-reporter/typo-reporter.css', 'typo-reporter-css', kiraDeferLateSecond, undefined, true);
+</script>
+	<!--=================================
+	=		Low-priority scripts		=
+	==================================-->
+
+
+
+<script>
+	var kiraDeferLateSecond = 6500, kiraDeferLateThird = 7000;
+	Defer.js('../theme/js/AddToAny/addtoany.js', 'addtoany-local', kiraDeferLateSecond, undefined, true);
+	Defer.js('https://static.addtoany.com/menu/page.js', 'addtoany', kiraDeferLateThird, undefined, true);
+</script>
+
+
+
+
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.js('../theme/js/Browser-Update/browser-update.js', 'browser-update-local', kiraDeferLate);
+	Defer.js('https://browser-update.org/update.min.js', 'browser-update', kiraDeferLate);
+</script>
+
+
+
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.js('https://cdn.jsdelivr.net/npm/typo-reporter/lib/TypoReporter.min.js', 'typo-reporter', kiraDeferLate, undefined, true);
+</script>
+
+	<script>
+		var kiraDeferLateSecond = 6500;
+		Defer.js('../theme/js/typo-reporter/typo-reporter-en.js', 'typo-reporter-local-en', kiraDeferLateSecond, undefined, true);
+	</script>
+
+
+
+
+<script>
+	var kiraDeferImmediately = 0;
+	Defer.dom('.KiraUtterances', kiraDeferImmediately, 'KiraUtterancesDeferJS', () => {
+			const kiraUtterancesDefer = document.createElement('script');
+			kiraUtterancesDefer.setAttribute("src", "https://utteranc.es/client.js");
+			kiraUtterancesDefer.setAttribute("repo", "Kristinita/KristinitaPelican");
+			kiraUtterancesDefer.setAttribute("issue-term", "title");
+			kiraUtterancesDefer.setAttribute("label", "Utterances");
+			kiraUtterancesDefer.setAttribute("theme", "preferred-color-scheme");
+			kiraUtterancesDefer.setAttribute("crossorigin", "anonymous");
+			document.querySelector(".KiraUtterances").append(kiraUtterancesDefer);
+		});
+</script>
+
+
+
+
+
+
+
+
+
+	<!--=========================
+	=			base			=
+	==========================-->
+
+
+	<!--=================================
+	=			Structured data			=
+	==================================-->
+
+
+	<meta property="og:title" content="typo reporter">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://i.imgur.com/U8pIw0a.png">
+	<meta property="og:url" content=".\IT-articles/typo-reporter.html">
+	<meta property="og:description" content="Features, problems and its solutions, that not described in official typo-reporter Readme.">
+	<meta property="og:site_name" content="Поиск Кристиниты">
+	<meta property="article:published_time" content="2018-03-22">
+	<meta property="article:modified_time" content="2025-02-17">
+	<meta property="article:section" content="IT-articles">
+	<meta property="article:tag" content="it-articles">
+	<meta property="article:tag" content="error-reporting">
+
+
+
+
+<script type="application/ld+json">
+{
+		"@context": "https://schema.org",
+		"@type": "HowTo",
+		"name": "typo reporter",
+		"description": "Features, problems and its solutions, that not described in official typo-reporter Readme.",
+		"headline": "typo reporter",
+		"datePublished": "2018-03-22 07:52:14+03:00",
+		"dateModified": "2025-02-17 12:17:21+03:00",
+		"author": {
+			"@type": "Person",
+			"name": "Sasha Chernykh"
+		},
+		"image": "https://i.imgur.com/U8pIw0a.png",
+		"url": "../IT-articles/typo-reporter.html"
+}
+</script>
+	<!--=========================
+	=			Feeds			=
+	==========================-->
+
+	<!-- Atom feeds -->
+
+
+	<link href="../feeds/feeds-all/all.atom.xml" rel="alternate" type="application/atom+xml">
+
+
+		<link href="../feeds/feeds-categories/it-articles.atom.xml" rel="alternate" type="application/atom+xml">
+
+			<link href="../feeds/feeds-tags/it-articles.atom.xml" rel="alternate" type="application/atom+xml">
+			<link href="../feeds/feeds-tags/error-reporting.atom.xml" rel="alternate" type="application/atom+xml">
+
+		<link href="../feeds/feeds-languages/all-en.atom.xml" rel="alternate" type="application/atom+xml">
+
+			<link href="../feeds/feeds-authors/sasha-chernykh.atom.xml" rel="alternate" type="application/atom+xml">
+
+
+
+	<!-- RSS feeds -->
+
+
+	<link href="../feeds/feeds-all/all.rss.xml" rel="alternate" type="application/rss+xml">
+
+
+		<link href="../feeds/feeds-categories/it-articles.rss.xml" rel="alternate" type="application/rss+xml">
+
+			<link href="../feeds/feeds-tags/it-articles.rss.xml" rel="alternate" type="application/rss+xml">
+			<link href="../feeds/feeds-tags/error-reporting.rss.xml" rel="alternate" type="application/rss+xml">
+
+		<link href="../feeds/feeds-languages/all-en.rss.xml" rel="alternate" type="application/rss+xml">
+
+			<link href="../feeds/feeds-authors/sasha-chernykh.rss.xml" rel="alternate" type="application/rss+xml">
+
+
+
+</head>
+
+
+<body class="gm-scrollbar-container">
+
+	<!--=====================================
+	=			Skip to main link			=
+	======================================-->
+
+
+	<a class="KiraSkipToContent" href="#KiraUniqueContent">Skip to main content</a>
+
+	<!--=============================
+	=			Scrollbar			=
+	==============================-->
+
+	<div class="gm-scrollbar -vertical"><div class="thumb"></div></div>
+	<div class="gm-scrollbar -horizontal"><div class="thumb"></div></div>
+	<div class="gm-scroll-view">
+
+		<!--=============================
+		=			Side icon			=
+		==============================-->
+
+
+
+
+<aside class="SashaIconAside" aria-label="Icon on a third of the screen (for desktop devices) or at the top of the page (for mobile devices)">
+
+	<div class="SashaAsideBottomText">
+
+			typo-reporter
+
+	</div>
+</aside>
+		<!--=================================
+		=			Content area			=
+		==================================-->
+
+		<div class="KiraContentArea">
+
+			<!--=============================
+			=			noscript			=
+			==============================-->
+
+
+<div role="alert">
+	<noscript class="SashaDisabledJavaScriptMessage">
+		<p>Sorry, this site doesn’t work, if JavaScript disabled. Please, <a href="https://activatejavascript.org/en/instructions" rel="noopener" target="_blank">enable JavaScript for your browser</a>.</p>
+		<p>Owner of this site thinks that <a href="https://stackoverflow.com/a/17073999/5951529" rel="noopener" target="_blank">JavaScript disabling — is obsolete action in 2025</a> and <a href="https://www.reddit.com/r/webdev/comments/48z7jz/do_you_take_into_account_those_who_disable/d0nxftd/" rel="noopener" target="_blank">will not support users who did this</a>.</p>
+		<p>Probably, <a href="https://www.howtogeek.com/138865/htg-explains-should-you-disable-javascript/" rel="noopener" target="_blank">you don’t need turn off JavaScript</a>.</p>
+	</noscript>
+</div>
+			<!--=========================
+			=			Navbar			=
+			==========================-->
+
+
+
+<nav aria-label="main navigation" class="navbar">
+
+	<div class="navbar-brand">
+
+
+		<button aria-label="menu" aria-expanded="false" class="navbar-burger" data-target="navbar-menu">
+
+
+
+			<span aria-hidden="true">&#8203;</span>
+			<span aria-hidden="true">&#8203;</span>
+			<span aria-hidden="true">&#8203;</span>
+
+
+		</button>
+
+	</div>
+
+	<div class="navbar-menu">
+		<div class="navbar-start">
+
+			<!-- Library for life -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Library for life
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Neliateka-Documentation/Библиотека-для-жизни#KiraUniqueContent" rel="noopener" target="_blank">“Library for life” description</a>
+					<a class="navbar-item" href="../tag/library-for-life-main" rel="noopener" target="_blank">Literature of Neliateka by themes</a>
+					<a class="navbar-item" href="https://raw.githubusercontent.com/Kristinita/KristinitaPelican/master/content/Library-for-life/Библиотека-для-жизни-полный-список.txt" rel="noopener" target="_blank">Complete list of Neliateka books and other materials</a>
+					<a class="navbar-item" href="../Neliateka-Documentation/Библиотека-непрерывного-обучения#KiraUniqueContent" rel="noopener" target="_blank">Lifelong learning library</a>
+					<a class="navbar-item" href="../Neliateka-Wishlist/Вишлист-библиотеки-для-жизни#KiraUniqueContent" rel="noopener" target="_blank">Neliateka wishlist</a>
+				</div>
+			</div>
+
+			<!-- Nelia’s Rooms -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Nelia’s Rooms
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Nelias-Rooms/Комнаты-Нели#KiraUniqueContent" rel="noopener" target="_blank">Nelia’s Rooms description</a>
+					<a class="navbar-item" href="../Nelias-Rooms/Зелёная-Комната-Нели#KiraUniqueContent" rel="noopener" target="_blank">Nelia’s Green Room</a>
+					<a class="navbar-item" href="../Nelias-Rooms/Поиск-книг-для-Комнат-Нели#KiraUniqueContent" rel="noopener" target="_blank">Nelia’s Rooms wishlist</a>
+					<a class="navbar-item" href="../category/nelias-rooms" rel="noopener" target="_blank">All materials of the “Nelia’s Rooms” category</a>
+				</div>
+			</div>
+
+			<!-- Kristinita’s Search -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Kristinita’s Search
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href=".." rel="noopener" target="_blank">Kristinita’s Search</a>
+					<a class="navbar-item" href="https://cyclowiki.org/wiki/Участник:Саша_Черных/Поиск_Кристиниты" rel="noopener" target="_blank">Kristinita’s Search description</a>
+					<a class="navbar-item" href="https://raw.githubusercontent.com/Kristinita/KristinitaPelican/master/content/Kristinita's-Search/Kristinita's-Search__actual_catalogue.txt" rel="noopener" target="_blank">Complete catalog of the Kristinita’s Search</a>
+				</div>
+			</div>
+
+
+			<!-- IT -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					IT
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Sublime-Text/SashaSublime#KiraUniqueContent" rel="noopener" target="_blank">SashaSublime</a>
+
+					<a class="navbar-item" href="../Sasha-Black.html" rel="noopener" target="_blank">Sasha Black</a>
+					<a class="navbar-item" href="../tag/it-articles" rel="noopener" target="_blank">IT articles</a>
+					<a class="navbar-item" href="../tag/sasha-chernykh-software" rel="noopener" target="_blank">Programs and scripts</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- About site -->
+
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					About site
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait is-right">
+					<a class="navbar-item" href="../Pages/Terms-and-Conditions-and-Privacy-Policy#KiraUniqueContent" rel="noopener" target="_blank">Terms and Conditions and Privacy Policy</a>
+					<a class="navbar-item" href="../Pages/About-for-developers#KiraUniqueContent" rel="noopener" target="_blank">Information about this site for developers</a>
+					<a class="navbar-item" href="https://github.com/Kristinita/KristinitaPelican" rel="noopener" target="_blank">Open source of the site</a>
+					<a class="navbar-item" href="../sitemap.xml" rel="noopener" target="_blank">Sitemap</a>
+					<a class="navbar-item" href="../tag/alltags" rel="noopener" target="_blank">All site tags</a>
+					<a class="navbar-item" href="../categories" rel="noopener" target="_blank">All site categories</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</nav>
+			<!--=================================
+			=			Article area			=
+			==================================-->
+
+			<div class="KiraArticle">
+
+				<!--=========================
+				=			Header			=
+				==========================-->
+
+				<header>
+
+
+<!-- Header -->
+
+<!-- Title -->
+
+<h1 class="SashaTopHeader">
+		typo-reporter
+</h1>
+
+
+<!-- Analytics -->
+
+
+
+<!-- Version of article/page content -->
+
+<div class="SashaHeaderData">Version 0.2.1</div>
+
+
+<!-- Dates of creation and last modification -->
+
+<div class="SashaHeaderData">
+	Posted — 2018-03-22T07:52:14+0300
+</div>
+
+
+<div class="SashaHeaderData">
+	Last modified — 2025-02-17T12:17:21+0300
+</div>
+
+
+<!-- GCTW flags -->
+
+
+
+
+
+<img src="../theme/images/flags/ps.webp" tabindex="0" alt="Palestine" data-google-lang="ar" class="language__img" loading="lazy">
+<img src="../theme/images/flags/nz.webp" tabindex="0" alt="New Zealand" data-google-lang="en" class="language__img" loading="lazy">
+<img src="../theme/images/flags/ve.webp" tabindex="0" alt="Venezuela" data-google-lang="es" class="language__img" loading="lazy">
+<img src="../theme/images/flags/cd.webp" tabindex="0" alt="Democratic Republic of the Congo" data-google-lang="fr" class="language__img" loading="lazy">
+<img src="../theme/images/flags/ru.webp" tabindex="0" alt="Russia" data-google-lang="ru" class="language__img" loading="lazy">
+<img src="../theme/images/flags/mo.webp" tabindex="0" alt="Macao" data-google-lang="zh-TW" class="language__img" loading="lazy">
+
+
+
+<!-- Tags -->
+
+	<div class="tags are-medium">
+			<a class="tag is-rounded" href="../tag/it-articles.html">it-articles</a>
+			<a class="tag is-rounded" href="../tag/error-reporting.html">error-reporting</a>
+	</div>
+
+
+
+
+
+
+
+
+
+<!-- Skip TOC link -->
+
+<div class="KiraHeaderSkipTOC">
+		<a href="#KiraUniqueContent">Skip TOC</a>
+</div>
+
+
+				</header>
+
+				<!--=================================
+				=			Unique Content			=
+				==================================-->
+
+
+				<main>
+
+
+<nav class="KiraMarkdownToc"><!-- MarkdownTOC -->
+
+<ol>
+<li><a href="#Overview">Overview</a></li>
+<li><a href="#Demonstration">Demonstration</a></li>
+<li><a href="#Relevance">Relevance</a></li>
+<li><a href="#Limitations">Limitations</a></li>
+<li><a href="#Comparison">Comparison</a></li>
+<li><a href="#Getting-formId">Getting formId</a></li>
+<li><a href="#Mail-forwarding">Mail forwarding</a><ol>
+<li><a href="#Check-mail-forwarding">Check mail forwarding</a></li>
+</ol>
+</li>
+</ol>
+<!-- /MarkdownTOC --></nav><div id="KiraUniqueContent">
+
+<h2 id="Overview">1. Overview <a class="KiraAnchorPermanentLink" href="#Overview" title="Permanent link">¶</a></h2>
+<p>In this article I wrote typo-reporter:</p>
+<ul>
+<li>features,</li>
+<li>possibly problems and its solutions,</li>
+</ul>
+<p>that not described in official typo-reporter Readme.</p>
+<h2 id="Demonstration">2. Demonstration <a class="KiraAnchorPermanentLink" href="#Demonstration" title="Permanent link">¶</a></h2>
+<p>You can try use typo-reporter directly on this web page. Usage instructions see on <a href="https://www.npmjs.com/package/typo-reporter" rel="noopener" target="_blank">typo-reporter description</a>.</p>
+<ul>
+<li>English form example:</li>
+</ul>
+<p><div class="hes-gallery"><img alt="English typo-reporter form" src="https://i.imgur.com/U8pIw0a.png" loading="lazy"></div></p>
+<ul>
+<li>How does a webmaster see a new report:</li>
+</ul>
+<p><div class="hes-gallery"><img alt="typo-reporter reports on Google Docs" src="https://i.imgur.com/jIik44n.png" loading="lazy"></div></p>
+<ul>
+<li>E-mail message for webmaster:</li>
+</ul>
+<p><div class="hes-gallery"><img alt="typo-reporter mail" src="https://i.imgur.com/ZQdakQj.png" loading="lazy"></div></p>
+<ul>
+<li>Russian form example:</li>
+</ul>
+<p><div class="hes-gallery"><img alt="Russian typo-reporter form" src="https://i.imgur.com/lYPZMGU.png" loading="lazy"></div></p>
+<h2 id="Relevance">3. Relevance <a class="KiraAnchorPermanentLink" href="#Relevance" title="Permanent link">¶</a></h2>
+<p>This article is relevant for March 2018. In the future, the data in this article may be obsolete.</p>
+<h2 id="Limitations">4. Limitations <a class="KiraAnchorPermanentLink" href="#Limitations" title="Permanent link">¶</a></h2>
+<p>typo-reporter limitations:</p>
+<ol>
+<li>Works for PC, not for mobile devices.</li>
+</ol>
+<p>That use typo-reporter on your site you need to have:</p>
+<ol>
+<li>site, that support custom JavaScript and CSS inserting (some <a href="https://www.forbes.com/uk/advisor/business/software/what-is-a-website-builder/" rel="noopener" target="_blank">website builders</a> don’t support this),</li>
+<li>Google account.</li>
+</ol>
+<h2 id="Comparison">5. Comparison <a class="KiraAnchorPermanentLink" href="#Comparison" title="Permanent link">¶</a></h2>
+<p>I use typo-reporter, not Orphus or another alternatives, because typo-reporter:</p>
+<ol>
+<li>Open source,</li>
+<li>Active maintained,</li>
+<li><a href="https://github.com/psmb/typo-reporter/issues" rel="noopener" target="_blank">Have technical support</a>,</li>
+<li>
+<p>Support CDN — you need paste to your web page <code class="SashaCodeInline"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/typo-reporter/lib/TypoReporter.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code> (<a href="https://webmasters.stackexchange.com/a/92103/71131" rel="noopener" target="_blank">CDN vs. local files</a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>NpmCDN, that <a href="https://www.npmjs.com/package/typo-reporter#install-via-plain-old-html-tag" rel="noopener" target="_blank">described in official documentation</a> hangs for me. I use <a href="https://www.jsdelivr.com/" rel="noopener" target="_blank">JSDelivr</a> CD instead.</p>
+</div>
+</li>
+</ol>
+<h2 id="Getting-formId">6. Getting formId <a class="KiraAnchorPermanentLink" href="#Getting-formId" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you try get <em>formId</em> use <a href="https://productforums.google.com/forum/#!topic/docs/eoPN9F6KTs4" rel="noopener" target="_blank">this method</a>, typo-reporter <a href="https://github.com/psmb/typo-reporter/issues/4" rel="noopener" target="_blank">will not work</a>.</p>
+</div>
+<p><a href="https://www.npmjs.com/package/typo-reporter#create-a-target-google-form-to-gather-feedback" rel="noopener" target="_blank">Create your spreadsheet</a> → <em>Form</em> → <em>Edit form</em> → <em>Send</em> → click to link icon → copy link below:</p>
+<p><div class="hes-gallery"><img alt="formId link" src="https://i.imgur.com/cr8JNqT.png" loading="lazy"></div></p>
+<p><strong>For</strong> link:</p>
+<p>    copy symbols between <em>/e/</em> and <em>/viewform</em> — it your <em>formId</em>.</p>
+<p><strong>Example</strong>:</p>
+<ul>
+<li>your link — <a href="https://docs.google.com/forms/d/e/1FAIpQLSfu5tnuHYKNPjH0n1fR9EmWDHwlFESzJj7JQFu_O5IS8G5R2A/viewform?usp=sf_link" rel="noopener" target="_blank">docs.google.com/forms/d/e/1FAIpQLSfu5tnuHYKNPjH0n1fR9EmWDHwlFESzJj7JQFu_O5IS8G5R2A/viewform?usp=sf_link</a>,</li>
+<li>your formId — <em>1FAIpQLSfu5tnuHYKNPjH0n1fR9EmWDHwlFESzJj7JQFu_O5IS8G5R2A</em>.</li>
+</ul>
+<h2 id="Mail-forwarding">7. Mail forwarding <a class="KiraAnchorPermanentLink" href="#Mail-forwarding" title="Permanent link">¶</a></h2>
+<p>I don’t use GMail, because GMail move to Spam non-spam messages more often than another mail services (<a href="https://productforums.google.com/forum/#!msg/gmail-ru/ydfMTF7IUec/4cJLmnSUFAAJ" rel="noopener" target="_blank">example</a>). But “<a href="https://web.archive.org/web/20220603063301/https://support.google.com/docs/forum/AAAABuH1jm0YJ09uwy-pWU/?hl=en&amp;msgid=g_1AJTXZN6QJ&amp;gpf=d/msg/docs/YJ09uwy-pWU/g_1AJTXZN6QJ" rel="noopener" target="_blank">notifications are solely sent to the email address associated with your Google account</a>”. That solve this problem I use <a href="https://support.google.com/mail/answer/10957?hl=en" rel="noopener" target="_blank">mail forwarding</a>.</p>
+<p><strong>Example</strong> filter:</p>
+<p>In your GMail <a href="https://support.google.com/mail/answer/6579?hl=en" rel="noopener" target="_blank">create a filter</a> with parameters:</p>
+<ul>
+<li><em>From</em> — <em><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#111;&#116;&#105;&#102;&#121;&#64;&#103;&#111;&#111;&#103;&#108;&#101;&#46;&#99;&#111;&#109;">&#110;&#111;&#116;&#105;&#102;&#121;&#64;&#103;&#111;&#111;&#103;&#108;&#101;&#46;&#99;&#111;&#109;</a></em>;</li>
+<li><em>Has the words</em> — name of your spreadsheet;</li>
+<li><em>Forward it to:</em> — your forwarding e-mail;</li>
+<li>check <em>Never Send it to Spam</em>.</li>
+</ul>
+<p><div class="hes-gallery"><img alt="Filter 1" src="https://i.imgur.com/Nq0wB3c.png" loading="lazy"></div>
+<div class="hes-gallery"><img alt="Filter 2" src="https://i.imgur.com/G7YzdLi.png" loading="lazy"></div></p>
+<h3 id="Check-mail-forwarding">7.1. Check mail forwarding <a class="KiraAnchorPermanentLink" href="#Check-mail-forwarding" title="Permanent link">¶</a></h3>
+<p>After filter creating I recommend to make sure, that:</p>
+<ol>
+<li>typo reports forwarded,</li>
+<li>another e-mail messages not forwarded.</li>
+</ol>
+<p><strong>Example</strong> testing:</p>
+<p>
+<div class="justtable">
+    <table>
+        <thead>
+        <tr>
+            <th>Send</th>
+            <th>Expected behavior for your forwarding e-mail</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Example typo report on your site</td>
+                <td>Get <a href="#Demonstration">similar message</a></td>
+            </tr>
+            <tr>
+                <td>Any another message from another e-mail to your GMail mail</td>
+                <td>don’t get any message</td>
+            </tr>
+        </tbody>
+    </table>
+</div></p>
+
+
+				</div></main>
+
+				<!--=========================
+				=			Footer			=
+				==========================-->
+
+				<footer>
+
+
+
+<div class="KiraNeighborsClearfix">
+
+	<span class="SashaNeighborsPreviousPage"><a href="../IT-articles/How-to-publish-your-package-to-PyPI-2018.html" title="How to publish your package to PyPI, 2018">← Previous article</a></span>
+
+	<span class="SashaNeighborsNextPage"><a href="../IT-articles/How-to-get-current-…-in-Sublime-Text.html" title="How to get current … in Sublime Text">Next article →</a></span>
+</div>
+
+
+
+
+
+
+
+
+<div class="SashaFooterActions">
+
+	<h2 id="Share">Share <a class="KiraAnchorPermanentLink" href="#Share" title="Permanent link">¶</a></h2>
+		<p>You can share this page on social networks using the <a href="https://www.addtoany.com/" rel="noopener" target="_blank">AddToAny</a> social buttons widget on the side of the page</p>
+
+	<h2 id="Subscribe">Subcsribe <a class="KiraAnchorPermanentLink" href="#Subscribe" title="Permanent link">¶</a></h2>
+		<p>You can subscribe to the <a href="../feeds/feeds-all/all.atom.xml" rel="noopener" target="_blank">Atom</a> or <a href="../feeds/feeds-all/all.rss.xml" rel="noopener" target="_blank">RSS</a> feeds of all site materials and any of its <a href="https://github.com/Kristinita/Kristinita.github.io/tree/master/feeds/feeds-categories" rel="noopener" target="_blank">categories</a> and <a href="https://github.com/Kristinita/Kristinita.github.io/tree/master/feeds/feeds-tags" rel="noopener" target="_blank">tags</a>. To subscribe, you need to install any <a href="https://alternativeto.net/software/quiterss/?license=opensource" rel="noopener" target="_blank">feed reader software</a>. <a href="https://docs.getpelican.com/en/latest/faq.html#can-i-force-atom-feeds-to-show-only-summaries-instead-of-article-content" rel="noopener" target="_blank">Choose</a> subscriptions to Atom if preferable for you reading articles in your feed reader. Choose subscriptions to RSS feeds if more convenient for you to fully read articles in the browser; your feed reader will display solely the article abstracts.</p>
+
+
+	<h2 id="Report-a-typo-or-error">Report a typo or error <a class="KiraAnchorPermanentLink" href="#Report-a-typo-or-error" title="Permanent link">¶</a></h2>
+		<p>(Solely for desktop, not mobile devices). If you see a typo, inaccuracy or error on this page, please report it using <a href="../IT-articles/typo-reporter" rel="noopener" target="_blank">typo-reporter</a>: select text with a typo/mistake → press <kbd>Ctrl+Enter</kbd> (<kbd>⌘Enter</kbd> for Mac) → write your comment → <em>Send</em>.</p>
+
+	<h2 id="Edit-page">Edit page <a class="KiraAnchorPermanentLink" href="#Edit-page" title="Permanent link">¶</a></h2>
+
+		<p>You can edit this page <em>https://github.com/Kristinita/KristinitaPelican/edit/master/content/IT-articles/typo-reporter.md</em> yourself on GitHub and send <a href="https://flaviocopes.com/how-to-make-first-github-pull-request/" rel="noopener" target="_blank">pull request</a>.</p>
+
+	<h2 id="Comment">Comment <a class="KiraAnchorPermanentLink" href="#Comment" title="Permanent link">¶</a></h2>
+		<p>For any questions please contact via <a href="https://utteranc.es/" rel="noopener" target="_blank">utterances</a> comment widget below. Please be polite and constructive.</p>
+		<p>To leave a comment, you need to be registered with GitHub. When writing comments, use <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax" rel="noopener" target="_blank">Markdown</a> syntax.
+		</p><p>Once sended, your comment should appear at the top of the <a href="https://github.com/Kristinita/KristinitaPelican/issues" rel="noopener" target="_blank">list of issues</a> for this site. Notification of a reply to your comment should be sent to the email associated with your GitHub account.</p>
+		<p>You can also write and send your message use <a href="https://github.com/Kristinita/KristinitaPelican/issues/new" rel="noopener" target="_blank">GitHub Issues</a> directly.</p>
+
+
+	<div class="KiraUtterances"></div>
+</div>
+
+<div class="SashaWorkOnYourself">Работайте над собой</div>
+				</footer>
+
+			</div>
+
+		</div>
+
+		<!--=================================
+		=			Share buttons			=
+		==================================-->
+
+
+
+
+<!-- AddToAny buttons -->
+
+<aside class="KiraAddToAny">
+	<div class="a2a_kit a2a_kit_size_17 a2a_floating_style a2a_vertical_style">
+		<a class="a2a_button_mastodon" href="https://joinmastodon.org/" aria-label="Share this web page on Mastodon"></a>
+		<a class="a2a_button_diaspora" href="https://diasporafoundation.org/" aria-label="Share this web page on diaspora*"></a>
+		<a class="a2a_button_bluesky" href="https://bsky.app/" aria-label="Share this web page on Bluesky"></a>
+		<a class="a2a_button_meneame" href="https://www.meneame.net/" aria-label="Share this web page on Menéame"></a>
+		<a class="a2a_button_copy_link" href="https://www.addtoany.com/services/copy_link_button" aria-label="Copy link to this web page"></a>
+		<a class="a2a_button_printfriendly" href="https://www.printfriendly.com/" aria-label="Print or convert to PDF this web page use PrintFriendly service"></a>
+		<a class="a2a_dd" href="https://www.addtoany.com/services/" aria-label="Select a web-service to share this page on it"></a>
+	</div>
+</aside>
+	</div>
+
+</body>
+
+</html>

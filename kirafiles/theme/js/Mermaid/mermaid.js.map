@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "mermaid.js",
+  "sourceRoot": "../../coffee/Mermaid/",
+  "sources": [
+    "mermaid.coffee"
+  ],
+  "names": [],
+  "mappings": "AAKG;;;;;;;;;;;;;;;;AAYH,OAAO,CAAC,UAAR,CAAmB;EAAA,WAAA,EAAa;AAAb,CAAnB",
+  "sourcesContent": [
+    "###\n@Author: Kristinita\n@Date: 2023-12-07 10:46:45\n@Last Modified by: Kristinita\n@Last Modified time: 2025-02-20 19:37:26\n###\n\n###########\n# Mermaid #\n###########\n###\n[OVERVIEW] Mermaid — charts and diagrams:\nhttps://mermaid-js.github.io\n\n[INFO] HTML usage:\nhttps://mermaid-js.github.io/mermaid/#/n00b-gettingStarted?id=requirements-for-the-mermaid-api\n###\nmermaid.initialize startOnLoad: true\n"
+  ]
+}

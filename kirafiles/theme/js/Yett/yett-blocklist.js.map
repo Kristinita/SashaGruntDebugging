@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "yett-blocklist.js",
+  "sourceRoot": "../../coffee/Yett/",
+  "sources": [
+    "yett-blocklist.coffee"
+  ],
+  "names": [],
+  "mappings": "AAKG;;;;;;AAAA,IAAA,cAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA6CH,cAAA,GAAiB,CAChB,iBADgB",
+  "sourcesContent": [
+    "###\n@Author: Kristinita\n@Date: 2023-12-24 16:19:45\n@Last Modified by: Kristinita\n@Last Modified time: 2025-02-20 19:38:40\n###\n\n########\n# Yett #\n########\n###\n[OVERVIEW] Yett — block unwanted analytics, tracker and advertising scripts,\ncalled from third-party scripts:\nhttps://github.com/elbywan/yett\nhttps://elbywan.github.io/yett/\n\n[NOTE] Yett works solely for scripts, it doesn’t block unwanted POST requests.\nYett doesn’t block POST requests from Google Translate Custom Widget:\nhttps://github.com/elbywan/yett/issues/51#issuecomment-1868944112\n\n[INFO] Since I don’t need support for older browsers, I use the script for modern browsers:\nhttps://cdn.jsdelivr.net/npm/yett/dist/yett.min.modern.js\n\n[INFO] Add script that calls unwanted scripts, via “document.createElement(\"script\")”.\nFirefox, Chrome and Safari prevents loading unwanted scripts in this case:\nhttps://github.com/elbywan/yett#usage\nhttps://github.com/elbywan/yett#browser-compatibility\n\n[NOTE] “application/javascript” MIME type is obsolete:\nhttps://stackoverflow.com/a/21098951/5951529\n###\n\n\n###\n[INFO] Block ad tracker cookies script of Programmable Search Engine:\nhttps://cse.google.com/adsense/search/async-ads.js\nhttps://support.google.com/programmable-search/thread/15208084?hl=en\n\n[NOTE] I can’t fix via Yett http request “http://clients1.google.com/generate_204” for the Programmable Search Engine.\nThis http request severely underestimates a web page’s score in Lighthouse.\nhttps://stackoverflow.com/q/1989214/5951529\nhttps://i.imgur.com/lykEySy.png\n\n[INFO] The RegExp “v” flag, introduced in ECMAScript 2024, is a superset of the “u” flag:\nhttps://v8.dev/features/regexp-v-flag\n\n[SOON] In December 2023 when using the “v” flag in CoffeeScript\nI get an error “invalid regular expressions flag \"v\"”.\nIn the coming years, the “v” flag may be fully valid in CoffeeScript.\n###\nYETT_BLACKLIST = [\n\t/async-ads\\.js$/u\n]\n"
+  ]
+}

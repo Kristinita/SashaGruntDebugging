@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "stork-404.js",
+  "sourceRoot": "../../coffee/Stork/",
+  "sources": [
+    "stork-404.coffee"
+  ],
+  "names": [],
+  "mappings": "AAKG;;;;;;;;;;;;AAQH,KAAK,CAAC,QAAN,CAAe,YAAf,EAA6B,mBAA7B",
+  "sourcesContent": [
+    "###\n@Author: Kristinita\n@Date: 2023-12-07 10:46:45\n@Last Modified by: Kristinita\n@Last Modified time: 2025-02-20 19:37:47\n###\n\n###\n[DECLINED] Stork works critically slow on iOS devices:\nhttps://github.com/jameslittle230/stork/issues/361\n\n[INFO] I left Stork for use on the 404 page.\n###\nstork.register 'kira-stork', './search-index.st'\n"
+  ]
+}

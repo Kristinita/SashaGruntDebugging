@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "typo-reporter-en.js",
+  "sourceRoot": "../../coffee/typo-reporter/",
+  "sources": [
+    "typo-reporter-en.coffee"
+  ],
+  "names": [],
+  "mappings": "AAKG;;;;;;AAAA,IAAA,QAAA,EAAA,IAAA;;;;;;;;;;;AAWH,QAAA,GAAW,QAAQ,CAAC,aAAT,CAAuB,KAAvB;;AACX,QAAQ,CAAC,IAAI,CAAC,MAAd,CAAqB,QAArB;;AACA,IAAA,GAAO,IAAI,YAAJ,CAAiB;EACvB,MAAA,EAAQ,0DADe;EAEvB,MAAA,EAAQ,IAFe;EAGvB,MAAA,EAAQ;AAHe,CAAjB,EAIJ,QAJI",
+  "sourcesContent": [
+    "###\n@Author: Kristinita\n@Date: 2018-02-22 11:54:50\n@Last Modified by: Kristinita\n@Last Modified time: 2025-02-20 19:38:11\n###\n\n#################\n# typo-reporter #\n#################\n###\n[OVERVIEW] Script, that users can send message about site typos:\nhttps://www.npmjs.com/package/typo-reporter\nhttps://kristinita.netlify.app/IT-articles/typo-reporter\nhttps://github.com/psmb/typo-reporter/issues/4#issuecomment-367471138\n###\nrootNode = document.createElement(\"div\")\ndocument.body.append rootNode\ntypo = new TypoReporter({\n\tformId: \"1FAIpQLSfu5tnuHYKNPjH0n1fR9EmWDHwlFESzJj7JQFu_O5IS8G5R2A\"\n\tlocale: \"en\"\n\toffset: 44\n}, rootNode)\n"
+  ]
+}

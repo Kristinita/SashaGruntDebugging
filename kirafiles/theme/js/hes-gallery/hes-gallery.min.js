@@ -1,0 +1,2 @@
+let kiraAddAltForImage;HesGallery.init({hostedStyles:!1,wrapAround:!0});kiraAddAltForImage=async $kiraNoAltImage_kiraObjectNoAltImage$$=>{$kiraNoAltImage_kiraObjectNoAltImage$$=await waitForElm($kiraNoAltImage_kiraObjectNoAltImage$$);return $kiraNoAltImage_kiraObjectNoAltImage$$.hasAttribute("alt")?console.error(`\u201Calt\u201D attribute already exists for #${$kiraNoAltImage_kiraObjectNoAltImage$$.id} element!`):$kiraNoAltImage_kiraObjectNoAltImage$$.setAttribute("alt","hes-gallery default image stub")};
+kiraAddAltForImage("#hg-pic");

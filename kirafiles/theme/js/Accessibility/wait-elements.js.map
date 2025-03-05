@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "wait-elements.js",
+  "sourceRoot": "../../coffee/Accessibility/",
+  "sources": [
+    "wait-elements.coffee"
+  ],
+  "names": [],
+  "mappings": "AAKG;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA,IAAA;;AA8BH,UAAA,GAAa,QAAA,CAAC,YAAD,CAAA;SACZ,IAAI,OAAJ,CAAY,QAAA,CAAC,WAAD,CAAA;AACb,QAAA;IAAE,IAAG,QAAQ,CAAC,aAAT,CAAuB,YAAvB,CAAH;MACC,WAAA,CAAY,QAAQ,CAAC,aAAT,CAAuB,YAAvB,CAAZ,EADD;;IAGA,YAAA,GAAe,IAAI,gBAAJ,CAAqB,QAAA,CAAC,SAAD,CAAA;MACnC,IAAG,QAAQ,CAAC,aAAT,CAAuB,YAAvB,CAAH;QACC,YAAY,CAAC,UAAb,CAAA;QACA,WAAA,CAAY,QAAQ,CAAC,aAAT,CAAuB,YAAvB,CAAZ,EAFD;;IADmC,CAArB;IAMf,YAAY,CAAC,OAAb,CAAqB,QAAQ,CAAC,IAA9B,EACC;MAAA,SAAA,EAAW,IAAX;MACA,OAAA,EAAS;IADT,CADD;EAVW,CAAZ;AADY",
+  "sourcesContent": [
+    "###\n@Author: Kristinita\n@Date: 2023-12-19 12:42:25\n@Last Modified by: Kristinita\n@Last Modified time: 2025-02-20 19:34:55\n###\n\n###\n[OVERVIEW] Wait for HTML elements to appear on the page\nand then make modifications to them:\nhttps://stackoverflow.com/a/61511955/5951529\n\nI use this library to fix errors in third-party JavaScript libraries.\n\n[INFO] It uses “MutationObserver” interface provides the ability\nto watch for changes being made to the DOM tree:\nhttps://developer.mozilla.org/en-US/docs/Web/API/MutationObserver\n\n[EXAMPLES] Pages where I use this function:\n“AddToAny/addtoany.coffee”\n“Gemini/gemini-scrollbar.coffee”\n“google-translate-custom-widget/gtcw-accessibility.coffee”\n“hes-gallery/hes-gallery.coffee”\n“programmable-search-engine-kristinitas-search.coffee”\n\n\n[LEARN][ACCESSIBILITY] Get active (focused) element in any browser:\nhttps://agileadam.com/2020/03/monitoring-which-element-has-focus-in-web-browser/\n\n\n[REQUIRED] 2 “return” in CoffeeScript version of Yong Wang script\nfor resolving ESLint “consistent-return” and “no-promise-executor-return” rules:\nhttps://eslint.org/docs/latest/rules/consistent-return\nhttps://eslint.org/docs/latest/rules/no-promise-executor-return\n###\nwaitForElm = (kiraSelector) ->\n\tnew Promise (kiraResolve) ->\n\t\tif document.querySelector(kiraSelector)\n\t\t\tkiraResolve(document.querySelector(kiraSelector))\n\n\t\tkiraObserver = new MutationObserver (mutations) ->\n\t\t\tif document.querySelector(kiraSelector)\n\t\t\t\tkiraObserver.disconnect()\n\t\t\t\tkiraResolve(document.querySelector(kiraSelector))\n\t\t\t\treturn\n\n\t\tkiraObserver.observe document.body,\n\t\t\tchildList: true\n\t\t\tsubtree: true\n\n\t\treturn\n"
+  ]
+}

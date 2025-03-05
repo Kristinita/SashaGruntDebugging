@@ -1,0 +1,1040 @@
+
+
+
+
+<!--=============================
+=			Variables			=
+==============================-->
+
+
+<!--=============================
+=			Beginning			=
+==============================-->
+
+
+<!DOCTYPE html>
+
+<!--=========================
+=			HTML			=
+==========================-->
+
+<html lang="ru">
+
+<!--=========================
+=			Head			=
+==========================-->
+
+<head>
+
+	<!--=========================
+	=			Meta			=
+	==========================-->
+
+
+
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<title>Перед первым применением ARK Benefit S401</title>
+
+
+<meta name="description" content="ARK Benefit S401 for dummies">
+
+
+
+	<!--=============================
+	=		Critical images			=
+	==============================-->
+
+
+
+
+<!-- Flags for GCTW preload -->
+
+	<link rel="preload" href="../theme/images/flags/ps.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/nz.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/ve.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/cd.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/ru.webp" as="image">
+	<link rel="preload" href="../theme/images/flags/mo.webp" as="image">
+
+
+<!-- Aside icon preload -->
+
+<link rel="preload" href="../theme/images/aside/SashaGreenSweater.webp" as="image">
+
+<!-- Titleimage preload -->
+
+
+	<!--=================================
+	=			Critical styles			=
+	==================================-->
+
+
+
+
+<!-- Basic styles -->
+
+<link rel="preload" href="../theme/css/components/basic.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Aside styles -->
+
+<link rel="preload" href="../theme/css/components/Aside-icons/aside-icons.css" as="style" onload="this.rel='stylesheet'">
+
+<!-- Left/right aside icon styles -->
+
+<link rel="preload" href="../theme/css/components/Aside-icons/aside-icon-left.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Aside icon -->
+
+<style>
+	.SashaIconAside {
+		background-image: url(../theme/images/aside/SashaGreenSweater.webp)
+	}
+</style>
+
+
+<!-- Images styles -->
+
+
+	<link rel="preload" href="../theme/css/components/images.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+<!-- Admonition -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Hide body scrollbar -->
+
+<link rel="preload" href="../theme/css/components/scrollbar-body-hide.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Fonts styles -->
+
+<link rel="preload" href="../theme/css/components/fonts.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Bulma styles -->
+
+<link rel="preload" href="../theme/css/third-party/Bulma/bulma-modules.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="../theme/css/third-party/Bulma/bulma-local.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Gemini scrollbar styles -->
+
+<link rel="preload" href="../theme/css/third-party/Gemini/gemini.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="../theme/css/third-party/Gemini/gemini-local.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Stork styles -->
+
+
+
+
+<!-- Theme -->
+
+<link rel="preload" href="../theme/css/nelican-themes/it-articles.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!-- Background for header on aside icon -->
+
+	<link rel="preload" href="../theme/css/nelican-themes-aside-header-backgrounds/KiraSeagreen.css" as="style" onload="this.rel='stylesheet'">
+
+
+<!--=====================
+=		Header CSS		=
+======================-->
+
+<link rel="preload" href="../theme/css/components/header-main.css" as="style" onload="this.rel='stylesheet'">
+	<!--=============================
+	=		Critical scripts		=
+	==============================-->
+
+
+
+
+<!-- Defer.js -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js" as="script">
+<script src="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js"></script>
+
+
+<!-- Wait elements -->
+
+<link rel="preload" href="../theme/js/Accessibility/wait-elements.js" as="script">
+<script src="../theme/js/Accessibility/wait-elements.js" defer=""></script>
+
+
+<!-- Gemini scrollbar -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/noeldelgado/gemini-scrollbar/index.min.js" as="script">
+<script src="https://cdn.jsdelivr.net/gh/noeldelgado/gemini-scrollbar/index.min.js" defer=""></script>
+<script src="../theme/js/Gemini/gemini-scrollbar.js" defer=""></script>
+
+
+<!-- Bulma -->
+
+<link rel="preload" href="../theme/js/Bulma/bulma-navbar.js" as="script">
+<script src="../theme/js/Bulma/bulma-navbar.js" defer=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=================
+	=		Fonts		=
+	==================-->
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="">
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap" media="print" onload="this.media='all'">
+
+<noscript>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@700&amp;family=Philosopher&amp;display=swap">
+</noscript>
+
+
+
+<script>
+	let kiraScadaFontLoaded = false;
+	var kiraDeferImmediately = 0;
+	Defer.dom("h2", kiraDeferImmediately, "KiraScadaFontHeaderDeferJS", () => {
+		if (!kiraScadaFontLoaded) {
+			const kiraScadaFontHeaderDefer = document.createElement("link");
+			kiraScadaFontHeaderDefer.setAttribute("href", "https://fonts.googleapis.com/css2?family=Scada:ital,wght@1,700&amp;display=swap");
+			kiraScadaFontHeaderDefer.setAttribute("rel", "stylesheet");
+			document.querySelector("head").append(kiraScadaFontHeaderDefer);
+			kiraScadaFontLoaded = true;
+		}
+	});
+</script>
+
+
+
+
+
+
+
+<script>
+	var kiraDeferImmediately = 0;
+	Defer.dom(".SashaWorkOnYourself", kiraDeferImmediately, "KiraMarckScriptFontWorkOnYourselfDeferJS", () => {
+			const kiraMarckScriptFontWorkOnYourselfDefer = document.createElement("link");
+			kiraMarckScriptFontWorkOnYourselfDefer.setAttribute("href", "https://fonts.googleapis.com/css2?family=Marck+Script&amp;display=swap&amp;text=Работйендс");
+			kiraMarckScriptFontWorkOnYourselfDefer.setAttribute("rel", "stylesheet");
+			document.querySelector("head").append(kiraMarckScriptFontWorkOnYourselfDefer);
+		});
+</script>
+
+
+
+	<!--=================================
+	=	Styles for specific categories	=
+	==================================-->
+
+
+
+
+
+<!-- Neliateka navigation menu -->
+
+
+
+<!-- Kristinograd icons -->
+
+
+
+<!-- Kristinograd examples blocks -->
+
+
+	<!--=========================
+	=	Styles of components	=
+	==========================-->
+
+
+
+
+
+<!-- Tables -->
+
+
+
+
+<!-- Blockquotes -->
+
+
+
+
+
+<!-- Iframes -->
+
+
+
+<!-- Code styles -->
+
+
+
+
+<!-- Small icons -->
+
+
+
+
+
+
+
+<!-- Shadows around the text -->
+
+
+
+<!-- Relative pages -->
+
+
+
+<!-- GRights -->
+
+
+
+<!-- Custom CSS -->
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.css('../personal/css/Life-hacks/default-portable-browser.css', 'customcss', kiraDeferEarly);
+	</script>
+
+
+<!-- Footer for articles and pages -->
+
+<script>
+	var kiraDeferEarly = 400;
+	Defer.css('../theme/css/components/footer-main.css', 'footer-main', kiraDeferEarly);
+</script>
+	<!--=========================
+	=	Scripts of components	=
+	==========================-->
+
+
+
+
+
+<!-- Code scripts -->
+
+
+
+<!-- Translate GCTW scripts -->
+
+
+
+<!-- Translate GCTW scripts -->
+
+	<script>
+		var kiraDeferEarly = 400;
+		Defer.js('../theme/js/google-translate-custom-widget/gtcw-ru.js', 'gtcw-ru', kiraDeferEarly);
+	</script>
+
+<script>
+	var kiraDeferEarlySecond = 700, kiraDeferEarlyThird = 1000;
+	Defer.js('../theme/js/google-translate-custom-widget/gtcw-accessibility.js', 'gtcw-accessibility', kiraDeferEarlySecond);
+	Defer.js('https://cdn.jsdelivr.net/gh/Kristinita/google-translate-custom-widget@KiraSeparateConfigAndTranslateScript/nativejs/js/google-translate.min.js', 'gtcw', kiraDeferEarlySecond);
+	Defer.js('https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js', 'js-cookie', kiraDeferEarlyThird);
+	Defer.js('https://translate.google.com/translate_a/element.js?cb=TranslateWidgetIsLoaded', 'google-translate-element', kiraDeferEarlyThird);
+</script>
+	<!--=============================
+	=		Third-party styles		=
+	==============================-->
+
+
+
+
+
+	<script>
+		var kiraDeferMedium = 1000;
+		Defer.css('https://cdn.jsdelivr.net/npm/hes-gallery/dist/hes-gallery.min.css', 'hes-gallery-styles', kiraDeferMedium);
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=============================
+	=		Third-party scripts		=
+	==============================-->
+
+
+
+
+	<script>
+		var kiraDeferMedium = 1000, kiraDeferMediumSecond = 1500;
+		Defer.js('https://cdn.jsdelivr.net/gh/demtario/hes-gallery/dist/hes-gallery.min.js', 'hes-gallery', kiraDeferMedium);
+		Defer.js('../theme/js/hes-gallery/hes-gallery.js', 'hes-gallery-local', kiraDeferMediumSecond);
+	</script>
+
+
+
+
+
+
+
+
+	<!--=================================
+	=		Low-priority styles		    =
+	==================================-->
+
+
+<link rel="stylesheet" href="../theme/css/components/javascript-disabled.css">
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.css('../theme/css/third-party/AddToAny/addtoany.css', 'addtoany-styles', kiraDeferLate, undefined, true);
+</script>
+
+<script>
+	var kiraDeferLateSecond = 6500;
+	Defer.css('../theme/css/third-party/typo-reporter/typo-reporter.css', 'typo-reporter-css', kiraDeferLateSecond, undefined, true);
+</script>
+	<!--=================================
+	=		Low-priority scripts		=
+	==================================-->
+
+
+
+<script>
+	var kiraDeferLateSecond = 6500, kiraDeferLateThird = 7000;
+	Defer.js('../theme/js/AddToAny/addtoany.js', 'addtoany-local', kiraDeferLateSecond, undefined, true);
+	Defer.js('https://static.addtoany.com/menu/page.js', 'addtoany', kiraDeferLateThird, undefined, true);
+</script>
+
+
+
+
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.js('../theme/js/Browser-Update/browser-update.js', 'browser-update-local', kiraDeferLate);
+	Defer.js('https://browser-update.org/update.min.js', 'browser-update', kiraDeferLate);
+</script>
+
+
+
+
+<script>
+	var kiraDeferLate = 6000;
+	Defer.js('https://cdn.jsdelivr.net/npm/typo-reporter/lib/TypoReporter.min.js', 'typo-reporter', kiraDeferLate, undefined, true);
+</script>
+
+	<script>
+		var kiraDeferLateSecond = 6500;
+		Defer.js('../theme/js/typo-reporter/typo-reporter-ru.js', 'typo-reporter-local-ru', kiraDeferLateSecond, undefined, true);
+	</script>
+
+
+
+
+<script>
+	var kiraDeferImmediately = 0;
+	Defer.dom('.KiraUtterances', kiraDeferImmediately, 'KiraUtterancesDeferJS', () => {
+			const kiraUtterancesDefer = document.createElement('script');
+			kiraUtterancesDefer.setAttribute("src", "https://utteranc.es/client.js");
+			kiraUtterancesDefer.setAttribute("repo", "Kristinita/KristinitaPelican");
+			kiraUtterancesDefer.setAttribute("issue-term", "title");
+			kiraUtterancesDefer.setAttribute("label", "Utterances");
+			kiraUtterancesDefer.setAttribute("theme", "preferred-color-scheme");
+			kiraUtterancesDefer.setAttribute("crossorigin", "anonymous");
+			document.querySelector(".KiraUtterances").append(kiraUtterancesDefer);
+		});
+</script>
+
+
+
+
+
+
+
+
+
+	<!--=========================
+	=			base			=
+	==========================-->
+
+
+	<!--=================================
+	=			Structured data			=
+	==================================-->
+
+
+	<meta property="og:title" content="Перед первым применением ARK Benefit S401">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://s.4pda.to/I5lB3s6bjRPdAAqOH9ucARYLxz211Mfez2txLI9OoxjRQqqGIAGK.jpg">
+	<meta property="og:url" content=".\IT-articles/Перед-первым-применением-ARK-Benefit-S401.html">
+	<meta property="og:description" content="ARK Benefit S401 for dummies">
+	<meta property="og:site_name" content="Поиск Кристиниты">
+	<meta property="article:published_time" content="2017-02-13">
+	<meta property="article:modified_time" content="2024-01-24">
+	<meta property="article:section" content="IT-articles">
+	<meta property="article:tag" content="it-articles">
+	<meta property="article:tag" content="android-firmwares">
+	<meta property="article:tag" content="ark-benefit-s401">
+
+
+
+
+<script type="application/ld+json">
+{
+		"@context": "https://schema.org",
+		"@type": "HowTo",
+		"name": "Перед первым применением ARK Benefit S401",
+		"description": "ARK Benefit S401 for dummies",
+		"headline": "Перед первым применением ARK Benefit S401",
+		"datePublished": "2017-02-13 19:15:15+03:00",
+		"dateModified": "2024-01-24 15:50:56+03:00",
+		"author": {
+			"@type": "Person",
+			"name": "Sasha Chernykh"
+		},
+		"image": "https://s.4pda.to/I5lB3s6bjRPdAAqOH9ucARYLxz211Mfez2txLI9OoxjRQqqGIAGK.jpg",
+		"url": "../IT-articles/Перед-первым-применением-ARK-Benefit-S401.html"
+}
+</script>
+	<!--=========================
+	=			Feeds			=
+	==========================-->
+
+	<!-- Atom feeds -->
+
+
+	<link href="../feeds/feeds-all/all.atom.xml" rel="alternate" type="application/atom+xml">
+
+
+		<link href="../feeds/feeds-categories/it-articles.atom.xml" rel="alternate" type="application/atom+xml">
+
+			<link href="../feeds/feeds-tags/it-articles.atom.xml" rel="alternate" type="application/atom+xml">
+			<link href="../feeds/feeds-tags/android-firmwares.atom.xml" rel="alternate" type="application/atom+xml">
+			<link href="../feeds/feeds-tags/ark-benefit-s401.atom.xml" rel="alternate" type="application/atom+xml">
+
+		<link href="../feeds/feeds-languages/all-ru.atom.xml" rel="alternate" type="application/atom+xml">
+
+			<link href="../feeds/feeds-authors/sasha-chernykh.atom.xml" rel="alternate" type="application/atom+xml">
+
+
+
+	<!-- RSS feeds -->
+
+
+	<link href="../feeds/feeds-all/all.rss.xml" rel="alternate" type="application/rss+xml">
+
+
+		<link href="../feeds/feeds-categories/it-articles.rss.xml" rel="alternate" type="application/rss+xml">
+
+			<link href="../feeds/feeds-tags/it-articles.rss.xml" rel="alternate" type="application/rss+xml">
+			<link href="../feeds/feeds-tags/android-firmwares.rss.xml" rel="alternate" type="application/rss+xml">
+			<link href="../feeds/feeds-tags/ark-benefit-s401.rss.xml" rel="alternate" type="application/rss+xml">
+
+		<link href="../feeds/feeds-languages/all-ru.rss.xml" rel="alternate" type="application/rss+xml">
+
+			<link href="../feeds/feeds-authors/sasha-chernykh.rss.xml" rel="alternate" type="application/rss+xml">
+
+
+
+</head>
+
+
+<body class="gm-scrollbar-container">
+
+	<!--=====================================
+	=			Skip to main link			=
+	======================================-->
+
+
+	<a class="KiraSkipToContent" href="#KiraUniqueContent">Перейти к основному содержимому</a>
+
+	<!--=============================
+	=			Scrollbar			=
+	==============================-->
+
+	<div class="gm-scrollbar -vertical"><div class="thumb"></div></div>
+	<div class="gm-scrollbar -horizontal"><div class="thumb"></div></div>
+	<div class="gm-scroll-view">
+
+		<!--=============================
+		=			Side icon			=
+		==============================-->
+
+
+
+
+<aside class="SashaIconAside" aria-label="Icon on a third of the screen (for desktop devices) or at the top of the page (for mobile devices)">
+
+	<div class="SashaAsideBottomText">
+
+			Перед первым применением ARK Benefit S401
+
+	</div>
+</aside>
+		<!--=================================
+		=			Content area			=
+		==================================-->
+
+		<div class="KiraContentArea">
+
+			<!--=============================
+			=			noscript			=
+			==============================-->
+
+
+<div role="alert">
+	<noscript class="SashaDisabledJavaScriptMessage">
+		<p>Sorry, this site doesn’t work, if JavaScript disabled. Please, <a href="https://activatejavascript.org/en/instructions" rel="noopener" target="_blank">enable JavaScript for your browser</a>.</p>
+		<p>Owner of this site thinks that <a href="https://stackoverflow.com/a/17073999/5951529" rel="noopener" target="_blank">JavaScript disabling — is obsolete action in 2025</a> and <a href="https://www.reddit.com/r/webdev/comments/48z7jz/do_you_take_into_account_those_who_disable/d0nxftd/" rel="noopener" target="_blank">will not support users who did this</a>.</p>
+		<p>Probably, <a href="https://www.howtogeek.com/138865/htg-explains-should-you-disable-javascript/" rel="noopener" target="_blank">you don’t need turn off JavaScript</a>.</p>
+	</noscript>
+</div>
+			<!--=========================
+			=			Navbar			=
+			==========================-->
+
+
+
+<nav class="navbar" aria-label="main navigation">
+
+	<div class="navbar-brand">
+
+
+		<button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+
+
+			<span aria-hidden="true">&#8203;</span>
+			<span aria-hidden="true">&#8203;</span>
+			<span aria-hidden="true">&#8203;</span>
+
+
+		</button>
+
+	</div>
+
+	<div class="navbar-menu">
+		<div class="navbar-start">
+
+			<!-- Библиотека для жизни -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+
+				<button class="navbar-link">
+					Библиотека для жизни
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Neliateka-Documentation/Библиотека-для-жизни#KiraUniqueContent" rel="noopener" target="_blank">Описание библиотеки для жизни</a>
+					<a class="navbar-item" href="../tag/library-for-life-main" rel="noopener" target="_blank">Литература Нелиатеки по тематикам</a>
+					<a class="navbar-item" href="https://raw.githubusercontent.com/Kristinita/KristinitaPelican/master/content/Library-for-life/Библиотека-для-жизни-полный-список.txt" rel="noopener" target="_blank">Полный список книг и прочих материалов Нелиатеки</a>
+					<a class="navbar-item" href="../Neliateka-Documentation/Библиотека-непрерывного-обучения#KiraUniqueContent" rel="noopener" target="_blank">Библиотека непрерывного обучения</a>
+					<a class="navbar-item" href="../Neliateka-Wishlist/Вишлист-библиотеки-для-жизни#KiraUniqueContent" rel="noopener" target="_blank">Вишлист Нелиатеки</a>
+				</div>
+			</div>
+
+			<!-- Комнаты Нели -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Комнаты Нели
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Nelias-Rooms/Комнаты-Нели#KiraUniqueContent" rel="noopener" target="_blank">Описание Комнат Нели</a>
+					<a class="navbar-item" href="../Nelias-Rooms/Зелёная-Комната-Нели#KiraUniqueContent" rel="noopener" target="_blank">Зелёная Комната Нели</a>
+					<a class="navbar-item" href="../Nelias-Rooms/Поиск-книг-для-Комнат-Нели#KiraUniqueContent" rel="noopener" target="_blank">Вишлист Комнат Нели</a>
+					<a class="navbar-item" href="../category/nelias-rooms" rel="noopener" target="_blank">Все материалы категории «Комнаты Нели»</a>
+				</div>
+			</div>
+
+			<!-- Поиск Кристиниты -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					Поиск Кристиниты
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href=".." rel="noopener" target="_blank">Поиск Кристиниты</a>
+					<a class="navbar-item" href="https://cyclowiki.org/wiki/Участник:Саша_Черных/Поиск_Кристиниты" rel="noopener" target="_blank">Описание Поиска Кристиниты</a>
+					<a class="navbar-item" href="https://raw.githubusercontent.com/Kristinita/KristinitaPelican/master/content/Kristinita's-Search/Kristinita's-Search__actual_catalogue.txt" rel="noopener" target="_blank">Полный каталог Поиска Кристиниты</a>
+				</div>
+			</div>
+
+
+			<!-- IT -->
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					IT
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait">
+					<a class="navbar-item" href="../Sublime-Text/SashaSublime#KiraUniqueContent" rel="noopener" target="_blank">SashaSublime</a>
+					<a class="navbar-item" href="../Sasha-Black.html" rel="noopener" target="_blank">Sasha Black</a>
+					<a class="navbar-item" href="../tag/it-articles" rel="noopener" target="_blank">Статьи на IT-тематику</a>
+					<a class="navbar-item" href="../tag/sasha-chernykh-software" rel="noopener" target="_blank">Программы и скрипты</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- О сайте -->
+
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<button class="navbar-link">
+					О сайте
+				</button>
+
+				<div class="navbar-dropdown is-hidden-portrait is-right">
+					<a class="navbar-item" href="../Pages/Terms-and-Conditions-and-Privacy-Policy#KiraUniqueContent" rel="noopener" target="_blank">Условия использования и политика конфиденциальности</a>
+					<a class="navbar-item" href="../Pages/About-for-developers#KiraUniqueContent" rel="noopener" target="_blank">Информация о сайте для разработчиков</a>
+					<a class="navbar-item" href="https://github.com/Kristinita/KristinitaPelican" rel="noopener" target="_blank">Открытый исходный код сайта</a>
+					<a class="navbar-item" href="../sitemap.xml" rel="noopener" target="_blank">Карта сайта</a>
+					<a class="navbar-item" href="../tag/alltags" rel="noopener" target="_blank">Все теги сайта</a>
+					<a class="navbar-item" href="../categories" rel="noopener" target="_blank">Все категории сайта</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</nav>
+			<!--=================================
+			=			Article area			=
+			==================================-->
+
+			<div class="KiraArticle">
+
+				<!--=========================
+				=			Header			=
+				==========================-->
+
+				<header>
+
+
+<!-- Header -->
+
+<!-- Title -->
+
+<h1 class="SashaTopHeader">
+		Перед первым применением ARK Benefit S401
+</h1>
+
+
+<!-- Analytics -->
+
+
+
+<!-- Version of article/page content -->
+
+<div class="SashaHeaderData">Version </div>
+
+
+<!-- Dates of creation and last modification -->
+
+<div class="SashaHeaderData">
+	Posted — 2017-02-13T19:15:15+0300
+</div>
+
+
+<div class="SashaHeaderData">
+	Last modified — 2024-01-24T15:50:56+0300
+</div>
+
+
+<!-- GCTW flags -->
+
+
+
+
+
+<img src="../theme/images/flags/ps.webp" tabindex="0" alt="Palestine" data-google-lang="ar" class="language__img" loading="lazy">
+<img src="../theme/images/flags/nz.webp" tabindex="0" alt="New Zealand" data-google-lang="en" class="language__img" loading="lazy">
+<img src="../theme/images/flags/ve.webp" tabindex="0" alt="Venezuela" data-google-lang="es" class="language__img" loading="lazy">
+<img src="../theme/images/flags/cd.webp" tabindex="0" alt="Democratic Republic of the Congo" data-google-lang="fr" class="language__img" loading="lazy">
+<img src="../theme/images/flags/ru.webp" tabindex="0" alt="Russia" data-google-lang="ru" class="language__img" loading="lazy">
+<img src="../theme/images/flags/mo.webp" tabindex="0" alt="Macao" data-google-lang="zh-TW" class="language__img" loading="lazy">
+
+
+
+<!-- Tags -->
+
+	<div class="tags are-medium">
+			<a class="tag is-rounded" href="../tag/it-articles.html">it-articles</a>
+			<a class="tag is-rounded" href="../tag/android-firmwares.html">android-firmwares</a>
+			<a class="tag is-rounded" href="../tag/ark-benefit-s401.html">ark-benefit-s401</a>
+	</div>
+
+
+
+
+
+
+
+
+
+<!-- Skip TOC link -->
+
+<div class="KiraHeaderSkipTOC">
+		<a href="#KiraUniqueContent">Пропустить оглавление</a>
+</div>
+
+
+				</header>
+
+				<!--=================================
+				=			Unique Content			=
+				==================================-->
+
+
+				<main>
+
+
+<nav class="KiraMarkdownToc"><!-- MarkdownTOC -->
+
+<ol>
+<li><a href="#Введение">Введение</a><ol>
+<li><a href="#Для-чего-предназначена-данная-инструкция">Для чего предназначена данная инструкция</a></li>
+<li><a href="#Для-кого-предназначена-данная-инструкция">Для кого предназначена данная инструкция</a></li>
+<li><a href="#Необходимое-оборудование">Необходимое оборудование</a></li>
+</ol>
+</li>
+<li><a href="#Чего-не-стоит-делать">Чего не стоит делать</a><ol>
+<li><a href="#Не-удаляйте-самостоятельно-заражённые-файлы-если-не-уверены-в-последствиях">Не удаляйте самостоятельно заражённые файлы, если не уверены в последствиях</a></li>
+<li><a href="#Делайте-бэкапы-перед-тем-как-совершать-рискованные-действия">Делайте бэкапы перед тем, как совершать рискованные действия</a></li>
+<li><a href="#Не-устанавливайте-официальные-прошивки">Не устанавливайте официальные прошивки</a></li>
+<li><a href="#В-прошивке-VERTEX-баги">В прошивке VERTEX баги</a></li>
+</ol>
+</li>
+<li><a href="#Установка-кастомного-recovery-и-перепрошивка">Установка кастомного recovery и перепрошивка</a><ol>
+<li><a href="#Зачем-это-нужно">Зачем это нужно</a></li>
+<li><a href="#Установка-кастомного-recovery">Установка кастомного recovery</a><ol>
+<li><a href="#Установка-драйверов">Установка драйверов</a></li>
+<li><a href="#Кнопка-Download">Кнопка Download</a></li>
+</ol>
+</li>
+<li><a href="#Установка-CyanogenMod-121">Установка CyanogenMod 12.1</a><ol>
+<li><a href="#Приложения">Приложения</a></li>
+<li><a href="#Вайпы">Вайпы</a></li>
+<li><a href="#Форматирование-раздела-system">Форматирование раздела system</a></li>
+<li><a href="#Окончание-перепрошивки">Окончание перепрошивки</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<!-- /MarkdownTOC --></nav><div id="KiraUniqueContent">
+
+<h2 id="Введение">1. Введение <a class="KiraAnchorPermanentLink" href="#Введение" title="Permanent link">¶</a></h2>
+<h3 id="Для-чего-предназначена-данная-инструкция">1.1. Для чего предназначена данная инструкция <a class="KiraAnchorPermanentLink" href="#Для-чего-предназначена-данная-инструкция" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://fb.ru/article/254999/stokovaya-proshivka-chto-eto-takoe" rel="noopener" target="_blank">Стоковая прошивка</a> телефона ARK Benefit S401 содержит вредоносное ПО</strong> — без Вашего согласия на телефон будут устанавливаться программы. Данная проблема возникла не только у меня, но и у многих прочих участников форума 4PDA, см. сообщения <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=340#entry67671845" rel="noopener" target="_blank">1</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=340#entry67600967" rel="noopener" target="_blank">2</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=300#entry64686674" rel="noopener" target="_blank">3</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=300#entry63816408" rel="noopener" target="_blank">4</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=300#entry63247178" rel="noopener" target="_blank">5</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=280#entry61611283" rel="noopener" target="_blank">6</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=280#entry60787829" rel="noopener" target="_blank">7</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=220#entry58263044" rel="noopener" target="_blank">8</a>.</p>
+<p><div class="hes-gallery"><img alt="Вирусы Dr.Web" src="https://i.imgur.com/t27DFhh.png" loading="lazy"></div></p>
+<p>Если не желаете мириться с постоянными загрузками нежелательного ПО, нужно что-то делать.</p>
+<h3 id="Для-кого-предназначена-данная-инструкция">1.2. Для кого предназначена данная инструкция <a class="KiraAnchorPermanentLink" href="#Для-кого-предназначена-данная-инструкция" title="Permanent link">¶</a></h3>
+<p>В основном, для пользователей, не имеющих большого опыта перепрошивок. К сожалению, <a href="https://4pda.ru/forum/index.php?s=&amp;showtopic=788444&amp;view=findpost&amp;p=36669797" rel="noopener" target="_blank">сообщения по ссылкам в шапке 4PDA</a> могут быть не совсем понятными для неопытных пользователей.</p>
+<p>Если же Вы опытный юзер и заметили ошибки/недочёты в данной статье, просьба в конструктивном ключе сообщить о них автору.</p>
+<h3 id="Необходимое-оборудование">1.3. Необходимое оборудование <a class="KiraAnchorPermanentLink" href="#Необходимое-оборудование" title="Permanent link">¶</a></h3>
+<p>Автор статьи лично выполнял описанные ниже действия на следующем оборудовании, и у него получилось.</p>
+<ol>
+<li>ARK Benefit S401 со стоковой прошивкой — собственно, телефон, о котором идёт речь;</li>
+<li>Windows 10 LTSB Enterprise EN;</li>
+<li>Нужно как-нибудь перенести файл прошивки на SD-карту.</li>
+<li>Если телефон нормально работает, удобнее всего переносить файлы с компьютера на телефон и обратно с помощью программы <a href="https://f-droid.org/en/packages/be.ppareit.swiftp_free/" rel="noopener" target="_blank">FTP Server (Free)</a>.</li>
+<li>Если телефоном не получается пользоваться в обычном режиме, — после ошибки YouTube или <a href="https://4pda.ru/forum/index.php?s=&amp;showtopic=788444&amp;view=findpost&amp;p=67471483" rel="noopener" target="_blank">неудачном сбросе настроек</a> — я беру устройство, поддерживающее MicroSD (для меня это скрытая камера) → вставляю в него MicroSD из телефона → подключаю устройство через USB к компьютеру → переношу на MicroSD нужные файлы → отключаю устройство от компьютера → вставляю MicroSD обратно в телефон.</li>
+<li>Вероятно, переносить файлы без дополнительного (помимо USB-кабеля) оборудования можно <a href="https://www.techcolumnist.com/2013/07/29/android-push-file-to-sdcard-with-adb/" rel="noopener" target="_blank">посредством adb</a>. Сам не пробовал, не могу сказать, какие подводные камни ожидают.</li>
+</ol>
+<h2 id="Чего-не-стоит-делать">2. Чего не стоит делать <a class="KiraAnchorPermanentLink" href="#Чего-не-стоит-делать" title="Permanent link">¶</a></h2>
+<p>Не повторяйте моих ошибок.</p>
+<h3 id="Не-удаляйте-самостоятельно-заражённые-файлы-если-не-уверены-в-последствиях">2.1. Не удаляйте самостоятельно заражённые файлы, если не уверены в последствиях <a class="KiraAnchorPermanentLink" href="#Не-удаляйте-самостоятельно-заражённые-файлы-если-не-уверены-в-последствиях" title="Permanent link">¶</a></h3>
+<p>я пытался удалять вредоносное ПО следующим образом.</p>
+<ol>
+<li>Программой RootAppDelete удалил приложение YouTube,</li>
+<li>Удалял YouTube программой <a href="https://4pda.ru/forum/index.php?showtopic=735417&amp;st=40#entry49802449" rel="noopener" target="_blank">Lucky Patcher</a>,</li>
+<li>Просканировал телефон антивирусом Dr.Web и удалил вручную, при помощи Root Explorer, файлы, на которые указал Dr.Web.</li>
+</ol>
+<p>Во всех трёх случаях стала постоянно появляться ошибка приложения YouTube, которая не давала ничего делать на данном телефоне.</p>
+<h3 id="Делайте-бэкапы-перед-тем-как-совершать-рискованные-действия">2.2. Делайте бэкапы перед тем, как совершать рискованные действия <a class="KiraAnchorPermanentLink" href="#Делайте-бэкапы-перед-тем-как-совершать-рискованные-действия" title="Permanent link">¶</a></h3>
+<p>Под «рискованными действиями» понимаются, в частности, перепрошивка, сброс до заводских настроек, монтирование разделов, на конкретно данной модели телефона — удаление вирусных приложений.</p>
+<p>я делаю 2 бэкапа:</p>
+<ol>
+<li>При помощи <a href="https://f-droid.org/en/packages/dk.jens.backup/" rel="noopener" target="_blank">oandbackup</a>,</li>
+<li>В кастомном Recovery.</li>
+</ol>
+<h3 id="Не-устанавливайте-официальные-прошивки">2.3. Не устанавливайте официальные прошивки <a class="KiraAnchorPermanentLink" href="#Не-устанавливайте-официальные-прошивки" title="Permanent link">¶</a></h3>
+<p><a href="https://mega.nz/#F!oj5RQQKR!UdBNCCpFbThPqJy9mobGlQ!0jZAhZjR" rel="noopener" target="_blank">V007</a> и <a href="https://mega.nz/#F!oj5RQQKR!UdBNCCpFbThPqJy9mobGlQ!4ixAzZqT" rel="noopener" target="_blank">V006</a>, которые рекомендует <a href="https://vk.com/topic-114301917_36567374" rel="noopener" target="_blank">официальная группа ARK ВКонтакте</a>. В них также содержится вредоносное ПО.</p>
+<h3 id="В-прошивке-VERTEX-баги">2.4. В прошивке VERTEX баги <a class="KiraAnchorPermanentLink" href="#В-прошивке-VERTEX-баги" title="Permanent link">¶</a></h3>
+<p><a href="https://4pda.ru/forum/index.php?s=&amp;showtopic=788444&amp;view=findpost&amp;p=67800133" rel="noopener" target="_blank">Данные баги</a> не воспроизводятся в прошивке CyanogenMod 12.1. Кроме того в VERTEX присутствуют GAPPS, отсутствующие в прошивке CyanogenMod 12.1.</p>
+<h2 id="Установка-кастомного-recovery-и-перепрошивка">3. Установка кастомного recovery и перепрошивка <a class="KiraAnchorPermanentLink" href="#Установка-кастомного-recovery-и-перепрошивка" title="Permanent link">¶</a></h2>
+<h3 id="Зачем-это-нужно">3.1. Зачем это нужно <a class="KiraAnchorPermanentLink" href="#Зачем-это-нужно" title="Permanent link">¶</a></h3>
+<ol>
+<li>Без кастомного recovery не получится установить новую прошивку. <a href="https://4pda.ru/forum/index.php?s=&amp;showtopic=523117&amp;view=findpost&amp;p=27160632" rel="noopener" target="_blank">Что ещё позволяет TWRP recovery</a>.</li>
+<li>Даже если будет выложен безопасный способ удаления вредоносного ПО в данной модели телефона, в официальных прошивках останутся GAPPS. <a href="https://archive.ph/vWC97" rel="noopener" target="_blank">мне без них лучше</a>. В прошивке CyanogenMod 12.1 GAPPS отсутствуют.</li>
+</ol>
+<h3 id="Установка-кастомного-recovery">3.2. Установка кастомного recovery <a class="KiraAnchorPermanentLink" href="#Установка-кастомного-recovery" title="Permanent link">¶</a></h3>
+<p>Приступаем к действиям. Если Вы успели сохранить на телефон что-то нужное</p>
+<p>я установил <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=240#entry59542724" rel="noopener" target="_blank">TWRP 3.1.0</a>. Проделываем действия по <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=120#entry56295822" rel="noopener" target="_blank">этой инструкции</a>. Моменты, которые у меня вызвали затруднения:</p>
+<h4 id="Установка-драйверов">3.2.1. Установка драйверов <a class="KiraAnchorPermanentLink" href="#Установка-драйверов" title="Permanent link">¶</a></h4>
+<p>я делал так. С выключенным телефоном заходил в Device Manager → подключил выключенный телефон по USB → в Device Manager на время около секунды появлялся пункт <em>Ports (COM &amp; LPT)</em> → <em>Preloader USB VCOM Port (COM6)</em>.</p>
+<p><div class="hes-gallery"><img alt="Preloader" src="https://i.imgur.com/vAN4BIQ.png" loading="lazy"></div></p>
+<p>Успевал кликнуть на <em>Preloader USB VCOM Port (COM6)</em> → <em>Driver</em> → <em>Update Driver…</em> → <em>Browse my computer for driver software</em> → выбирал папку с драйверами, которую скачал в инструкции, → Поставил галочку на <em>Include subfolders</em> → <em>Next</em> → получал окно <em>The best driver software for your device is already installed</em>.</p>
+<p><div class="hes-gallery"><img alt="Best driver" src="https://i.imgur.com/6tEn7ka.png" loading="lazy"></div></p>
+<p>Несмотря на это сообщение, установить кастомное recovery получилось. Видимо, если драйвер уже установлен, можно приступать к дальнейшим действиям.</p>
+<h4 id="Кнопка-Download">3.2.2. Кнопка Download <a class="KiraAnchorPermanentLink" href="#Кнопка-Download" title="Permanent link">¶</a></h4>
+<p>После пункта инструкции <em>Снимаем все галки кроме recovery, и нажав на путь в той же строке, выбираем в открывшемся окне скачанный ранее образ кастомного рекавери.</em> следует нажать на большую зелёную кнопку <em>Download</em></p>
+<p><div class="hes-gallery"><img alt="Download" src="https://i.imgur.com/Wl8pHW9.png" loading="lazy"></div></p>
+<p>После нажатия подключил по USB выключенный телефон → программа SP Flash Tool моментально определила телефон (видно по жёлтой полосе внизу окна программы) → загрузка успешно завершилась.</p>
+<p><div class="hes-gallery"><img alt="Завершение загрузки TWRP" src="https://i.imgur.com/A5CpBmN.png" loading="lazy"></div></p>
+<h3 id="Установка-CyanogenMod-121">3.3. Установка CyanogenMod 12.1 <a class="KiraAnchorPermanentLink" href="#Установка-CyanogenMod-121" title="Permanent link">¶</a></h3>
+<p>Все <a href="https://4pda.ru/forum/index.php?s=&amp;showtopic=788444&amp;view=findpost&amp;p=36669797" rel="noopener" target="_blank">прошивки из шапки</a> не пробовал, возможно, есть те, которые работают лучше.</p>
+<p><a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=120#entry56296225" rel="noopener" target="_blank">Инструкция</a>, <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=60#entry55887596" rel="noopener" target="_blank">прошивка</a>; GAPPS по ссылке <a href="https://archive.ph/vWC97" rel="noopener" target="_blank">устанавливать не стал</a>. Дополнения к инструкции:</p>
+<h4 id="Приложения">3.3.1. Приложения <a class="KiraAnchorPermanentLink" href="#Приложения" title="Permanent link">¶</a></h4>
+<p>После успешной установки данной прошивки все иконки на рабочем столе, которые у меня были раньше, удалились. Это может оказаться неприятной неожиданностью: когда я перепрошивался на <a href="https://4pda.ru/forum/index.php?s=&amp;showtopic=528204&amp;view=findpost&amp;p=39754381" rel="noopener" target="_blank">Cosmic ROM</a> в Samsung GT-I8262 Galaxy Core, данные на рабочем столе остались нетронутыми (точно не помню, возможно, из-за того, что не сделал все вайпы, ну и точно я не форматировал раздел system).</p>
+<p>Чтобы восстановить все иконки, которые у меня были на рабочем столе, в oandbackup я сделал восстановление из бэкапа.</p>
+<h4 id="Вайпы">3.3.2. Вайпы <a class="KiraAnchorPermanentLink" href="#Вайпы" title="Permanent link">¶</a></h4>
+<p>После пункта <em>Качаем прошивку из шапки, из раздела "Неофициальные прошивки" и кладём на карту памяти</em>, вероятно, лучше <a href="https://archive.ph/IWlGw" rel="noopener" target="_blank">сделать вайпы</a> <em>data/Factory reset</em>, <em>Cache Partition</em>, <em>Dalvik Cache</em> через кастомное recovery.</p>
+<h4 id="Форматирование-раздела-system">3.3.3. Форматирование раздела system <a class="KiraAnchorPermanentLink" href="#Форматирование-раздела-system" title="Permanent link">¶</a></h4>
+<p>После вайпов необходимо через кастомное рекавери <a href="https://4pda.ru/forum/index.php?showtopic=788444&amp;st=80#entry56070304" rel="noopener" target="_blank">отформатировать раздел system</a>, иначе после перепрошивки <a href="https://4pda.ru/forum/index.php?s=&amp;showtopic=788444&amp;view=findpost&amp;p=56066199" rel="noopener" target="_blank">будет висеть логотип ARK</a>, и дальше дело не двинется.</p>
+<h4 id="Окончание-перепрошивки">3.3.4. Окончание перепрошивки <a class="KiraAnchorPermanentLink" href="#Окончание-перепрошивки" title="Permanent link">¶</a></h4>
+<p>В остальном инструкция для меня понятна. После успешной установки новой прошивки можно вновь установить Dr.Web и просканировать систему на наличие вирусов. На сей раз их быть не должно.</p>
+<p>Если Вы делали бэкап, можно восстановить данные.</p>
+
+
+				</div></main>
+
+				<!--=========================
+				=			Footer			=
+				==========================-->
+
+				<footer>
+
+
+
+<div class="KiraNeighborsClearfix">
+
+	<span class="SashaNeighborsMainPageLeft"><a href="..">Поиск Кристиниты</a></span>
+
+	<span class="SashaNeighborsNextPage"><a href="../IT-articles/Fastest-way-to-add-new-version-of-Sublime-Text-3-package.html" title="Fastest way to add new version of your Sublime Text package">Следующая статья →</a></span>
+</div>
+
+
+
+
+
+
+
+
+<div class="SashaFooterActions">
+
+	<h2 id="Поделиться">Поделиться <a class="KiraAnchorPermanentLink" href="#Поделиться" title="Permanent link">¶</a></h2>
+		<p>Вы можете поделиться данной страницей в социальных сетях, используя виджет социальных кнопок <a href="https://www.addtoany.com/" rel="noopener" target="_blank">AddToAny</a> в боковой части страницы.</p>
+
+	<h2 id="Подписаться">Подписаться <a class="KiraAnchorPermanentLink" href="#Подписаться" title="Permanent link">¶</a></h2>
+		<p>Вы можете подписаться на <a href="../feeds/feeds-all/all.atom.xml" rel="noopener" target="_blank">Atom-ленту</a> или <a href="../feeds/feeds-all/all.rss.xml" rel="noopener" target="_blank">RSS-ленту</a> всех материалов сайта и Atom/RSS-ленты его любых <a href="https://github.com/Kristinita/Kristinita.github.io/tree/master/feeds/feeds-categories" rel="noopener" target="_blank">категорий</a> и <a href="https://github.com/Kristinita/Kristinita.github.io/tree/master/feeds/feeds-tags" rel="noopener" target="_blank">тегов</a>. Для подписки необходимо установить какой-нибудь <a href="https://alternativeto.net/software/quiterss/?license=opensource" rel="noopener" target="_blank">софт для чтения фидов</a>. <a href="https://docs.getpelican.com/en/latest/faq.html#can-i-force-atom-feeds-to-show-only-summaries-instead-of-article-content" rel="noopener" target="_blank">Выбирайте</a> подписки на Atom-ленты, если для Вас удобнее читать статьи в Вашей программе для чтения фидов. Выбирайте подписки на RSS-ленты, если Вам удобнее полноценно читать статьи в браузере; в Вашей же программе для чтения фидов будут отображаться только абстракты статей.</p>
+
+
+	<h2 id="Сообщить-об-опечатке-или-ошибке">Сообщить об опечатке или ошибке <a class="KiraAnchorPermanentLink" href="#Сообщить-об-опечатке-или-ошибке" title="Permanent link">¶</a></h2>
+		<p>(Только для десктопных, не мобильных устройств). Eсли Вы увидели на данной странице опечатку, неточность или ошибку, пожалуйста, сообщите об этом, используя <a href="../IT-articles/typo-reporter" rel="noopener" target="_blank">typo-reporter</a>: выделите текст с опечаткой/ошибкой → нажмите <kbd>Ctrl+Enter</kbd> (<kbd>⌘Enter</kbd> для Mac) → напишите Ваш комментарий → <em>Отправить</em>.</p>
+
+	<h2 id="Редактировать-страницу">Редактировать страницу <a class="KiraAnchorPermanentLink" href="#Редактировать-страницу" title="Permanent link">¶</a></h2>
+		<p>Вы можете самостоятельно отредактировать эту страницу <em>https://github.com/Kristinita/KristinitaPelican/edit/master/content/IT-articles/Перед-первым-применением-ARK-Benefit-S401.md</em> на GitHub и отправить <a href="https://flaviocopes.com/how-to-make-first-github-pull-request/" rel="noopener" target="_blank">pull request</a>.</p>
+
+	<h2 id="Комментировать">Комментировать <a class="KiraAnchorPermanentLink" href="#Комментировать" title="Permanent link">¶</a></h2>
+		<p>По любым вопросам обращайтесь через виджет комментариев <a href="https://utteranc.es/" rel="noopener" target="_blank">utterances</a> ниже. Пожалуйста, будьте вежливы и конструктивны.</p>
+		<p>Чтобы оставить комментарий, Вам необходимо быть зарегистрированным на GitHub. При написании комментариев используйте синтаксис <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax" rel="noopener" target="_blank">Markdown</a>.
+		</p><p>После отправки Ваш комментарий должен появиться <a href="https://github.com/Kristinita/KristinitaPelican/issues" rel="noopener" target="_blank">сверху в списке issues</a> для этого сайта. Уведомление об ответе на Ваш комментарий должно прийти на почту, привязанную к Вашему аккаунту на GitHub.</p>
+		<p>Также Вы можете написать и отправить своё сообщение через непосредственно <a href="https://github.com/Kristinita/KristinitaPelican/issues/new" rel="noopener" target="_blank">GitHub Issues</a>.</p>
+
+
+	<div class="KiraUtterances"></div>
+</div>
+
+<div class="SashaWorkOnYourself">Работайте над собой</div>
+				</footer>
+
+			</div>
+
+		</div>
+
+		<!--=================================
+		=			Share buttons			=
+		==================================-->
+
+
+
+
+<!-- AddToAny buttons -->
+
+<aside class="KiraAddToAny">
+	<div class="a2a_kit a2a_kit_size_17 a2a_floating_style a2a_vertical_style">
+		<a class="a2a_button_mastodon" href="https://joinmastodon.org/" aria-label="Share this web page on Mastodon"></a>
+		<a class="a2a_button_diaspora" href="https://diasporafoundation.org/" aria-label="Share this web page on diaspora*"></a>
+		<a class="a2a_button_bluesky" href="https://bsky.app/" aria-label="Share this web page on Bluesky"></a>
+		<a class="a2a_button_meneame" href="https://www.meneame.net/" aria-label="Share this web page on Menéame"></a>
+		<a class="a2a_button_copy_link" href="https://www.addtoany.com/services/copy_link_button" aria-label="Copy link to this web page"></a>
+		<a class="a2a_button_printfriendly" href="https://www.printfriendly.com/" aria-label="Print or convert to PDF this web page use PrintFriendly service"></a>
+		<a class="a2a_dd" href="https://www.addtoany.com/services/" aria-label="Select a web-service to share this page on it"></a>
+	</div>
+</aside>
+	</div>
+
+</body>
+
+</html>
