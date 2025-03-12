@@ -1,34 +1,23 @@
-os: linux
+cache:
+  directories:
+  - $HOME/.npm
+# - $HOME/.cache/pip
+# - $HOME/.cache/pipenv
 
 dist: jammy
 
 git:
   depth: 1
 
-language: python
-
-python: nightly
-
-env:
-  global:
-
-  # [INFO] Equivalent: API_KEY_APPVEYOR = my real key:
-  # https://kristinita.netlify.app/Pages/About-for-developers#AppVeyor
-  - secure: >
-      kx0qX2lR6ankxiVOCAY99ESR/a2QQ1+KCjgnnXFYY2IQ5ONNtZfCieUBPQ5OddyiIAkvp36VR/PGw8D4kQPmj2JsKuXBLiY4UKuuSnH/
-      FRqueJoz4cWkKfZfGmGjjwV1Ju5ndMSUo/MbkoJPNqiKgON6nhI7xY015lmCQYjzUntb7Ckxfc7X1D0++
-      zjOYS8M5aSyH5b5wIs4ZB4c9LKgOrfM/eLOC3sz0Uj9JhxPWTZVVlYhfkrPxAoesIEntOy+O7CsCkqjsB0WPzF3p+QfgL6QBBkoSbTsIRO+
-      hjkR4LRFrQg4oHAHMJM5DPxz6LWqc8h42BwX7uMJTl/GW9CSbs6OVfVkA5Zfx387f27CZa9XrncV9pjnemm7GUvnnx+KDP+rb++Ckkqy/
-      96RVmisz919qWyDOSZ+uTYoBuk6bT0RfF7n/i0LYaRvURrUXZiIlxMkaSlEpuRZwdj8CsRyYbBOwZpCDM2ss+V2XA8++FIlblqwc0LUweZQL+2jt6+
-      1w8tPTSgyFJYaiOQSeeypZEs1aQDKQtl6B/RD44+HWGrUnikUX5YQqHOi2oNW9TE1DlfvOGeo4mhCmkC5Zad3qlCNgFWQu9Jdw0xyYtaGvmgFQ99jbImruHTtTN5G1iwgZq+
-      0EoMdDGZxVTwcG67XoLTKyEEafcg9/7xOe2DvTUc=
-
-
 install:
 - npm install -g grunt-cli
-- npm install
+- npm ci --loglevel=error
 
+language: node_js
+
+node_js: node
+
+os: linux
 
 script:
-- grunt shell:appveyorlintvalidconfig
-- grunt shell:appveyorlintnonvalidconfig
+- grunt shell:commitlint

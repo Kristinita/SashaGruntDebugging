@@ -1,7 +1,10 @@
 {
 	"devDependencies": {
+		"@commitlint/cli": "^19.8.0",
+		"@commitlint/config-conventional": "^19.8.0",
 		"coffeescript": "^2.7.0",
 		"grunt": "^1.5.3",
-		"grunt-shell": "^4.0.0"
+		"grunt-shell": "^4.0.0",
+		"simple-git-hooks": "^2.11.1"
 	}
 }

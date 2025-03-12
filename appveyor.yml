@@ -1,22 +1,20 @@
-platform: x64
+build_script:
+- grunt shell:commitlint
 
-image: Visual Studio 2022
+cache:
+- "%LOCALAPPDATA%\\npm-cache"
+# - "%LOCALAPPDATA%\\pip\\cache"
+# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 clone_depth: 1
 
 environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
 
-  API_KEY_APPVEYOR:
-
-    secure: +tAYCLWvKpNefBmIFHBZzSdFnN8mu71hBU1MqYbrjlY=
-
-  PYTHON: C:\Python312-x64
+image: Visual Studio 2022
 
 install:
-- choco install nodejs
 - npm install -g grunt-cli
-- npm install
+- npm ci --loglevel=error
 
-build_script:
-- grunt shell:appveyorlintvalidconfig
-- grunt shell:appveyorlintnonvalidconfig
+platform: x64
