@@ -7,7 +7,7 @@ module.exports = (grunt) ->
 	grunt.initConfig
 
 		shell:
-
 			appveyorlint:
-				command: "npx dotenvx run --debug -- https ci.appveyor.com/api/projects/validate-yaml @appveyornonvalid.yml
+				command: "npx dotenvx run --env-file .env.ci --
+							https ci.appveyor.com/api/projects/validate-yaml @appveyornonvalid.yml
 							--auth-type bearer --auth <%= process.env.KEY_APPVEYOR %> --body --ignore-stdin"
