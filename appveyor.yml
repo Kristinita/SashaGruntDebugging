@@ -14,6 +14,7 @@ environment:
 image: Visual Studio 2022
 
 install:
+- choco install --yes nodejs
 - npm install --global grunt-cli
 - npm ci --loglevel=error
 - pip install httpie
