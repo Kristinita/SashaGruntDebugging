@@ -8,6 +8,8 @@ module.exports = (grunt) ->
 
 		shell:
 			appveyorlint:
-				command: "npx dotenvx run --env-file .env.ci --
-							https ci.appveyor.com/api/projects/validate-yaml @appveyornonvalid.yml
+				command: "https ci.appveyor.com/api/projects/validate-yaml @appveyornonvalid.yml
 							--auth-type bearer --auth <%= process.env.KEY_APPVEYOR %> --body --ignore-stdin"
+				# command: "npx dotenvx run --env-file .env.ci --debug --
+				# 			https ci.appveyor.com/api/projects/validate-yaml @appveyornonvalid.yml
+				# 			--auth-type bearer --auth <%= process.env.KEY_APPVEYOR %> --body --ignore-stdin"

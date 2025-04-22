@@ -21,4 +21,4 @@ node_js: node
 os: linux
 
 script:
-- grunt shell:appveyorlint
+- grunt shell:appveyorlint --verbose
