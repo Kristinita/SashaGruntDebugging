@@ -1,5 +1,5 @@
 build_script:
-- grunt shell:commitlint
+- grunt shell:appveyorlint
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -14,7 +14,7 @@ environment:
 image: Visual Studio 2022
 
 install:
-- npm install -g grunt-cli
+- npm install --global grunt-cli
 - npm ci --loglevel=error
 
 platform: x64

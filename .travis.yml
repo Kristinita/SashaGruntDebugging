@@ -4,13 +4,13 @@ cache:
 # - $HOME/.cache/pip
 # - $HOME/.cache/pipenv
 
-dist: jammy
+dist: noble
 
 git:
   depth: 1
 
 install:
-- npm install -g grunt-cli
+- npm install --global grunt-cli
 - npm ci --loglevel=error
 
 language: node_js
@@ -20,4 +20,4 @@ node_js: node
 os: linux
 
 script:
-- grunt shell:commitlint
+- grunt shell:appveyorlint

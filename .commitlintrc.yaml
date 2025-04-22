@@ -205,6 +205,11 @@ rules:
   - always
   - 250
 
+  footer-max-line-length:
+  - 2
+  - always
+  - 250
+
   # [OPTION] 120 as Python line length
   header-max-length:
   - 2

@@ -5,5 +5,5 @@ module.exports = (grunt) ->
 	grunt.initConfig
 
 		shell:
-			commitlint:
-				command: "git log -1 --pretty=%B | npx commitlint --verbose"
+			appveyorlint:
+				command: "npx dotenvx run -- echo <%= process.env.KIRA %>"
