@@ -1,9 +1,13 @@
 module.exports = (grunt) ->
 
+	require('@dotenvx/dotenvx').config()
+
 	grunt.loadNpmTasks "grunt-shell"
 
 	grunt.initConfig
 
 		shell:
+
 			appveyorlint:
-				command: "npx dotenvx run -- echo <%= process.env.KIRA %>"
+				command: "npx dotenvx run --debug -- https ci.appveyor.com/api/projects/validate-yaml @appveyornonvalid.yml
+							--auth-type bearer --auth <%= process.env.KEY_APPVEYOR %> --body --ignore-stdin"
