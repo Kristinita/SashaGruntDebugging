@@ -3,7 +3,7 @@ build_script:
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
-# - "%LOCALAPPDATA%\\pip\\cache"
+- "%LOCALAPPDATA%\\pip\\cache"
 # - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 clone_depth: 1
@@ -16,5 +16,6 @@ image: Visual Studio 2022
 install:
 - npm install --global grunt-cli
 - npm ci --loglevel=error
+- pip install httpie
 
 platform: x64

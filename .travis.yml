@@ -1,7 +1,7 @@
 cache:
   directories:
   - $HOME/.npm
-# - $HOME/.cache/pip
+  - $HOME/.cache/pip
 # - $HOME/.cache/pipenv
 
 dist: noble
@@ -12,6 +12,7 @@ git:
 install:
 - npm install --global grunt-cli
 - npm ci --loglevel=error
+- pip install httpie
 
 language: node_js
 
