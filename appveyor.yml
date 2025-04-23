@@ -10,6 +10,8 @@ clone_depth: 1
 
 environment:
   APPVEYOR_SAVE_CACHE_ON_ERROR: true
+  DOTENV_PRIVATE_KEY_CREDENTIALS:
+    secure: Ai82TZjeThZXRh3fq4PtYkScL0xOuHm6L7kqHTXk9as5m8rUjKOLOWT8RvoSV6/Lr2LxCYDqVsrsDPodk1+m4XiTbmcWDV6QrvfGzkkBYB4=
 
 image: Visual Studio 2022
 
