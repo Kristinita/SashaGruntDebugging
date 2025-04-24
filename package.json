@@ -5,7 +5,7 @@
 		"@dotenvx/dotenvx": "^1.41.0",
 		"coffeescript": "^2.7.0",
 		"grunt": "^1.5.3",
-		"grunt-shell": "^4.0.0",
+		"grunt-shell-spawn": "^0.5.0",
 		"simple-git-hooks": "^2.11.1"
 	}
 }

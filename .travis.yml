@@ -1,30 +1,20 @@
 cache:
   directories:
   - $HOME/.npm
-  - $HOME/.cache/pip
-# - $HOME/.cache/pipenv
+  # - $HOME/.cache/pip
+  # - $HOME/.cache/pipenv
 
 dist: noble
 
 env:
-- secure: iCBlWewfhKmw85rnkYBGBIXR1tt6GJq2A4WbDifKX3b7Cit2lrcmmkqKL/gl9z1GCIQ52mY+pDkHuCPwyxaV7eI9DCJ9OHO8KK3TkDfKfS76bM/z83RT9cc37uf/tWIc1Dirc1gmU9NVQMF9yxKt0lokGK/e/31OGlksjjXy9ozoOQV8Kl84JxawDDxg+ZSNveCapYJf61Zk565Tm0EAaAoc+t1aUguszq5QIWEh7sSjQ12SABYeRqYnNnOchCUOf+h5uRReZ4kMH/UPZLY/3m4+BbWCvrxxIXmiYQSjI9oegjAMDU5qvMPPZF4fxNsYtjLR6k3NhYBTpI7ECEdUt6HtX2uFDaF9oiVzBFyOjKS/xcM+yD0UnKS9hq5yUeaqZ911CCd4vSfKj0RlsopCOushuIED59vDnA2abW+xCg6Iznx9DHDVIljcUnLLTbFwiXcPD1/qDZG0/qbv8THc6It0XJKiku1Y0hA8UNgAAIojSbOpIYo1pARHLIBKHRLgK4iKf9vmP707XzWLCndgCBIisAi6pOaHAJZp2mSgzin/m5lQv6c+zCnZWPDxIKY3aElK3bXuHo40+yZ0tNOqXOCbaSJfcbxiH/vDotOSW5Cb+3LNOsi3IsyZJviKuwsWEO0Z2iOmqUr19yL3HS3Wwgu2vSKHAYjpWjOFpnjh8jI=
-- secure: >
-    u4bZ1LyhoUDKvng6cwQRlrKzR0EgFpnHSk0+zVH8entxT2tP8Ltir7IDrhY+v2+a7EXn3c/
-    61ukV3QpF3qCBA9zBk7awfG4cW6DIVE1ZyQPFcVeT/LGqD5kAzHOM3m06k2HD0LS97FxQF9b5de1Edx6vAwtdLBILneXtGpMwENCKYT/
-    FHkMLdRywIUSPAoQSuJRxX1OTxN7n5DA4nQ6YqOi4kZs2sWfFe3nGlIYjHtbJEnh11OBuwY5j2V8AoT/
-    DBpsXOJAtXI+aQ0rRYIdZvcchHjiV8bp3jNgbpWAeWKqwfgU8fCMx16poizGzqzlw4n4uCFuc7Rv5TSbkwDYy5eR/
-    vlBe+5XnbGCQcyefkpQabSYOXCNVeABGUc32snN8XdSq69m+lyO5+uSi7/
-    gLHg+7yEcR8nA3g+ZC2cFWLA92HTqM7tMhAbNjQ+V9rqJLqAHYQtaItFiCXveoe6p3f628RU/
-    lmIISg0P2VtPLZIw4sCSJ9ts3dnOtADkYDiruXF1laoKmw4+73TpbNsvxNTYitSnWFsAOKoZqzCX3+t5v+swkb7gc7i+pXKDwuLaF6pF1lemV/
-    3bpq7yay5d6KmMIPpDwW+rBNLhCbzxPLpGdG40xd9Gs+w6iRoRXIlChh6PuGohDAPcA/oMofXtHic3hx5ViAPDcxsoB5pjc8CM=
+  secure: fKBmY2SwtYPgJVNkhke8+G3g/bUsXfPMi4AMfXVzHH4X7D6xU3/UDo47kU94OFcPmSZrXowPs5ZLu4P8WQmU0ZFXTQRBMFDRzzaTQcb0ULQ7AX55e9oV4jXxEN2dg7C6TqS6k4ln8/1O/Kzu7lYwy3RAhGTuc5vcbVdrgd65wDYsG4YrlyMJsg+OYYo6CHwFJ0jbVvT04eQ9qujnP5cbKzee62Mk0xblrBmBHU0gpHrksvTm5McsvSQ82fCK1U4jEfSXx7sY3prau1vCxZswC5L8Y6o+9HnkeY7KB9vdDR+aASf2s4gEEr1kUETudzWbZr0BkQdwBsvMMVnGjldr1a5toe18cjcWioLkOcLY84h+SMTzUTDEOP82owWe9im2wkJcB/fn/dPykyVzPMJgdJMBgxHDkjw8WcOsL+6gAIDYpb4Bowdl378vu0nMSAczpqjQwgoxNr0Hzjc+F1bPDtZGFDMAW8hWrJfiNwt/pUUzG9eeqbKqZGgq9A/EVXshi6vh7h4Al6isPU3/r8XImfaf4qNuQzdrqZe2ZZWNTXLY3mIHR0Cm4px0Lak+Sz01cZ0eKxEGgV06tapsV636qfC+TUK3rj/dpv2cPHNeMNa6U4VF+S4U7M2pTA8QhV+2ZmgZYybEgflBluCUOhfl3l/EUhLEU2pKdoFntnFUzbc=
 
 git:
   depth: 1
 
 install:
 - npm install --global grunt-cli
-- npm ci --loglevel=error
-- pip install httpie
+- npm install
 
 language: node_js
 
@@ -33,4 +23,4 @@ node_js: node
 os: linux
 
 script:
-- grunt shell:appveyorlint
+- grunt shell:whoiskira
