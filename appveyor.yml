@@ -1,5 +1,5 @@
 build_script:
-- grunt shell:appveyorlint --verbose
+- grunt shell:appveyorlint
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
