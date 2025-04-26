@@ -1,16 +1,27 @@
 module.exports = (grunt) ->
 
-	# [INFO] Initialize Dotenvx:
-	# https://dotenvx.com/docs/advanced/config
-	require("@dotenvx/dotenvx").config()
+	kiraDotenvxObject = require "@dotenvx/dotenvx"
+
+	kiraDotenvxObject.config
+		path: [
+			".env"
+			".env.credentials"
+		]
+		strict: true
+
+	console.log kiraDotenvxObject
 
 	grunt.loadNpmTasks "grunt-shell-spawn"
 
 	grunt.initConfig
 
+		templates:
+			arguments:
+				kiraTemplate: kiraDotenvxObject.get "KIRA"
+
 		shell:
 			whoiskira:
-				command: "<%= process.env.KIRA %>"
+				command: "<%= templates.arguments.kiraTemplate %>"
 				options:
-					stderr: false
-					stdout: false
+					stderr: true
+					stdout: true
