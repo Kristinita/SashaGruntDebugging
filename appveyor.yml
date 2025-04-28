@@ -1,5 +1,5 @@
 build_script:
-- grunt shell:whoiskira
+- echo "Kira Goddess!"
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -10,8 +10,6 @@ clone_depth: 1
 
 environment:
   APPVEYOR_SAVE_CACHE_ON_ERROR: true
-  DOTENV_PRIVATE_KEY:
-    secure: 83IA5UJ20aA4hQtOCeBGymBhXPoG3KgVanbm/bMQTuK1vSR74a7Ku9/olv2704Z54/0xqthzxGRj7EP6JkgzxbaXYYkDlurKyA6DuiAeCpI=
 
 image: Visual Studio 2022
 
