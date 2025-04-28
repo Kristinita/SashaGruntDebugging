@@ -1,13 +1,5 @@
 module.exports = (grunt) ->
 
-	kiraDotenvxObject = require "@dotenvx/dotenvx"
-
-	kiraDotenvxObject.config
-		path: [
-			".env"
-			".env.credentials"
-		]
-		strict: true
 
 	kiraLatestCommitHash = require("node:child_process").execSync("git rev-parse --short HEAD").toString().trim()
 
@@ -18,8 +10,6 @@ module.exports = (grunt) ->
 	grunt.initConfig
 
 		templates:
-			arguments:
-				kiraTemplate: kiraDotenvxObject.get "KIRA"
 			github:
 				commithash: kiraLatestCommitHash
 				outputRepository: "KristinitaTests.github.io"
@@ -36,9 +26,3 @@ module.exports = (grunt) ->
 							successfully built, checked and tested on Travis CI and deployed to this repository.\"
 							--nojekyll
 							--repo https://github.com/<%= templates.github.username %>/<%= templates.github.outputRepository %>"
-
-			whoiskira:
-				command: "<%= templates.arguments.kiraTemplate %>"
-				options:
-					stderr: true
-					stdout: true
