@@ -1,1 +1,1 @@
-Kira the best!
+Kira Best!
