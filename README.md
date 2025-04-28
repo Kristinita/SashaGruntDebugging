@@ -1,1 +1,1 @@
-Kira champion!
+Kira the best!
