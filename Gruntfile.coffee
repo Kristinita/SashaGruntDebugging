@@ -1,5 +1,13 @@
 module.exports = (grunt) ->
 
+	kiraDotenvxObject = require "@dotenvx/dotenvx"
+
+	kiraDotenvxObject.config
+		path: [
+			".env"
+			".env.credentials"
+		]
+		strict: true
 
 	kiraLatestCommitHash = require("node:child_process").execSync("git rev-parse --short HEAD").toString().trim()
 
@@ -15,6 +23,9 @@ module.exports = (grunt) ->
 				outputRepository: "KristinitaTests.github.io"
 				sourcesRepository: "SashaGruntDebugging"
 				username: "Kristinita"
+			tokens:
+				kiraTokenGitHubForGhPages: kiraDotenvxObject.get "TOKEN_GITHUB_FOR_GH_PAGES"
+
 
 		shell:
 
@@ -24,5 +35,7 @@ module.exports = (grunt) ->
 							\"Changes added with the commit
 							<%= templates.github.username %>/<%= templates.github.sourcesRepository %>@<%= templates.github.commithash %>
 							successfully built, checked and tested on Travis CI and deployed to this repository.\"
-							--nojekyll
-							--repo https://github.com/<%= templates.github.username %>/<%= templates.github.outputRepository %>"
+							--nojekyll --repo
+							https://git:<%= templates.tokens.kiraTokenGitHubForGhPages
+							%>@github.com/<%= templates.github.username %>/<%= templates.github.outputRepository %>.git"
+							# --repo https://github.com/<%= templates.github.username %>/<%= templates.github.outputRepository %>"
