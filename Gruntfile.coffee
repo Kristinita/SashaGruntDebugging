@@ -11,8 +11,6 @@ module.exports = (grunt) ->
 
 	kiraLatestCommitHash = require("node:child_process").execSync("git rev-parse --short HEAD").toString().trim()
 
-	console.log kiraLatestCommitHash
-
 	grunt.loadNpmTasks "grunt-shell-spawn"
 
 	grunt.initConfig
