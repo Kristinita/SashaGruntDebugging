@@ -1,0 +1,21 @@
+os: linux
+
+dist: focal
+
+git:
+  depth: 1
+
+cache: false
+
+language: node_js
+
+node_js:
+- node
+
+install:
+- npm install -g grunt-cli
+- npm install
+
+script:
+- grunt posthtml --verbose
+- cat KiraPosthtmlOutput.html
