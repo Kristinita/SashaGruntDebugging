@@ -34,6 +34,5 @@ module.exports = (grunt) ->
 							<%= templates.github.username %>/<%= templates.github.sourcesRepository %>@<%= templates.github.commithash %>
 							successfully built, checked and tested on Travis CI and deployed to this repository.\"
 							--nojekyll --repo
-							https://git:<%= templates.tokens.kiraTokenGitHubForGhPages
-							%>@github.com/<%= templates.github.username %>/<%= templates.github.outputRepository %>.git"
-							# --repo https://github.com/<%= templates.github.username %>/<%= templates.github.outputRepository %>"
+							https://<%= templates.tokens.kiraTokenGitHubForGhPages
+							%>@github.com/<%= templates.github.username %>/<%= templates.github.outputRepository %>"
