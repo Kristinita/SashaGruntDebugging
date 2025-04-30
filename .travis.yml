@@ -30,3 +30,4 @@ os: linux
 
 script:
 - npx gh-pages --version
+- git config --list
