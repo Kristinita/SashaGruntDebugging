@@ -23,4 +23,4 @@ node_js: node
 os: linux
 
 script:
-- grunt shell:whoiskira
+- grunt shell:whoiskira --verbose

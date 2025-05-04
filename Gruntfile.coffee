@@ -2,26 +2,14 @@ module.exports = (grunt) ->
 
 	kiraDotenvxObject = require "@dotenvx/dotenvx"
 
-	kiraDotenvxObject.config
-		path: [
-			".env"
-			".env.credentials"
-		]
-		strict: true
-
-	console.log kiraDotenvxObject
-
-	grunt.loadNpmTasks "grunt-shell-spawn"
+	grunt.loadNpmTasks "grunt-shell"
 
 	grunt.initConfig
 
-		templates:
-			arguments:
-				kiraTemplate: kiraDotenvxObject.get "KIRA"
+		# [INFO] Get the value of encrypted variable “KIRA” via Dotenvx:
+		# https://dotenvx.com/docs/advanced/config-get-key
+		kiraStatus: kiraDotenvxObject.get "KIRA"
 
 		shell:
 			whoiskira:
-				command: "<%= templates.arguments.kiraTemplate %>"
-				options:
-					stderr: true
-					stdout: true
+				command: "<%= kiraStatus %>"

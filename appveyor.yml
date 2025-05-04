@@ -1,5 +1,5 @@
 build_script:
-- grunt shell:whoiskira
+- grunt shell:whoiskira --verbose
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
