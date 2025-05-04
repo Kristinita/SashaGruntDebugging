@@ -3,6 +3,6 @@
 		"@dotenvx/dotenvx": "^1.43.0",
 		"coffeescript": "^2.7.0",
 		"grunt": "^1.6.1",
-		"grunt-shell": "^4.0.0"
+		"grunt-shell": "github:Kristinita/grunt-shell#KiraHideCommand"
 	}
 }

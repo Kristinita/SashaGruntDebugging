@@ -13,3 +13,5 @@ module.exports = (grunt) ->
 		shell:
 			whoiskira:
 				command: "<%= kiraStatus %>"
+				options:
+					hideCommand: true
