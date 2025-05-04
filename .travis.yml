@@ -1,20 +1,23 @@
-os: linux
+cache:
+  directories:
+  # - $HOME/.cache/pip
+  # - $HOME/.cache/pipenv
+  - $HOME/.npm
 
-dist: jammy
+dist: noble
 
 git:
   depth: 1
+
+install:
+- npm install --global grunt-cli
+- npm install
 
 language: node_js
 
 node: node
 
-cache:
-  npm: false
-
-install:
-- npm install -g grunt-cli
-- npm install
+os: linux
 
 script:
 - grunt postcss --verbose --stack

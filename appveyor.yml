@@ -1,0 +1,22 @@
+build_script:
+- grunt postcss --verbose --stack
+- cat KiraOutput/KiraExpected.html
+- cat KiraOutput/KiraBug.html
+
+cache:
+- "%LOCALAPPDATA%\\npm-cache"
+# - "%LOCALAPPDATA%\\pip\\cache"
+# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
+
+clone_depth: 1
+
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
+image: Visual Studio 2022
+
+install:
+- npm install --global grunt-cli
+- npm install
+
+platform: x64
